@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Тип кодеровки -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Для адаптивной верстки -->
+    <meta name="description" content="About customers"> <!-- Описание сайта в поиской системе -->
+    <meta name="keywords" content="customers, costs"> <!-- Ключевые слова для поисковой системы -->
+    <link rel="icon" href="./img/shortcut_icon.png" type="image/x-icon"> <!-- Иконка в шапке браузера -->
+    <link rel="shortcut icon" href="./img/shortcut_icon.png" type="image/x-icon"> <!-- Иконка в шапке браузера, старая разметка -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Кино Монстр</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="container">
+                <div class="logo">
+                    <h1 class="logo-header"><a href="#">КиноМонстр</a></h1>
+                    <p class="logo-text">Кино - наша страсть!</p>
+                </div>
+                <nav class="menu">
+                    <ul class="menu-ul">
+                        <li class="menu-ul-selected"><a href="#">Главная</a></li>
+                        <li><a href="./films.html">Фильмы</a></li>
+                        <li><a href="#">Сериалы</a></li>
+                        <li><a href="#">Рейтинг</a></li>
+                        <li><a href="./contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="left-and-right">
+                    <section class="left">
+                        <div class="left-film">
+                        <h2 class="left-film-header">Новые фильмы</h2>
+                            <div class="left-film-row">
+                                <a class="left-film-card" href="./show.html">
+                                    <img src="./img/droj_zemli.jpeg" alt="Дрож земли">
+                                </a>
+                                <a class="left-film-card" href="#">
+                                    <img src="./img/rasplata.jpg" alt="Расплата">
+                                </a>
+                                <a class="left-film-card" href="#">
+                                    <img src="./img/first_man.jpg" alt="первый мужчина">
+                                </a>
+                                <a class="left-film-card" href="#">
+                                    <img src="./img/zubastik.jpg" alt="Зубастики">
+                                </a>
+                            </div>
+                         </div>
+                         <div class="left-film">
+                            <h2 class="left-film-header">Новые сериалы</h2>
+                                <div class="left-film-row">
+                                    <a class="left-film-card" href="#">
+                                        <img src="./img/the_end.jpg" alt="Конец">
+                                    </a>
+                                    <a class="left-film-card" href="#">
+                                        <img src="./img/otpusk.jpeg" alt="Отпуск">
+                                    </a>
+                                    <a class="left-film-card" href="#">
+                                        <img src="./img/mandalorian.jpg" alt="Мадолориц">
+                                    </a>
+                                    <a class="left-film-card" href="#">
+                                        <img src="./img/serial.jpg" alt="Сериал">
+                                    </a>
+                                </div>
+                             </div>
+                             <div class="left-content">
+                                <h3 class="left-content-header">Как снимали Дрож земли</h3>
+                                <p class="left-content-text">Фильм "Дрожь земли " вышел в прокат в начале 1990 года. Авторы считали проходным "ужастиком", обреченным на скорое забвение, но их детище удостоилось теплой критики и не только принесло прибыль, но и породило целую череду продолжений.
+                                Идея кино о плотоядных монстрах, живущих под землей и реагирующих на вибрации почвы, пришла драматургу С.С.Уилсону, когда он сидел в пустыне на скале и ради забавы представлял себе, как он мог бы спастись, кабы безопасными остались только каменные участки поверхности.</p>
+                                <a class="left-content-link" href="#">Читать</a>
+                             </div>
+                             <div class="left-content">
+                                <h3 class="left-content-header">Как снимали Зубастики</h3>
+                                <p class="left-content-text">Плотоядные «колобки» запустили карьеру Леонардо ДиКаприо, но сами продержались всего четыре части.
+                                Из космической тюрьмы, в которой содержатся только самые опасные преступники Галактики, сбегают восемь крайтов — невероятно злобных плотоядных тварей, похожих на ежей. Они угоняют звездолёт и направляют его к Земле, жители которой совсем недавно добрались до Луны и ещё даже не подозревают о существовании иных цивилизаций.</p>
+                                <a class="left-content-link" href="#">Читать</a>
+                             </div>
+                    </section>
+                    <section class="right">
+                        <div class="right-wrapper">
+                            <h4 class="right-header">Поиск</h4>
+                            <form action="#" method="post" id="search-form">
+                                <input type="search" name="search-field" id="search-input" placeholder="Введите название">
+                                <input type="submit" name="btn-seacrh" id="search-input" value="Найти">
+                            </form>
+                        </div>
+                        <div class="right-wrapper">
+                            <h4 class="right-header">Вход</h4>
+                            <form action="#" method="post" id="login-form">
+                                <input type="text" name="text-name" id="name-input" placeholder="Введите имя">
+                                <input type="password" name="password" id="password-input" placeholder="Введите пароль">
+                                <input type="submit" name="btn-entrance" id="entrance-input" value="Вход">
+                                <div class="right-logo-link">
+                                    <a href="#">Забыли пароль?</a>
+                                    <a href="#">Регистрация</a>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="right-wrapper news">
+                            <h4 class="right-header">Новости</h4>
+                            <span>31.03.2022</span>
+                            <p>Мы запустили расширенный поиск</p>
+                            <a href="#">Читать</a>
+                        </div>
+                        <div class="right-wrapper">
+                            <h4 class="right-header">Рейтинг фильмов</h4>
+                            <ul class="right-rating">
+                                <li class="rating-li"><a href="#">Дрожь земли</a><span class="rating">8.9</span></li>
+                                <li class="rating-li"><a href="#">Расплата</a><span class="rating">8.3</span></li>
+                                <li class="rating-li"><a href="#">Первый мужчина</a><span class="rating">7.9</span></li>
+                                <li class="rating-li"><a href="#">Зубастики</a><span class="rating">8.7</span></li>
+                            </ul>
+                        </div>
+                    </section>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <nav class="menu footer-menu">
+                <ul class="menu-ul">
+                    <li class="menu-ul-selected"><a href="#">Главная</a></li>
+                    <li><a href="#">Фильмы</a></li>
+                    <li><a href="#">Сериалы</a></li>
+                    <li><a href="#">Рейтинг</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            <p class="footer-copyright">film-present.com 2021</p>
+        </div>
+    </footer>
+    <script src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/profile_registartion/profile.css">
+    <link rel="stylesheet" href="./css/profile_registartion/section-profile-header.css">
+    <link rel="stylesheet" href="./css/profile_registartion/section-profile-photo.css">
+    <link rel="stylesheet" href="./css/profile_registartion/section-profile-name.css">
+    <link rel="stylesheet" href="./css/profile_registartion/section-profile-connect.css">
+    <link rel="stylesheet" href="./css/profile_registartion/section-profile-subscribe.css">
+    <link rel="stylesheet" href="./css/profile_registartion/section-profile-out.css">
+    <link rel="stylesheet" href="./node_modules/cropperjs/dist/cropper.min.css">
+    <script src="./node_modules/cropperjs/dist/cropper.min.js"></script>
+    <title>Профиль</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-row">
+                <div class="header-logo">
+                    <img src="./img/header/logo.svg" alt="Логотип">
+                </div>
+                <div class="header-menu header-menu-mobile">
+                    <ul class="dropdown header-menu-kitchen">
+                        <li class="dropbtn"> 
+                            <a href="#">Рецепты</a>
+                            <span class="arrow"></span>
+                            <ul class="dropdown-content">
+                                <li><a href="./categories.html">По типу блюд</a></li>
+                                <li><a href="#">По кухням мира</a></li>
+                                <li><a href="#">По диетам</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="dropdown header-menu-kitchen">
+                        <li class="dropbtn"> 
+                            <a href="#">Мультимедия</a>
+                            <span class="arrow"></span>
+                            <ul class="dropdown-content">
+                                <li><a href="#">Видеорецепты</a></li>
+                                <li><a href="#">Новости кулинарии</a></li>
+                                <li><a href="#">Техники и лайфхаки</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="dropdown header-menu-kitchen">
+                        <li class="dropbtn"> 
+                            <a href="#">Магазин</a>
+                            <span class="arrow"></span>
+                            <ul class="dropdown-content">
+                                <li><a href="#">Ингредиенты</a></li>
+                                <li><a href="#">Книги</a></li>
+                                <li><a href="#">Сувениры</a></li>
+                                <li><a href="#">Инструменты и приборы</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="dropdown header-menu-kitchen">
+                        <li class="dropbtn"> 
+                            <a href="#">Контакты</a>
+                            <span class="arrow"></span>
+                            <ul class="dropdown-content">
+                                <li><a href="#">Реклама</a></li>
+                                <li><a href="#">О нас</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="buy-link">
+                        <a href="#">Buy</a>
+                    </div>
+                </div>
+                <div class="header-login">
+                    <button class="search">
+                        <img src="./img/header/search.svg" alt="Поиск">
+                    </button>
+                    <ul class="dropdown header-menu-kitchen">
+                        <li class="dropbtn"> 
+                            <img src="./img/header/login.svg" alt="Логин">
+                            <ul class="dropdown-content">
+                                <li><a href="/profile.html">Регистрация</a></li>
+                                <li><a href="/authorization.html">Вход</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <button type="button" class="mobile-nav-button">
+                    <span class="mobile-nav-button-icon"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="section-profile">
+            <div class="container">
+                <div class="section-profile-header">
+                    <h5>Профиль</h5>
+                    <button class="orange-btn orange-btn-save">Сохранить</button>
+                </div>
+                <div class="section-profile-photo">
+                    <div class="section-profile-photo-img">
+                        <img id="profile-photo-img" src="./img/profile/avatar.jpg" alt="Фото профиля">
+                    </div>
+                    <form class="section-profile-photo-btn" id="photo-upload-form" enctype="multipart/form-data">
+                        <label for="profile-photo" id="customFileButton" class="orange-btn">Выберите фото</label>
+                        <input type="file" id="profile-photo" name="profile-photo" style="display: none;" />
+                        <button type="button" class="white-btn" id="delete-photo-btn">Удалить фото</button>
+                    </form>
+                </div>
+                <!-- Модальное окно для Cropper.js -->
+                <div id="cropper-modal" class="modal">
+                    <div id="cropper-container" class="modal-content">
+                        <img id="cropper-image" src="" alt="Изображение для обрезки" class="modal-image">
+                        <div class="modal-buttons">
+                            <button id="crop-button" class="modal-button">Обрезать</button>
+                            <button id="cancel-button" class="modal-button cancel">Отмена</button>
+                        </div>
+                    </div>
+                </div>                   
+                <div class="section-profile-name">
+                    <form class="section-profile-form">
+                        <div class="input-group">
+                            <div class="section-profile-fallname">
+                                <div class="svg-icon-profile">
+                                    <svg>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C14.7614 2 17 4.23858 17 7C17 9.76142 14.7614 12 12 12C9.23858 12 7 9.76142 7 7C7 4.23858 9.23858 2 12 2ZM12 4C10.3431 4 9 5.34315 9 7C9 8.65685 10.3431 10 12 10C13.6569 10 15 8.65685 15 7C15 5.34315 13.6569 4 12 4ZM21 19V21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21V19C19 17.3431 17.6569 16 16 16H8C6.34315 16 5 17.3431 5 19V21C5 21.5523 4.55228 22 4 22C3.44772 22 3 21.5523 3 21V19C3 16.2386 5.23858 14 8 14H16C18.7614 14 21 16.2386 21 19Z"/>
+                                    </svg> 
+                                </div>
+                                <label for="fullname">Полное имя:</label>
+                                <input type="text" id="fullname" name="fullname" required>
+                            </div>
+                            <div class="section-profile-email">
+                                <div class="svg-icon-profile">
+                                    <svg>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.8935 5.55395L12.0001 11.7793L3.10666 5.55395C3.27204 5.22692 3.61212 5 4.00009 5H20.0001C20.388 5 20.7281 5.22692 20.8935 5.55395ZM23 5.98327C23.0002 5.99295 23.0002 6.00264 23.0001 6.01231V18C23.0001 19.6523 21.6524 21 20.0001 21H4.00009C2.3478 21 1.00009 19.6523 1.00009 18V6.01225C0.999957 6.00241 0.999973 5.99256 1.00013 5.9827C1.0095 4.33832 2.35357 3 4.00009 3H20.0001C21.6468 3 22.991 4.33863 23 5.98327ZM3.00009 7.92066V18C3.00009 18.5477 3.45237 19 4.00009 19H20.0001C20.5478 19 21.0001 18.5477 21.0001 18V7.92066L12.5735 13.8192C12.2292 14.0603 11.7709 14.0603 11.4266 13.8192L3.00009 7.92066Z"/>
+                                    </svg>                                        
+                                </div>
+                                <label for="email">Почта:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="section-profile-password">
+                                <div class="svg-icon-profile">
+                                    <svg>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6 10H5C3.34315 10 2 11.3431 2 13V20C2 21.6569 3.34315 23 5 23H19C20.6569 23 22 21.6569 22 20V13C22 11.3431 20.6569 10 19 10H18V7C18 3.68629 15.3137 1 12 1C8.68629 1 6 3.68629 6 7V10ZM8 10H16V7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7V10ZM17 12H19C19.5523 12 20 12.4477 20 13V20C20 20.5523 19.5523 21 19 21H5C4.44772 21 4 20.5523 4 20V13C4 12.4477 4.44772 12 5 12H7H17Z"/>
+                                    </svg>                                                                                
+                                </div>
+                                <label for="password">Пароль:</label>
+                                <input type="password" id="password" name="password" required>
+                            </div>
+                            <div class="section-profile-again-password">
+                                <div class="svg-icon-profile">
+                                    <svg>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6 10H5C3.34315 10 2 11.3431 2 13V20C2 21.6569 3.34315 23 5 23H19C20.6569 23 22 21.6569 22 20V13C22 11.3431 20.6569 10 19 10H18V7C18 3.68629 15.3137 1 12 1C8.68629 1 6 3.68629 6 7V10ZM8 10H16V7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7V10ZM17 12H19C19.5523 12 20 12.4477 20 13V20C20 20.5523 19.5523 21 19 21H5C4.44772 21 4 20.5523 4 20V13C4 12.4477 4.44772 12 5 12H7H17Z"/>
+                                    </svg>                                            
+                                </div>
+                                <label for="confirm_password">Изменить пароль:</label>
+                                <input type="password" id="confirm-password" name="confirm_password" required>
+                            </div>
+                        </div>
+                        <div class="input-group input-change">
+                            <div class="section-profile-button">
+                                <button type="submit">Изменить</button>
+                            </div>
+                        </div>
+                    </form>
+                </div> 
+                <div class="section-profile-connect">
+                    <div class="section-profile-connect-header">Connected Accounts</div>
+                    <div class="section-profile-connect-row">
+                        <div class="section-profile-connect-facebook section-profile-connect-social">
+                            <a class="section-profile-connect-facebook-name" href="#">
+                                <img src="./img/profile/faccebook.png" alt="Facebook">
+                                <p>Suzan Miller</p>
+                            </a>
+                            <button class="section-profile-connect-facebook-btn">Disconnect</button>
+                        </div>
+                        <div class="section-profile-connect-google section-profile-connect-social">
+                            <a class="section-profile-connect-google-name" href="#">
+                                <img src="./img/profile/google.png" alt="Google">
+                                <p>Suzan@gmail.com</p>
+                            </a>
+                            <button class="section-profile-connect-google-btn">Disconnect</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-profile-subscribe">
+                    <div class="section-profile-subscribe-header">Newsletter</div>
+                    <div class="section-profile-subscribe-btn">
+                        <p>В данный момент вы подписаны на нашу рассылку новостей</p>
+                        <button class="white-btn">Отписаться</button>
+                    </div>
+                </div>
+                <div class="section-profile-out">
+                    <div class="section-profile-sign-out">
+                        <button id="sign-out-btn" class="section-profile-svg">
+                            <svg fill="none">
+                                <path d="M7 19H3C2.46957 19 1.96086 18.7893 1.58579 18.4142C1.21071 18.0391 1 17.5304 1 17V3C1 2.46957 1.21071 1.96086 1.58579 1.58579C1.96086 1.21071 2.46957 1 3 1H7" stroke="#505050" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>  
+                            <svg class="section-profile-svg-arrow">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289Z"/>
+                            </svg>
+                            <p>Выход из профиля</p>
+                        </button>
+                        </button>
+                        <button class="section-profile-delete" href="#">
+                            Delete Account
+                        </button>
+                    </div>
+                </div>             
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-row">
+            <div class="footer-logo-menu">
+                <div class="footer-logo">
+                    <div class="footer-logo-img">
+                        <img class="footer-logo-logo" src="./img/footer/logo.svg" alt="Логотип">
+                    </div>
+                    <div class="footer-logo-text">
+                        <p>"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment</p>
+                    </div>
+                </div>
+                <div class="footer-menu">
+                    <ul class="footer-menu-one">
+                        <li>
+                            <span class="footer-menu-toggle">Рецепты<span class="arrow"></span></span>
+                            <ul class="footer-menu-content">
+						        <li><a href="#">По типу блюд</a></li>
+                                <li><a href="#">По кухням мира</a></li>
+                                <li><a href="#">По диетам</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="footer-menu-two">
+                        <li>
+                            <span class="footer-menu-toggle">Мультимедия<span class="arrow"></span></span>
+                            <ul class="footer-menu-content">
+                                <li><a href="#">Видеорецепты</a></li>
+                                <li><a href="#">Новости кулинарии</a></li>
+                                <li><a href="#">Техники и лайфхаки</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="footer-menu-three">
+                        <li>
+                            <span class="footer-menu-toggle">Магазин<span class="arrow"></span></span>
+                            <ul class="footer-menu-content">
+                                <li><a href="#">Ингредиенты</a></li>
+                                <li><a href="#">Книги</a></li>
+                                <li><a href="#">Сувениры</a></li>
+                                <li><a href="#">Инструменты и приборы</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>                      
+            </div>
+            <div class="footer-coperative-social">
+                <div class="footer-coperative">
+                    <p>© 2020 Tastebite - All rights reserved</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#">
+                        <svg class="svg-icon">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 7.50016V5.8335C7.5 3.07207 9.73858 0.833496 12.5 0.833496H15C15.4602 0.833496 15.8333 1.20659 15.8333 1.66683V5.00016C15.8333 5.4604 15.4602 5.8335 15 5.8335H12.5V7.50016H15C15.5421 7.50016 15.9399 8.00965 15.8085 8.53561L14.9751 11.8689C14.8824 12.2399 14.5491 12.5002 14.1667 12.5002H12.5V18.3335C12.5 18.7937 12.1269 19.1668 11.6667 19.1668H8.33333C7.8731 19.1668 7.5 18.7937 7.5 18.3335V12.5002H5.83333C5.3731 12.5002 5 12.1271 5 11.6668V8.3335C5 7.87326 5.3731 7.50016 5.83333 7.50016H7.5ZM14.1667 2.50016H12.5C10.6591 2.50016 9.16667 3.99255 9.16667 5.8335V8.3335C9.16667 8.79373 8.79357 9.16683 8.33333 9.16683H6.66667V10.8335H8.33333C8.79357 10.8335 9.16667 11.2066 9.16667 11.6668V17.5002H10.8333V11.6668C10.8333 11.2066 11.2064 10.8335 11.6667 10.8335H13.516L13.9327 9.16683H11.6667C11.2064 9.16683 10.8333 8.79373 10.8333 8.3335V5.8335C10.8333 4.91302 11.5795 4.16683 12.5 4.16683H14.1667V2.50016Z"/>
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg class="svg-icon">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.16902 6.05932C9.23478 4.23482 10.385 2.61483 12.1043 1.95862C13.7146 1.34399 15.516 1.69246 16.7771 2.82099C17.4538 2.57223 18.0957 2.23557 18.686 1.81916C19.3152 1.37534 20.1582 1.94919 19.9761 2.69731C19.6906 3.86943 19.1184 4.94979 18.3138 5.84264C18.3262 5.97762 18.3326 6.11348 18.3331 6.25013C18.3331 16.133 8.79466 21.2099 0.42835 16.5619C-0.338885 16.1357 -0.0108189 14.9659 0.866173 15.0008C2.27167 15.0567 3.66301 14.7773 4.92818 14.1945C3.0914 13.0623 1.91527 11.5634 1.3383 9.7903C0.742567 7.95952 0.829522 6.03561 1.32651 4.20844C1.47685 3.65573 1.62965 3.23927 1.73821 2.99501C2.00127 2.40313 2.80944 2.32448 3.18168 2.85453C4.52492 4.76723 6.62091 5.9869 8.91093 6.2323L9.16615 6.25555L9.16902 6.05932ZM17.3628 4.38139L17.078 4.48155L16.79 4.57308C16.4761 4.66759 16.136 4.56933 15.9209 4.32201C15.1224 3.40381 13.8355 3.08181 12.6986 3.51574C11.5617 3.94966 10.8167 5.0472 10.833 6.27514V7.10848C10.833 7.5603 10.473 7.92982 10.0213 7.94153C7.30403 8.01199 4.708 6.94234 2.83643 5.03619C2.50723 6.4571 2.48316 7.92241 2.92316 9.2746C3.48735 11.0084 4.77889 12.416 7.00483 13.4053C7.60213 13.6708 7.67521 14.4892 7.1344 14.8563C6.20182 15.4893 5.17998 15.9644 4.10971 16.2699C10.509 17.9535 16.6664 13.7053 16.6664 6.2529C16.6658 6.07236 16.6484 5.89226 16.6145 5.71493C16.5623 5.44172 16.6498 5.16046 16.8479 4.96514C17.0335 4.78207 17.2055 4.58694 17.3628 4.38139Z"/>
+                         </svg>    
+                    </a>
+                    <a href="#">
+                        <svg class="svg-icon">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.1673 5.8335C19.1673 3.07207 16.9287 0.833496 14.1673 0.833496H5.83398C3.07256 0.833496 0.833984 3.07207 0.833984 5.8335V14.1668C0.833984 16.9283 3.07256 19.1668 5.83398 19.1668H14.1673C16.9287 19.1668 19.1673 16.9283 19.1673 14.1668V5.8335ZM5.83398 2.50016H14.1673C16.0083 2.50016 17.5007 3.99255 17.5007 5.8335V14.1668C17.5007 16.0078 16.0083 17.5002 14.1673 17.5002H5.83398C3.99304 17.5002 2.50065 16.0078 2.50065 14.1668V5.8335C2.50065 3.99255 3.99304 2.50016 5.83398 2.50016ZM14.1583 9.35284C13.8891 7.53724 12.4635 6.11165 10.6479 5.84242C8.8698 5.57875 7.12306 6.4851 6.3149 8.09073C5.50674 9.69635 5.81938 11.6392 7.09043 12.9103C8.36149 14.1813 10.3044 14.494 11.91 13.6858C13.5156 12.8777 14.422 11.1309 14.1583 9.35284ZM7.80363 8.84006C8.28853 7.87668 9.33657 7.33287 10.4034 7.49108C11.4928 7.65261 12.3481 8.50797 12.5097 9.59733C12.6679 10.6642 12.1241 11.7122 11.1607 12.1971C10.1973 12.682 9.03158 12.4944 8.26895 11.7318C7.50632 10.9692 7.31874 9.80343 7.80363 8.84006ZM15.1732 6.00609C14.8478 6.33152 14.3202 6.33152 13.9947 6.00609C13.6693 5.68065 13.6693 5.15301 13.9947 4.82757C14.3202 4.50214 14.8478 4.50214 15.1732 4.82757C15.4987 5.15301 15.4987 5.68065 15.1732 6.00609Z"/>
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg class="svg-icon">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.80243 2.50049L10.2863 2.5008L11.3957 2.51058C11.9672 2.51804 12.5583 2.52954 13.1438 2.546L13.7265 2.56414C15.4823 2.62438 16.7328 2.71943 17.394 2.88144C18.4797 3.18861 19.3182 4.05305 19.6039 5.20203C19.8774 6.71815 20.0101 8.25631 20.0005 9.78863C20.0059 11.3062 19.8732 12.821 19.5922 14.369C19.3182 15.4635 18.4797 16.328 17.3825 16.6383C16.8241 16.7877 15.7962 16.8861 14.3687 16.9528L13.7765 16.9778C13.1563 17.0015 12.5038 17.0189 11.8434 17.0308L10.5256 17.0476H9.47536L8.15759 17.0308C7.49714 17.0189 6.84465 17.0015 6.22445 16.9778L5.63227 16.9528C4.20466 16.8861 3.17634 16.7875 2.61388 16.6371C1.55108 16.3463 0.717483 15.5213 0.39705 14.3812C0.123574 12.8651 -0.00917459 11.327 0.000492182 9.79575C-0.00706305 8.2667 0.125677 6.74019 0.408753 5.18096C0.682723 4.08638 1.52123 3.22194 2.61851 2.91159C3.19792 2.75663 4.28481 2.65619 5.7958 2.58964L6.88706 2.54945C7.56163 2.52892 8.23815 2.51562 8.87593 2.50796L9.80243 2.50049ZM9.80336 4.16716L9.35845 4.16987C8.63098 4.17572 7.83357 4.189 7.03777 4.21236L5.92851 4.25224C4.51593 4.31381 3.48042 4.40631 3.06068 4.51849C2.54941 4.66314 2.15456 5.0702 2.03725 5.53119C1.78398 6.93566 1.66009 8.3604 1.66713 9.79686C1.65811 11.2347 1.782 12.6703 2.01862 14.005C2.16073 14.5041 2.55327 14.8926 3.04912 15.0283C3.48745 15.1455 4.56205 15.2403 6.02578 15.3019L6.9067 15.3336C7.32533 15.3464 7.75515 15.3566 8.18874 15.3644L9.4874 15.3809H10.5136L11.8122 15.3644C12.2458 15.3566 12.6756 15.3464 13.0943 15.3336L13.9752 15.3019L14.7123 15.2662C15.7978 15.2063 16.5883 15.1255 16.9403 15.0314C17.4516 14.8868 17.8464 14.4797 17.9637 14.0188C18.215 12.6249 18.3389 11.211 18.3338 9.7864C18.3429 8.34854 18.219 6.91294 17.9754 5.5523C17.8464 5.03687 17.4516 4.6298 16.9695 4.49284C16.5731 4.39605 15.6748 4.31667 14.4454 4.26061L13.6693 4.22983C12.9103 4.20379 12.1244 4.1869 11.3737 4.1771L10.282 4.16746L9.80336 4.16716ZM7.29215 7.06653C7.29215 6.42744 7.9819 6.02621 8.53744 6.34214L13.3291 9.06714C13.8909 9.38665 13.8909 10.1964 13.3291 10.5159L8.53744 13.2409C7.9819 13.5568 7.29215 13.1556 7.29215 12.5165V7.06653ZM8.95881 11.0839L11.2314 9.7915L8.95881 8.49908V11.0839Z"/>
+                        </svg>    
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/header.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+.section-description-video {
+    width: 100%; /* Ширина контейнера на 100% */
+    max-width: 100%; /* Максимальная ширина 100% */
+    overflow: hidden; /* Обрезает все, что выходит за пределы контейнера */
+    position: relative; /* Позиционирование для вложенного элемента */
+    padding-bottom: 56.25%; /* Соотношение сторон 16:9, можно изменить для другого соотношения */
+    height: 0;
+    border-radius: 10px;
+}
+.section-description-video video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ширина видео 100% */
+    height: 100%; /* Высота видео 100% */
+    object-fit: cover; /* Видео масштабируется, сохраняя соотношение сторон и обрезая, если нужно */
+}
+.section-description-video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease;
+}
+.section-description-video-overlay.hidden {
+    opacity: 0;
+}
+.play-button{
+    background-color: initial;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

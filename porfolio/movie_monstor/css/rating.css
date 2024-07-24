@@ -1,0 +1,14 @@
+.left-rating-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    font-weight: 700;
+}
+.rating-card-img {
+    border: 5px solid silver;
+    height: 270px;
+}
+.rating-card-img > img{
+    height: 270px;
+    width: auto;
+}

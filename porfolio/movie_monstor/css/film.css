@@ -1,0 +1,52 @@
+/* Main left*/
+.left > .left-film-card-show + .left-film-card-show{
+    margin-top: 20px;
+}
+
+.left-film-card-show {
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.film-card-header {
+    font-size: 30px;
+}
+.film-card-content {
+    display: flex;
+    column-gap: 20px;
+}
+.film-card-img{
+    border: 5px solid silver;
+   
+}
+.film-card-img {
+    border: 5px solid silver;
+    flex-shrink: 0; /* Запрещаем уменьшение размера */
+}
+
+  .film-card-img > img {
+    height: 270px;
+    width: auto;
+    display: block;
+}
+.film-card-btn {
+    align-self: flex-end;
+    padding: 20px;
+    background-color: rgb(81, 12, 146);
+    border-radius: 10px;
+    color: #fff;
+    transition: all 0.2s ease-in;
+}
+.film-card-btn:visited{
+    color: #fff;
+}
+
+.film-card-btn:hover{
+    color: #d89a14;
+    transform: scale(1.03);
+}
+
+

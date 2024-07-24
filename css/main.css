@@ -1,0 +1,26 @@
+@import url(./font/Old_Standard_TT/Old_Standard_TT.css);
+@import url(./header.css);
+@import url(./porfolio.css);
+@import url(./footer.css);
+
+
+html {
+    scroll-behavior: smooth;
+}
+body{
+   background:
+    radial-gradient(circle at top left, #ffffff, transparent 25%),
+    radial-gradient(circle at top right, #ffffff, transparent 25%),
+    radial-gradient(circle at bottom left, #ffffff, transparent 25%),
+    radial-gradient(circle at bottom right, #ffffff, transparent 25%),
+    linear-gradient(to bottom, #f0f0f0, #a0a0a0);
+    font-family: 'Old Standard TT', sans-serif;
+}
+.body-dark{
+    background:
+    radial-gradient(circle at top left, #2e2e2e, transparent 25%),
+     radial-gradient(circle at top right, #2e2e2e, transparent 25%),
+     radial-gradient(circle at bottom left, #2e2e2e, transparent 25%),
+     radial-gradient(circle at bottom right, #2e2e2e, transparent 25%),
+     linear-gradient(to bottom, #1a1a1a, #000000);
+ }

@@ -1,0 +1,31 @@
+.contacts {
+    width: 100%;
+}
+.contacts-header {
+    font-size: 45px;
+}
+.contacts-text {
+    padding-top: 20px;
+    font-size: 20px;
+    color: #504d4d;
+}
+.contacts-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    padding-top: 30px;
+}
+.contacts-form > input{
+    border: 1px solid rgb(81, 12, 146);
+}
+.contacts-form > textarea{
+    border: 1px solid rgb(81, 12, 146);
+    height: 300px;
+}
+.contacts-form > input:last-child{
+    margin-left: 0px;
+    align-self: flex-start;
+    padding: 20px;
+    background-color: rgb(81, 12, 146);
+    color: #fff;
+}

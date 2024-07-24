@@ -1,0 +1,113 @@
+.section-profile-name{
+    max-width: 730px;
+}
+.input-group {
+    display: flex;
+    column-gap: 30px;
+}
+.input-group:not(:last-child){
+    padding-top: 40px;
+}
+.input-group + .input-group{
+    padding-top: 70px;
+}
+.section-profile-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-profile-name label,
+.section-profile-email label,
+.section-profile-password label,
+.section-profile-again-password label {
+    display: block;
+    margin-bottom: 10px;
+}
+.section-profile-fallname,
+.section-profile-email,
+.section-profile-password,
+.section-profile-again-password{
+    max-width: 350px;
+    width: 100%;
+}
+.section-profile-name input,
+.section-profile-email input,
+.section-profile-password input,
+.section-profile-again-password input {
+    width: 100%;
+    padding: 5px 5px 5px 30px;
+    border: none;
+    border-bottom: 1px solid #ccc; /* добавляем только нижнюю границу */
+    border-radius: 0; /* убираем скругление углов */
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    background-color: inherit;
+}
+.section-profile-name input:focus,
+.section-profile-email input:focus,
+.section-profile-password input:focus,
+.section-profile-again-password input:focus {
+    border-bottom: 1px solid #FF642F;
+}
+
+.section-profile-form svg {
+    width: 24px;
+    height: 24px;
+    fill: #505050;
+}
+.svg-icon-profile {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(-50%);
+}
+
+.section-profile-fallname {
+    position: relative;
+}
+.section-profile-email {
+    position: relative;
+}
+.section-profile-password,
+.section-profile-again-password{
+    position: relative;
+}
+
+.section-profile-name input:focus,
+.section-profile-email input:focus,
+.section-profile-password input:focus,
+.section-profile-again-password input:focus {
+    outline: none; /* убираем фокусовую обводку */
+}
+
+.input-change{
+    display: flex;
+    justify-content: flex-end; /* Расположение элементов в конце контейнера */
+    padding-top: 8px;
+}
+.section-profile-button button {
+    cursor: pointer;
+    background-color: inherit;
+    color: #FF642F;
+}
+
+
+@media (max-width: 500px) {
+    .input-group{
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .input-group:not(:first-child){
+        padding-top: 20px;
+    }
+    .input-change{
+        text-align: center;
+        padding-top: 20px;
+    }
+    .input-group:not(:last-child){
+        padding-top: 20px;
+    }
+    #register-form{
+        padding-bottom: 40px;
+    }
+}

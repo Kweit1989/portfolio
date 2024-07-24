@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Портфолио">
+    <meta name="keywords" content="HTML, CSS, JS, SASS, Gulp, Figma">
+    <link rel="icon" href="./img/favicon_icon/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Моё портфолио</title>
+</head>
+<body>
+    <header>
+        <div class="header__content">
+            <div class="header__img">
+                <picture class="header__img-img">
+                    <source srcset="./img/header/photo@2x.jpg" media="(min-width: 800px)">
+                    <source srcset="./img/header/photo.jpg" media="(max-width: 799px)">
+                    <img src="./img/header/photo@2x.jpg" alt="Ноутбук">
+                </picture>
+            </div>
+            <div class="header__text">
+                <h1 class="header__title">Ильдар Рамилевич Калимуллин</h1>
+                <p class="header__description">Верстка сайтов с помощью:</p>
+                <div class="header__row">
+                    <div class="header__leng header__html">HTML</div>
+                    <div class="header__leng header__css">CSS</div>
+                    <div class="header__leng header__sass">SCSS </div>
+                    <div class="header__leng header__js">JS</div>
+                    <div class="header__leng header__gulp"> Gulp</div>
+                    <div class="header__leng header__figma">Figma</div>
+                </div>
+                <div class="popup" id="popup"></div>
+                <div class="header__links">
+                    <a class="header__links-black" href="#portfolio">Портфолио</a>
+                    <a class="header__links-white" href="#contacts">Контакты</a>
+                </div>
+            </div>
+        </div>
+        <button class="header__toggle">
+            <div class="header__toggle-btn"></div>
+        </button>
+    </header>
+
+
+    <main>
+        <section class="portfolio">
+            <div class="portfolio__link-container">
+                <a class="portfolio__link" id="portfolio"></a>
+            </div>
+            <h2 class="portfolio__title">Портфолио</h2>
+            <div class="portfolio__column">
+                <a href="./porfolio/legant/index.html" class="portfolio__cart">
+                    <img class="portfolio__cart-img" src="./img/portfolio/work_one.png" alt="Скрин сайта">
+                    <h3 class="portfolio__cart-title">Сайт по продаже наушников</h3>
+                </a>
+                <a href="./porfolio/web_test/index.html" class="portfolio__cart">
+                    <img class="portfolio__cart-img" src="./img/portfolio/work_two.png" alt="Скрин сайта">
+                    <h3 class="portfolio__cart-title">Тестовое задание от Yandex</h3>
+                </a>
+                <a href="./porfolio/recipe/index.html" class="portfolio__cart">
+                    <img class="portfolio__cart-img" src="./img/portfolio/work_three.png" alt="Скрин сайта">
+                    <h3 class="portfolio__cart-title">Сайт рецептов</h3>
+                </a>
+                <a href="./porfolio/movie_monstor/index.html" class="portfolio__cart">
+                    <img class="portfolio__cart-img" src="./img/portfolio/work_four.png" alt="Скрин сайта">
+                    <h3 class="portfolio__cart-title">Сайт просмотра фильмов</h3>
+                </a>
+            </div>
+        </section>
+    </main>
+   
+
+    <footer>
+        <div class="footer__contacts">
+            <a id="contacts"></a>
+            <h3 class="footer__contacts-title">Контакты</h3>
+            <div class="footer__contacts-row">
+                <a href="https://t.me/illddaarr" class="footer__contact telegram"><img src="./img/footer/telegram.svg" alt="Icon Telegram">Связаться в Телеграмм</a>
+                <a href="https://wa.me/+79603604732" class="footer__contact whatsapp"><img src="./img/footer/whatsapp.svg" alt="Icon Whats App">Связаться в Whats App</a>
+                <a href="https://vk.com/id334202046" class="footer__contact vk"><img src="./img/footer/vk.svg" alt="Icon VK">Связаться в Контакте</a>
+            </div>
+        </div>
+        <div class="footer__copiryte">
+            <p>© Ильдар Рамилевич Калимуллин</p>
+            <p>HTML верстальщик, создание сайтов Ульяновск</p>
+        </div>
+    </footer>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>

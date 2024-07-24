@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Тип кодеровки -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Для адаптивной верстки -->
+    <meta name="description" content="About customers"> <!-- Описание сайта в поиской системе -->
+    <meta name="keywords" content="customers, costs"> <!-- Ключевые слова для поисковой системы -->
+    <link rel="icon" href="./img/shortcut_icon.png" type="image/x-icon"> <!-- Иконка в шапке браузера -->
+    <link rel="shortcut icon" href="./img/shortcut_icon.png" type="image/x-icon"> <!-- Иконка в шапке браузера, старая разметка -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/contacts.css">
+    <title>Контакты</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="container">
+                <div class="logo">
+                    <h1 class="logo-header"><a href="#">КиноМонстр</a></h1>
+                    <p class="logo-text">Кино - наша страсть!</p>
+                </div>
+                <nav class="menu">
+                    <ul class="menu-ul">
+                        <li><a href="./index.html">Главная</a></li>
+                        <li><a href="./films.html">Фильмы</a></li>
+                        <li><a href="#">Сериалы</a></li>
+                        <li><a href="#">Рейтинг</a></li>
+                        <li class="menu-ul-selected"><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="left-and-right">
+                    <section class="left">
+                       <div class="contacts">
+                            <h2 class="contacts-header">Контакты</h2>
+                            <p class="contacts-text">Отправьте ваш отзыв о портале КиноМонстр</p>
+                            <form method="post" action="#" class="contacts-form">
+                                <input type="text" name="contacts-name" id="contacts-name-input" placeholder="Введите ваше имя">
+                                <input type="email" name="contacts-email" id="contacts-email-input" placeholder="Введите ваш email">
+                                <textarea name="contacts-reviews" id="contacts-reviews-textarea" placeholder="Напишите ваш отзыв"></textarea>
+                                <input type="submit" name="contacts-send" id="contacts-send-imput" value="Отправить">
+                            </form>
+                       </div>
+                    </section>
+                    <section class="right">
+                        <div class="right-wrapper">
+                            <h4 class="right-header">Поиск</h4>
+                            <form action="#" method="post" id="search-form">
+                                <input type="search" name="search-field" id="search-input" placeholder="Введите название">
+                                <input type="submit" name="btn-seacrh" id="search-input" value="Найти">
+                            </form>
+                        </div>
+                        <div class="right-wrapper">
+                            <h4 class="right-header">Вход</h4>
+                            <form action="#" method="post" id="login-form">
+                                <input type="text" name="text-name" id="name-input" placeholder="Введите имя">
+                                <input type="password" name="password" id="password-input" placeholder="Введите пароль">
+                                <input type="submit" name="btn-entrance" id="entrance-input" value="Вход">
+                                <div class="right-logo-link">
+                                    <a href="#">Забыли пароль?</a>
+                                    <a href="#">Регистрация</a>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="right-wrapper news">
+                            <h4 class="right-header">Новости</h4>
+                            <span>31.03.2022</span>
+                            <p>Мы запустили расширенный поиск</p>
+                            <a href="#">Читать</a>
+                        </div>
+                        <div class="right-wrapper">
+                            <h4 class="right-header">Рейтинг фильмов</h4>
+                            <ul class="right-rating">
+                                <li class="rating-li"><a href="#">Дрожь земли</a><span class="rating">8.9</span></li>
+                                <li class="rating-li"><a href="#">Расплата</a><span class="rating">8.3</span></li>
+                                <li class="rating-li"><a href="#">Первый мужчина</a><span class="rating">7.9</span></li>
+                                <li class="rating-li"><a href="#">Зубастики</a><span class="rating">8.7</span></li>
+                            </ul>
+                        </div>
+                    </section>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <nav class="menu footer-menu">
+                <ul class="menu-ul">
+                    <li class="menu-ul-selected"><a href="#">Главная</a></li>
+                    <li><a href="#">Фильмы</a></li>
+                    <li><a href="#">Сериалы</a></li>
+                    <li><a href="#">Рейтинг</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            <p class="footer-copyright">film-present.com 2021</p>
+        </div>
+    </footer>
+</body>
+</html>
