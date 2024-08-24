@@ -1,0 +1,52 @@
+.section-profile-out {
+    padding: 50px 0px 120px 0px;
+}
+
+.section-profile-sign-out {
+    display: flex;
+    justify-content: space-between;
+}
+.section-profile-sign-out button {
+    background-color: inherit;
+}
+
+.section-profile-svg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-profile-svg svg:first-child {
+    width: 8px;
+    height: 20px;
+}
+
+.section-profile-svg p {
+    padding-left: 10px;
+}
+
+.section-profile-svg-arrow {
+    fill: #505050;
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease; /* Добавить здесь */
+}
+
+.section-profile-svg:hover .section-profile-svg-arrow {
+    margin-left: 10px;
+    fill: #FF642F;
+}
+.section-profile-svg p {
+    transition: all 0.3s ease;
+}
+.section-profile-svg:hover p{
+    font-size: 16px;
+    color: #FF642F;
+}
+.section-profile-delete{
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.section-profile-delete:hover {
+    color: #FF642F;
+}

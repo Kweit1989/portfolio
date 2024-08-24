@@ -1,0 +1,179 @@
+@import url(./font/Inter/font_inter.css);
+@import url(./font/Karla/font_karla.css);
+@import url(./font/Play/font_play.css);
+@import url(./font/Roboto/font_roboto.css);
+@import url(./font/Space_Grotesk/font_roboto.css);
+@import url(./header.css);
+@import url(./benefits.css);
+@import url(./crm.css);
+@import url(./submit.css);
+@import url(./useful-crm.css);
+@import url(./business-crm.css);
+@import url(./price-crm.css);
+@import url(./application.css);
+@import url(./partners-crm.css);
+@import url(./write-us.css);
+@import url(./footer.css);
+
+html, body{
+    overflow-x: hidden;
+}
+
+body{
+    font-family: 'Play', sans-serif;
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+.container {
+    max-width: 1420px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: -0.020em;
+    padding: 15px 20px;
+    border: 1px solid transparent; /* Задаем ширину рамки */
+    box-shadow: 0 0 3px 0 rgba(162, 45, 247, 0.1), 
+                0 0 7px 0 rgba(162, 45, 247, 0.1), 
+                0 0 13px 0 rgba(162, 45, 247, 0.1), 
+                0 0 25px 0 rgba(162, 45, 247, 0.1), 
+                0 0 47px 0 rgba(162, 45, 247, 0.1), 
+                0 0 19px 9px rgba(162, 45, 247, 0.1);
+    background-image: linear-gradient(#1E0044, #1E0044), /* Цвет фона кнопки */
+                      linear-gradient(to right, #383FEC, #23FFFF); /* Градиент для границы */
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    cursor: pointer;
+    color: #E9DEFF;
+    transition: 0.3s all ease-in
+}
+.button:hover{
+    transform: scale(0.95);
+    box-shadow: none
+}
+.title{
+    font-size: 45px;
+    font-weight: 700;
+    padding-bottom: 45px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    line-height: 89px;
+}
+.pudding-bottom{
+    padding-bottom: 120px;
+}
+.title-sub{
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+    padding-bottom: 48px;
+    background: linear-gradient(
+      266.77deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(215, 149, 255, 1) 52.4%,
+      rgba(123, 194, 254, 1) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+.border-wrapper{
+    border-radius: 10px; /* Применяем радиус */
+    border: 5px solid transparent; /* Задаем ширину рамки */
+    overflow: hidden;
+}
+
+
+/* Модальное окно  "Задать вопрос"*/
+/* Overlay для двух модальных окн */
+.modal-overlay {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+/* Содержимое модального окна */
+.modal-question__content {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 40px;
+    width: 564px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+}
+
+.modal-question__content > *:not(:last-child):not(:first-child) {
+    padding: 20px;
+    background-color: #A19DD2;
+    border: 1px solid #7F73A4;
+    border-radius: 5px;
+}
+
+.modal-question__content > *::placeholder {
+    color: #383838;
+}
+
+.modal-question__close {
+    cursor: pointer;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    align-self: flex-end;
+    transition: 0.3s transform ease-in;
+}
+
+.none {
+    display: none;
+}
+
+
+
+@media (max-width: 850px){
+    .modal-question__content {
+        row-gap: 15px;
+        padding: 30px;
+        width: 280px;
+    }
+    .modal-question__content > textarea{
+        height: 100px;
+    }
+}
+
+@media (max-width: 600px){
+    body{
+        background-image: url(../img/bg_mobile.jpg);
+    }
+    .title{
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .title-sub{
+        font-size: 17px;
+        line-height: 20px;
+    }
+    .pudding-bottom{
+        padding-bottom: 75px;
+    }
+}

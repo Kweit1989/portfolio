@@ -1,0 +1,42 @@
+.section-profile-connect {
+    padding: 120px 0px;
+    max-width: 730px;
+}
+.section-profile-connect-header {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0.2px;
+    padding-bottom: 48px;
+}
+.section-profile-connect-social{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #E8E8E8;
+}
+.section-profile-connect-social button{
+    background-color: inherit;
+    font-size: 16px;
+    color:  #505050;;
+    cursor: pointer;
+}
+.section-profile-connect-social p{
+    padding: 10px 0px 20px 0px;
+    font-size: 14px;
+}
+.section-profile-connect-google {
+    padding-top: 28px;  
+}
+
+@media (max-width: 800px) {
+    .section-profile-connect {
+        padding: 60px 0px;
+    }
+}
+
+@media (max-width: 700px) {
+    .section-profile-connect {
+        padding: 50px 0px;
+    }
+}
