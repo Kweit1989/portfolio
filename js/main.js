@@ -141,7 +141,7 @@ function handleFormSubmit(event) {
         }
     }).then(response => {
         if (response.ok) {
-            window.location.href = https://kweit1989.github.io/portfolio/form-ok.html'; // Редирект после успешной отправки
+            window.location.href = 'https://kweit1989.github.io/portfolio/form-ok.html'; // Редирект после успешной отправки
         } else {
             alert('Произошла ошибка пожайлуста попробуйте еще раз');
         }
