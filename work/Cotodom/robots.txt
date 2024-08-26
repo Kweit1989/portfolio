@@ -1,3 +1,0 @@
-User-agent: *
-Disallow: /index.html
-Sitemap: http://www.koshara73.ru/sitemap.xml
