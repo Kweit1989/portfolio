@@ -1,0 +1,234 @@
+/* Модальное окно "Стоймость подключения" */
+.modal-price__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 17px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 453px;
+    padding: 44px 39px;
+    text-align: center;
+    border-radius: 32px;
+    border: 2px solid transparent; /* Задаем ширину рамки */
+    background-image: linear-gradient(#B77EFF, #B77EFF), /* Цвет фона кнопки */
+    linear-gradient(to right, #383FEC, #23FFFF); /* Градиент для границы */
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+.modal-price__content > input{
+    padding: 17px 19px;
+    border: 1px solid transparent; /* Задаем ширину рамки */
+    border-radius: 10px;
+    background-image: linear-gradient(#fff, #fff), /* Цвет фона кнопки */
+    linear-gradient(to right, #383FEC, #23FFFF); /* Градиент для границы */
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+.modal-price__close {
+    cursor: pointer;
+    font-size: 28px;
+    font-weight: bold;
+    align-self: flex-end;
+}
+.modal-price__title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 47px;
+}
+.modal-price__text {
+    max-width: 300px;
+    font-size: 15px;
+    line-height: 20px;
+    align-self: center;
+}
+.modal-price__btn{
+    margin: 0 auto;
+}
+.modal-price__consent  {
+    font-size: 14px;
+    line-height: 15px;
+}
+.modal-price__consent > input {
+    margin-right: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent;
+    border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Можно кастомизировать границу */
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    position: relative; /* Добавляем позиционирование для псевдоэлемента */
+}
+
+.modal-price__consent > input:checked {
+    background-color: transparent;
+}
+
+.modal-price__consent > input:checked::after {
+    content: '\2713'; /* Символ галочки */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центрирование галочки */
+    color: #00f; /* Цвет галочки */
+    font-size: 14px; /* Уменьшаем размер галочки */
+    line-height: 14px;
+}
+
+.modal-price__consent > a {
+    text-decoration: underline;
+}
+
+/* Оконо об успешной заявки */
+.modal-price__ok__row {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 453px;
+    text-align: center;
+    padding: 24px 60px;
+    border-radius: 32px;
+    border: 2px solid transparent; /* Задаем ширину рамки */
+    background-image: linear-gradient(#B77EFF, #B77EFF), /* Цвет фона кнопки */
+    linear-gradient(to right, #383FEC, #23FFFF); /* Градиент для границы */
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+.modal-price__close__ok {
+    position: absolute;
+    cursor: pointer;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+}
+.modal-price__ok__title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -0.035em;
+}
+
+.price-crm {
+    padding-bottom: 120px;
+}
+.price-crm__title {
+    padding-bottom: 75px;
+}
+.price-crm__row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+.price-crm__card {
+    display: flex;
+    flex-direction: column;
+    width: 690px;
+    height: 390px;
+    background-image: url(../img/price-crm/bg.jpg);
+    padding: 35px;
+    border: 1px solid #CF94FF;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 0 #d795ff, 0 0 4px 0 #d795ff;
+}
+.price-crm__card:nth-last-child(1):nth-child(odd) {
+    margin-left: auto;
+    margin-right: auto;
+}
+.price-crm__card__title {
+    max-height: 106px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 50px;
+    background-color: rgba(157, 0, 255, 0.150);
+    border-radius: 20px;
+}
+.price-crm__card__title > h5{
+    font-size: 24px;
+}
+.price-crm__card__title > span {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 66px;
+    color: #CF95FF;
+    white-space: nowrap;
+}
+.price-crm__card__text > p{
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    line-height: 30px;
+    column-gap: 10px;
+    padding-top: 20px;
+}
+
+.price-crm__card > .price-crm__card__btn {
+    font-size: 24px;
+    margin-top: auto;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 22.5px;
+    width: 292px;
+    column-gap: 10px;
+}
+
+
+
+@media(max-width: 1400px){
+    .price-crm__row {
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 600px){
+    .price-crm__card {
+        max-height: 247px;
+        padding: 18px 12px;
+    }
+    
+    .price-crm__card__title {
+        max-height: 50px;
+        padding: 10px;
+        column-gap: 5px;
+    }
+    .price-crm__card__title > h5{
+        font-size: 12px;
+    }
+    .price-crm__card__title > span {
+        font-size: 20px;
+    }
+    .price-crm__card__text > p{
+        font-size: 14px;
+        column-gap: 5px;
+        padding-top: 10px;
+    }
+    .price-crm__card > .price-crm__card__btn {
+        font-size: 16px;
+        margin-top: 15px;
+        padding: 20px;
+        width: 206px;
+        column-gap: 10px;
+        margin-top: auto;
+    }
+    .price-crm__card > .price-crm__card__btn > img {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media (max-width: 400px){
+    .price-crm__card {
+        max-width: 340px;
+    }
+}
