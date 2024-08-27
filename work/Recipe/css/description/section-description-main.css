@@ -1,0 +1,174 @@
+.section-description-main {
+    padding-top: 80px;
+}
+.section-description-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+.section-description-header h2{
+    font-weight: 700;
+    font-size: 60px;
+    max-width: 950px;
+    color: #434343;
+}
+.section-description-bookmarks{
+    padding-top: 30px;
+}
+.section-description-bookmarks svg{
+    margin-left: 32px;
+    width: 32px;
+    height: 32px;
+    fill: #7F7F7F;
+    transition: all 0.3s ease;
+}
+.section-description-bookmarks svg:hover{
+    fill: #000;
+    transform: scale(1.15);
+}
+.section-description-social {
+    padding: 24px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 288px;
+    font-size: 12px;
+}
+.section-description-social svg {
+    width: 16px;
+    height: 16px;
+    fill: #7F7F7F;
+    transition: all 0.3s ease;
+}
+.section-description-social-logo {
+    display: flex;
+    align-items: center;
+}
+.section-description-social-img {
+    transition: transform 0.3s ease;
+}
+.section-description-social-logo:hover .section-description-social-img{
+    transform: scale(1.15);
+}
+.section-description-social-name {
+    padding-left: 6px;
+}
+.section-description-social-calendar {
+    display: flex;
+    align-items: center;
+}
+.section-description-social-calendar:hover svg{
+    transform: scale(1.15);
+    fill: #000;
+}
+.section-description-social-calendar-day{
+    margin-left: 6px;
+}
+.section-description-social-message {
+    display: flex;
+    align-items: center;
+}
+.section-description-social-message:hover svg{
+    transform: scale(1.15);
+    fill: #000;
+}
+.section-description-social-message-count{
+    padding-left: 6px;
+}
+.section-description-text {
+    padding: 24px 0px 40px 0px;
+    border-top: 1px solid #E8E8E8;
+}
+.section-description-text p {
+    max-width: 825px;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.2px;
+}
+.section-description-video {
+    width: 100%; /* Ширина контейнера на 100% */
+    max-width: 100%; /* Максимальная ширина 100% */
+    overflow: hidden; /* Обрезает все, что выходит за пределы контейнера */
+    position: relative; /* Позиционирование для вложенного элемента */
+    padding-bottom: 56.25%; /* Соотношение сторон 16:9, можно изменить для другого соотношения */
+    height: 0;
+    border-radius: 10px;
+}
+.section-description-video video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ширина видео 100% */
+    height: 100%; /* Высота видео 100% */
+    object-fit: cover; /* Видео масштабируется, сохраняя соотношение сторон и обрезая, если нужно */
+}
+.section-description-video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease;
+}
+.section-description-video-overlay.hidden {
+    opacity: 0;
+}
+.play-button{
+    background-color: initial;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 1150px){
+    .section-description-main {
+        padding-top: 60px;
+    }
+    .section-description-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .section-description-bookmarks{
+        display: flex;
+    }
+}
+
+@media (max-width: 1000px){
+    .section-description-header h2{
+        font-weight: 600;
+        font-size: 50px;
+        max-width: 850px;
+    }
+}
+
+@media (max-width: 800px){
+    .section-description-main {
+        padding-top: 40px;
+    }
+    .section-description-header h2{
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 600px){
+    .section-description-header {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .section-description-header h2{
+        font-size: 30px;
+    }
+    .section-description-bookmarks a:first-child svg{
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 500px){
+    .section-description-header h2{
+        font-size: 25px;
+    }
+}
