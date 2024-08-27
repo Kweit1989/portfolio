@@ -87,7 +87,11 @@
     margin-top: 40px;
     cursor: pointer;
 }
-
+.connect_copyright-phone{
+    display: none;
+    text-align: center;
+    padding-top: 20px;
+}
 
 @media (max-width: 900px) {
     .connect__row{
@@ -102,6 +106,9 @@
     }
     .connect__all {
         padding-top: 10px;
+    }
+    .connect_copyright-phone{
+        display: block;
     }
 }
 
