@@ -9,12 +9,16 @@
 }
 .connect__phone > a {
     font-size: 30px;
-    color: #000!important;
+    color: #000;
+}
+.connect__phone-black{
+    color: #fff!important;
 }
 .connect__content > p + p {
     padding-top: 10px;
 }
-.connect__content > p > a{
+.connect__mail  > a,
+.connect__hh  > a {
     color: #D3E97A;
 }
 .connect__content > .connect__title {

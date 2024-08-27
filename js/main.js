@@ -54,6 +54,7 @@ const textareaBlack = document.querySelector('.modal-content > textarea')
 const closeBtn = document.querySelector('.modal-close > svg');
 const toggle = document.querySelector('.toggle');
 const body = document.body
+const connectPhone = document.querySelector('.connect__phone > a')
 const toggleCircle = document.querySelector('.toggle-circle');
 const formInputElements = document.querySelectorAll('.connect__form > input');
 const formMessage = document.querySelector('.connect__form-message');
@@ -66,6 +67,7 @@ toggle.addEventListener('click', function () {
     modalShadow.classList.toggle('modal-content-black');
     toggleCircle.classList.toggle('active');
     body.classList.toggle('body-black');
+    connectPhone.classList.toggle('connect__phone-black');
     formMessage.classList.toggle('message-black');
     navigationBar.classList.toggle('navigation-bar-black');
     toggle.classList.toggle('toggle-black');
