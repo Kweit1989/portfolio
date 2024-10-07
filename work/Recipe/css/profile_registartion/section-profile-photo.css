@@ -1,0 +1,82 @@
+.section-profile-photo {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+    padding: 80px 0px 20px 0px;
+}
+
+.section-profile-photo-img {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#profile-photo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Стили для модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    object-fit: cover;
+}
+
+.modal-image {
+    max-width: 100%;
+    height: auto;
+}
+.modal-buttons {
+    margin-top: 10px;
+}
+.modal-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.modal-button.cancel {
+    background-color: #f44336;
+}
+
+@media (max-width: 800px){
+    .section-profile-photo {
+        padding: 40px 0px 20px 0px;
+    }
+    .section-profile-photo-btn{
+        margin-left: 50px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+}
+
+@media (max-width: 700px){
+    .section-profile-photo-btn{
+        margin-left: 0px;
+    }
+}

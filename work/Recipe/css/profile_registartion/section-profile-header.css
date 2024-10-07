@@ -1,0 +1,26 @@
+
+.section-profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #979797;
+}
+.section-profile-header h5 {
+    font-weight: 700;
+    font-size: 36px;
+}
+
+@media (max-width: 800px){
+    .section-profile-header h5 {
+        font-weight: 600;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 400px){
+    .section-profile-header h5 {
+        font-weight: 600;
+        font-size: 25px;
+    }
+}

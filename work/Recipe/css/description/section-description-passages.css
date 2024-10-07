@@ -1,0 +1,70 @@
+.section-description-passages {
+    margin: 55px 0px 80px 0px;
+    padding: 70px 80px;
+    background-color: #F9F9F9;
+}
+.section-description-passages-login {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+   
+}
+.section-description-passages-name p + p{
+    padding-top: 2px;
+}
+.section-description-passages-name p:first-child{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 38px;
+}
+.section-description-passages-name p:last-child{
+    font-size: 16px;
+    line-height: 24px;
+}
+.section-description-passages-text {
+    padding: 25px 0px;
+    font-size: 20px;
+    line-height: 37px;
+    letter-spacing: 0.2px;
+}
+.section-description-passages-social svg{
+    width: 20px;
+    height: 20px;
+    fill: #7F7F7F;
+    transition: all 0.3s ease;
+}
+.section-description-passages-social svg:hover{
+    fill: #000;
+    transform: scale(1.15);
+}    
+.section-description-passages-social a + a {
+    margin-left: 32px;
+}
+
+
+@media (max-width: 800px){
+    .section-description-passages {
+        margin: 45px 0px 60px 0px;
+        padding: 50px 60px;
+    }
+}
+
+@media (max-width: 700px){
+    .section-description-passages {
+        margin: 35px 0px 50px 0px;
+        padding: 40px 50px;
+    }
+}
+
+@media (max-width: 600px){
+    .section-description-passages {
+        margin: 25px 0px 35px 0px;
+        padding: 30px 35px;
+    }
+}
+@media (max-width: 600px){
+    .section-description-passages {
+        margin: 20px 0px 25px 0px;
+        padding: 20px 25px;
+    }
+}

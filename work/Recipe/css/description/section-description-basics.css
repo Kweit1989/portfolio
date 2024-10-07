@@ -1,0 +1,98 @@
+.section-description-basics {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #E8E8E8;
+    flex-wrap: nowrap; /* Предотвращает перенос на новую строку */
+}
+
+.section-description-basics-content {
+    max-width: 520px;
+    flex: 1; /* Позволяет контенту занимать доступное пространство */
+}
+
+.section-description-basics-content p {
+    font-size: 20px;
+    letter-spacing: 0.2px;
+    line-height: 37px;
+}
+
+.section-description-basics-content p + p {
+    padding-top: 40px;
+}
+
+.section-description-basics-header {
+    font-weight: 700;
+    font-size: 45px;
+    padding-bottom: 24px;
+}
+
+.section-description-basics-img {
+    max-width: 540px;
+    max-height: 525px;
+    border-radius: 10px;
+    overflow: hidden;   
+    flex: 1; /* Позволяет изображению занимать доступное пространство */
+}
+
+.section-description-basics-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Изображение масштабируется, чтобы полностью заполнить контейнер */
+}
+
+@media (max-width: 1150px) {
+    .section-description-basics-content {
+        max-width: 100%; /* Делает контент растягивающимся на всю ширину */
+        flex: 1 1 100%; /* Позволяет контенту занимать всю ширину */
+        padding-right: 20px;
+    }
+
+    .section-description-basics-img {
+        max-width: 100%; /* Делает изображение растягивающимся на всю ширину */
+        max-height: auto; /* Сбрасывает фиксированную высоту */
+        flex: 1 1 100%; /* Позволяет изображению занимать всю ширину */
+    }
+
+    .section-description-basics-img img {
+        width: 100%;
+        height: auto; /* Позволяет изображению сохранять пропорции */
+    }
+}
+
+@media (max-width: 1080px){
+    .section-description-basics {
+        flex-wrap: wrap;
+    }
+    .section-description-basics-content {
+        padding-right: 0px;
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 800px){
+    .section-description-basics {
+        padding-bottom: 40px;
+    }
+    .section-description-basics-header {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 600px){
+    .section-description-basics {
+        padding-bottom: 25px;
+    }
+    .section-description-basics-header {
+        font-size: 30px;
+    }
+    .section-description-basics-content p + p {
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 500px){
+    .section-description-basics-header {
+        font-size: 25px;
+    }
+}

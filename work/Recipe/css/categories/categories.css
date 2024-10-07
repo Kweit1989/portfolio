@@ -1,0 +1,84 @@
+.categories {
+    padding-bottom: 120px;
+}
+.categories-description {
+    padding-bottom: 64px;
+}
+.categories-header{
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    
+}
+.categories-header h5{
+    font-weight: 700px;
+    font-size: 36px;
+    font-family: 'Playfair Display', sans-serif;
+    padding-bottom: 14px;
+    color: #434343;
+}
+.categories-header span {
+    font-weight: 400;
+    font-size: 16px;
+    color: #505050
+}
+.categories-text {
+    font-size: 18px;
+    letter-spacing: -0.2px;
+    line-height: 28px;
+    font-weight: 400;
+    max-width: 725px;
+    color: #505050
+}
+.categories-row {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 64px;
+    justify-content: space-around;
+}
+.categories-img img{
+    width: 100%;
+    padding-bottom: 104px;
+}
+.categories-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+.categories-cart.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.categories-cart-img {
+    width: 255px;
+    height: 255px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s ease; /* Плавный переход для трансформации */
+}
+.categories-cart-img:hover{
+    transform: scale(1.0625); /* Увеличение до 170px (160px * 1.0625 ≈ 170px) */
+}
+.categories-cart-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Изображение масштабируется, чтобы полностью заполнить круг */
+}
+.categories-cart-header {
+    padding-top: 12px;
+    color: #434343;
+}
+
+@media (max-width: 570px) {
+    .categories-cart-img {
+        width: 150px;
+        height: 150px;
+    }
+}
