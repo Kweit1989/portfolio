@@ -230,9 +230,6 @@ a.header__contact-form:hover.header__contact-form > span {
     .header{
         padding-top: 40px;
     }
-    a.header__contact-form {
-        padding: 10px;
-    }
 }
 
 @media (max-width: 500px){
