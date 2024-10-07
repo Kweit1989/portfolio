@@ -220,8 +220,7 @@ a.project-card__btn > span > img{
 }
 @media (max-width:1040px){
     .swiper-slide > .project-card{
-        height: auto;
-        max-width: 600px;
+        max-width: 540px;
         row-gap: 0px;
     }
 }
@@ -230,6 +229,7 @@ a.project-card__btn > span > img{
 @media (max-width: 650px) {  
     .swiper-slide > .project-card {
         max-width: 480px;
+        height: 700px;
     }
     .project-card__img {
         width: 100%;
