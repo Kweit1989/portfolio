@@ -181,6 +181,12 @@ svg.commercial-arrow-transform {
 .commercial-description { 
   padding: 30px;
 }
+.commercial-window {
+  max-height: 600px;
+}
+.commercial-description {
+  height: 601px;
+}
 }
 @media screen and (min-width: 1100px){
   .commercial-arrow {
