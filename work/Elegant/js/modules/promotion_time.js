@@ -1,7 +1,7 @@
 // const endDate = new Date();
 // endDate.setDate(endDate.getDate() + 3) // получаем +3 дня от текущей даты
 
-const endDate = new Date('Oct 17, 2024, 00:0:01');
+const endDate = new Date('Oct 17, 2025, 00:0:01');
 
 function updateTimer() {
     const now = new Date();

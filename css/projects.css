@@ -254,7 +254,7 @@ a.project-card__btn > span > img{
 
 @media (max-width: 500px) {
     .swiper-slide > .project-card {
-        max-width: 360px;
+        max-width: 340px;
         height: 650px;
     }
     .project-card__content {
