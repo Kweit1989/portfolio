@@ -6,6 +6,29 @@
   max-width: 100%;
   text-align: center;
 }
+.commercial-link-alpha {
+  position: relative;
+}
+.commercial-link-alpha::after,
+.commercial-link-alpha::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  height: 2px;
+  width: 0%;
+  background-color: #d3e97a;
+  transition: width 0.3s ease-in;
+}
+.commercial-link-alpha::after{
+  right: 0;
+}
+.commercial-link-alpha::before{
+  left: 0;
+}
+.commercial-link-alpha.active::after,
+.commercial-link-alpha.active::before {
+  width: 50%;
+}
 .commercial-swiper {
   margin-bottom: 20px;
 }
@@ -55,6 +78,7 @@
   position: absolute;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   z-index: 2;
   top: 0;
   left: 85%;
@@ -148,15 +172,24 @@
   border: 2px solid #d3e97a;
 }
 .commercial-arrow > svg {
-  margin: 0 auto;
+  margin: 0 7.5px;
   height: 15px;
-  transform: rotate(180deg);
+  transform: rotate(180deg) translateX(0px);
+  transition: transform 0.3s ease-in; /* Плавное изменение */
 }
+svg.active {
+  transform: rotate(180deg) translateX(-10px);
+  transition: transform 0.3s ease-in; /* Плавное изменение */
+} 
 svg.commercial-arrow-transform {
-  transform: rotate(-360deg);
+  transform: rotate(-360deg) translateX(0px);
+}
+svg.active.commercial-arrow-transform.active{
+  transform: translateX(10px);
 }
 .commercial-window > img {
   width: 100%;
+  border-radius: 15px;
 }
 
 @media screen and (min-width: 450px){

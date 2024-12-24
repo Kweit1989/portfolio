@@ -195,6 +195,17 @@ new Swiper(".swiper-container", {
 
 
 
+const link = document.querySelector('.commercial-link-alpha');
+
+// Функция для чередования ширины псевдоэлементов
+function toggleWidth() {
+  link.classList.toggle('active');  // Переключаем класс "active" каждые 1 секунду
+}
+
+// Запускаем изменение каждую секунду
+setInterval(toggleWidth, 1000);
+
+
 
 // Swiper commercial projects
 new Swiper(".commercial-swiper", {
@@ -256,3 +267,15 @@ const mixContainer = mixitup(".commercial-window-container", {
         enable: true, // Включаем контролы MixItUp для работы фильтров
     }
 })
+
+const commercialArrows = document.querySelectorAll('.commercial-arrow > svg');
+
+// Функция для чередования ширины псевдоэлементов
+function toggleMargin() {
+  commercialArrows.forEach(arrow => {
+    arrow.classList.toggle('active'); // Переключаем класс "active" для каждой стрелки
+  });
+}
+
+// Запускаем изменение каждую секунду
+setInterval(toggleMargin, 500);

@@ -17,9 +17,10 @@ body {
 html,
 body {
   overflow-x: hidden;
+  color: #444;
 }
 body.body-black {
-  color: #fff;
+  color: #DCDCDC;
   background-color: #000;
 }
 .none {
