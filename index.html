@@ -350,18 +350,35 @@
             Выполнена адаптивная вёрстка с подходом mobile-first для различных типов устройств. Подключены плагины
             Swiper и MixItUp для создания слайдеров и фильтров. Реализована бургер-меню с выпадающим списком и модальные
             окна для оформления заявок. Также добавлена интерактивная иконка фильтра с формой для заполнения,
-            позволяющая пользователю выбирать различные параметры для фильтрации товаров или услуг - <a class="commercial-link-alpha" href="https://alpha-osteklenie.ru/" target="_blank">Альфа остекление</a>.
+            позволяющая пользователю выбирать различные параметры для фильтрации товаров или услуг -
+            <a class="commercial-link-alpha" href="https://alpha-osteklenie.ru/" target="_blank">Альфа остекление</a>
+            .
           </p>
           <div class="commercial-swiper">
             <div class="swiper-wrapper">
-              <div class="commercial-slide swiper-slide commercial-slide-active" data-filter=".сottages">
-                Коттеджи и дома
+              <div class="commercial-slide swiper-slide commercial-slide-active" data-filter=".сottages">Коттеджи и дома</div>
+              <div class="commercial-slide swiper-slide commercial-slide-wrapper">
+                <div class="commercial-slide" data-filter=".about-us">
+                  <span>О нас</span>
+                  <div class="commercial-slide-arrow-wrapper">
+                    <svg class="commercial-slide-arrow" width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.5 2.44141L1.5 10.9414L10.5 19.4414"  stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <svg class="commercial-slide-arrow" width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.5 2.44141L1.5 10.9414L10.5 19.4414"  stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <svg class="commercial-slide-arrow" width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.5 2.44141L1.5 10.9414L10.5 19.4414"  stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+                <ul class="about-us-list">
+                  <li class="commercial-slide about-us-item" data-filter=".our-works">Наши работы <span>(разводящая)</span></li>
+                  <li class="commercial-slide about-us-item" data-filter=".detail-page">Наши работы <span>(детальная)</span></li>
+                  <li class="commercial-slide about-us-item" data-filter=".about-us-news">Новости <span>(разводящая)</span></li>
+                  <li class="commercial-slide about-us-item" data-filter=".news-windows">Новости <span>(детальная)</span></li>
+                </ul>
               </div>
-              <div class="commercial-slide swiper-slide" data-filter=".about-us">О нас</div>
-              <div class="commercial-slide swiper-slide" data-filter=".our-works">О нас - наши работы</div>
-              <div class="commercial-slide swiper-slide" data-filter=".about-us-news">О нас - новости</div>
-              <div class="commercial-slide swiper-slide" data-filter=".news-windows">О нас - новости, окна</div>
-              <div class="commercial-slide swiper-slide" data-filter=".detail-page">Детальная страница - окна</div>
               <div class="commercial-slide swiper-slide" data-filter=".calculator">Калькулятор</div>
               <div class="commercial-slide swiper-slide" data-filter=".repair">Ремонт</div>
               <div class="commercial-slide swiper-slide" data-filter=".catalog">Каталог</div>

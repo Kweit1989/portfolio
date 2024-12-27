@@ -134,6 +134,7 @@ a.project-card__btn > span > img{
 }
 .projects .projects-container > .swiper-pagination {
     bottom: -50px;
+    z-index: 1;
 }
 .projects-container > .swiper-pagination > .swiper-pagination-bullet {
     background-color: #ffffff; /* Цвет пульсирующих точек */

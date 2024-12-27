@@ -1,3 +1,18 @@
+// Swaiper main menu
+new Swiper(".swiper-container-menu", {
+  loop: false, // Бесконечный цикл
+  slidesPerView: 1, // По умолчанию 1 слайд для ширины 1290px и выше
+  spaceBetween: 10, // Отступы между слайдами
+});
+
+
+
+
+
+
+
+
+// Тень у изоброжения
 // Получаем все кнопки с классом .project-card__btn
 const buttons = document.querySelectorAll(".project-card__btn");
 const colorThief = new ColorThief();
@@ -47,9 +62,46 @@ function applyShadow(img, imgWrapper) {
   imgWrapper.classList.add("project-card__img-shadow");
 }
 
+//  Свайпер карточек
+new Swiper(".swiper-container", {
+  loop: true, // Бесконечный цикл
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  slidesPerView: 1, // По умолчанию 1 слайд для ширины 1290px и выше
+  spaceBetween: 10, // Отступы между слайдами
+
+  // Настройки для разных разрешений экрана
+  breakpoints: {
+    1040: {
+      slidesPerView: 2, // 2 слайда при ширине от 1050px до 1290px
+      spaceBetween: 10, // Отступы
+    },
+    1290: {
+      slidesPerView: 1, // 1 слайд при ширине 1290px и выше
+      spaceBetween: 10, // Отступы
+    },
+  },
+});
+
+
+
+
+
+
+
+let colorArrowDown;  // Переменная для хранения значения
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const toggle = document.querySelector(".toggle");
   const body = document.body;
+
 
   const singleElements = [
     { element: document.querySelector(".modal-content"), className: "modal-content-black" },
@@ -79,6 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
     { elements: document.querySelectorAll(".commercial-slide"), className: "commercial-slide-black" },
     { elements: document.querySelectorAll(".commercial-link"), className: "commercial-link-black" },
     { elements: document.querySelectorAll(".commercial-arrow > svg"), className: "commercial-arrow-black" },
+    { elements: document.querySelectorAll(".commercial-slide-arrow"), className: "commercial-slide-arrow-black" },
   ];
 
   toggle.addEventListener("click", function () {
@@ -93,11 +146,22 @@ document.addEventListener("DOMContentLoaded", function () {
     multipleElements.forEach(({ elements, className }) => {
       elements.forEach((el) => el.classList.toggle(className));
     });
+
+    // Определяем состояние переключателя и меняем переменную x
+    if (body.classList.contains("body-black")) {
+      colorArrowDown = '#000';  // Если переключатель включен (темная тема)
+    } else {
+      colorArrowDown = '#fff'; // Если переключатель выключен (светлая тема)
+    }
   });
 });
 
 
-// Получаем элементы
+
+
+
+
+// Модальное окно - формы
 const modalOverlay = document.getElementById("modal");
 const contactFormButtons = document.querySelectorAll(
   ".header__contact-form, .navigation-bar__form"
@@ -153,60 +217,26 @@ function handleFormSubmit(event) {
     }
   });
 }
-
 // Привязка обработчиков к формам
 document.getElementById("my-form").addEventListener("submit", handleFormSubmit);
 document
   .getElementById("my-form-two")
   .addEventListener("submit", handleFormSubmit);
 
-// Swaiper main menu
-new Swiper(".swiper-container-menu", {
-  loop: false, // Бесконечный цикл
-  slidesPerView: 1, // По умолчанию 1 слайд для ширины 1290px и выше
-  spaceBetween: 10, // Отступы между слайдами
-});
-
-new Swiper(".swiper-container", {
-  loop: true, // Бесконечный цикл
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  slidesPerView: 1, // По умолчанию 1 слайд для ширины 1290px и выше
-  spaceBetween: 10, // Отступы между слайдами
-
-  // Настройки для разных разрешений экрана
-  breakpoints: {
-    1040: {
-      slidesPerView: 2, // 2 слайда при ширине от 1050px до 1290px
-      spaceBetween: 10, // Отступы
-    },
-    1290: {
-      slidesPerView: 1, // 1 слайд при ширине 1290px и выше
-      spaceBetween: 10, // Отступы
-    },
-  },
-});
 
 
 
+
+
+
+
+// Функци  полоски у ссылки 
 const link = document.querySelector('.commercial-link-alpha');
-
-// Функция для чередования ширины псевдоэлементов
 function toggleWidth() {
   link.classList.toggle('active');  // Переключаем класс "active" каждые 1 секунду
 }
-
 // Запускаем изменение каждую секунду
 setInterval(toggleWidth, 1000);
-
-
-
 // Swiper commercial projects
 new Swiper(".commercial-swiper", {
   slidesPerView: "auto",
@@ -217,19 +247,76 @@ new Swiper(".commercial-swiper", {
     },
   },
 });
+
+
 // Получаем все слайды с классом .commercial-slide - для добовления активного таба
 const commercialSlides = document.querySelectorAll('.commercial-slide');
-
 // Добавляем обработчик клика для каждого слайда
 commercialSlides.forEach(slide => {
   slide.addEventListener('click', function() {
     // Удаляем класс .commercial-slide-active у всех слайдов
-    commercialSlides.forEach(s => s.classList.remove('commercial-slide-active'));
+    commercialSlides.forEach(s => {
+      s.classList.remove('commercial-slide-active');
+      
+      // Возвращаем стрелки на белый цвет для неактивных слайдов
+      const arrows = s.querySelectorAll('.commercial-slide-arrow path');
+      arrows.forEach(arrow => {
+        arrow.setAttribute('stroke', colorArrowDown);
+      });
+    });
 
     // Добавляем класс .commercial-slide-active только к текущему слайду
     this.classList.add('commercial-slide-active');
+    
+    // Меняем стрелки на черный цвет для активного слайда
+    const arrows = this.querySelectorAll('.commercial-slide-arrow path');
+    arrows.forEach(arrow => {
+      arrow.setAttribute('stroke', '#d3e97a'); // меняем цвет на #000 для активного
+    });
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+// Получаем элементы
+const aboutUsList = document.querySelector('.about-us-list');
+const arrowWrappers = document.querySelectorAll('.commercial-slide-arrow-wrapper');
+
+// Функция для обработки клика по документу
+function handleDocumentClick(event) {
+  // Проверяем, был ли клик вне .commercial-slide-arrow-wrapper
+  const isClickInside = [...arrowWrappers].some(wrapper => wrapper.contains(event.target));
+  if (!isClickInside) {
+    // Если клик вне области, удаляем класс
+    aboutUsList.classList.remove('about-us-list-active');
+  }
+}
+
+// Добавляем обработчики на .commercial-slide-arrow-wrapper
+arrowWrappers.forEach(wrapper => {
+  wrapper.addEventListener('click', (event) => {
+    event.stopPropagation(); // Останавливаем всплытие события
+    aboutUsList.classList.toggle('about-us-list-active');
+  });
+});
+
+// Добавляем обработчик на документ
+document.addEventListener('click', handleDocumentClick);
+
+
+
+
+
+
+
 
 
 
@@ -268,6 +355,31 @@ const mixContainer = mixitup(".commercial-window-container", {
     }
 })
 
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const arrows = document.querySelectorAll(".commercial-slide-arrow");
+  let currentIndex = 0;
+
+  function fadeOutArrow() {
+    arrows[currentIndex].style.opacity = 0;
+
+    // Через 500ms, как только текущая стрелка исчезнет
+    setTimeout(() => {
+      // Сбрасываем прозрачность текущей стрелки для следующего цикла
+      arrows[currentIndex].style.opacity = 1;
+
+      // Переходим к следующей стрелке
+      currentIndex = (currentIndex + 1) % arrows.length;
+      fadeOutArrow(); // Рекурсивно вызываем следующую анимацию
+    }, 200);
+  }
+
+  fadeOutArrow(); // Запускаем анимацию
+});
+
+
+
 const commercialArrows = document.querySelectorAll('.commercial-arrow > svg');
 
 // Функция для чередования ширины псевдоэлементов
@@ -279,3 +391,4 @@ function toggleMargin() {
 
 // Запускаем изменение каждую секунду
 setInterval(toggleMargin, 500);
+
