@@ -372,7 +372,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Переходим к следующей стрелке
       currentIndex = (currentIndex + 1) % arrows.length;
       fadeOutArrow(); // Рекурсивно вызываем следующую анимацию
-    }, 200);
+    }, 400);
   }
 
   fadeOutArrow(); // Запускаем анимацию
