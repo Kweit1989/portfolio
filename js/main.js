@@ -347,14 +347,6 @@ document.addEventListener('click', handleDocumentClick);
 
 
 
-
-
-
-
-
-
-
-
 const commercialBlocks = document.querySelectorAll('.commercial-window-wrapper');
 // Добавляем обработчики событий для каждого блока
 commercialBlocks.forEach((block) => {
@@ -375,19 +367,30 @@ commercialBlocks.forEach((block) => {
   }
 });
 
-
 const mixContainer = mixitup(".commercial-window-container", {
   selectors: {
-    target: '.mix', // Селектор для элементов, которые будут фильтроваться ('.mix' элементы)
+    target: '.mix', // Селектор для элементов, которые будут фильтроваться
     control: '.commercial-slide' // Селектор для кнопок, контролирующих фильтрацию по категориям
-    },
-    load: {
-        filter: '.сottages', // При загрузке по умолчанию отображаются элементы с классом '.category-1'
-    },
-    controls: {
-        enable: true, // Включаем контролы MixItUp для работы фильтров
-    }
-})
+  },
+  load: {
+    filter: '.сottages', // При загрузке по умолчанию отображаются элементы с классом '.category-1'
+  },
+  controls: {
+    enable: true, // Включаем контролы MixItUp для работы фильтров
+  }
+});
+
+// Обработчик для элементов внутри about-us-list, чтобы избежать их влияния на фильтрацию родителя
+document.querySelectorAll('.about-us-item').forEach(item => {
+  item.addEventListener('click', (event) => {
+    // Останавливаем всплытие, чтобы не вызывалась фильтрация родительских элементов
+    event.stopPropagation();
+    
+    // Запускаем фильтрацию только для этого элемента
+    const filter = item.getAttribute('data-filter');
+    mixContainer.filter(filter);
+  });
+});
 
 
 
