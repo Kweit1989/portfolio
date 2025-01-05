@@ -61,12 +61,6 @@
 .commercial-slide + .commercial-slide {
   margin-left: 10px;
 }
-
-/* .commercial-slide-active {
-  background-color: #fff;
-  color: #d3e97a;
-  border: 2px solid #d3e97a;
-} */
 .commercial-slide-wrapper {
   display: flex !important;
   justify-content: center;
@@ -259,6 +253,13 @@ svg.active.commercial-arrow-transform.active{
 }
 .commercial-window > img {
   width: 100%;
+}
+@media (hover: none) and (pointer: coarse) {
+  .commercial-slide:hover {
+    background-color: unset; /* Возвращаем значение по умолчанию */
+    color: unset; /* Возвращаем значение по умолчанию */
+    border-color: unset; /* Если меняется граница */
+  }
 }
 @media screen and (min-width: 450px){
   .commercial-description {
