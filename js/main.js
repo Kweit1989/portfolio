@@ -284,6 +284,8 @@ commercialSlides.forEach(slide => {
 
 
 
+
+
 // Получаем элементы
 const aboutUsList = document.querySelector('.about-us-list');
 const arrowWrappers = document.querySelectorAll('.commercial-slide-arrow-wrapper');
@@ -341,6 +343,9 @@ aboutUsList.addEventListener('mouseleave', () => {
 
 // Добавляем обработчик на документ
 document.addEventListener('click', handleDocumentClick);
+
+
+
 
 
 
