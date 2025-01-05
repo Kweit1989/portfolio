@@ -284,17 +284,19 @@ commercialSlides.forEach(slide => {
 
 
 
-
-
 // Получаем элементы
 const aboutUsList = document.querySelector('.about-us-list');
 const arrowWrappers = document.querySelectorAll('.commercial-slide-arrow-wrapper');
+const slideWrapper = document.querySelector('.commercial-slide-wrapper');
+
+// Флаг для отслеживания активности наведения
+let isHovered = false;
 
 // Функция для обработки клика по документу
 function handleDocumentClick(event) {
   // Проверяем, был ли клик вне .commercial-slide-arrow-wrapper
   const isClickInside = [...arrowWrappers].some(wrapper => wrapper.contains(event.target));
-  if (!isClickInside) {
+  if (!isClickInside && !isHovered) {
     // Если клик вне области, удаляем класс
     aboutUsList.classList.remove('about-us-list-active');
   }
@@ -308,44 +310,37 @@ arrowWrappers.forEach(wrapper => {
   });
 });
 
-// // Находим элементы
-// const slideWrappers = document.querySelector('.commercial-slide-wrapper');
+// Обработчики для наведения мыши
+slideWrapper.addEventListener('mouseenter', () => {
+  isHovered = true; // Устанавливаем флаг
+  aboutUsList.classList.add('about-us-list-active'); // Добавляем класс
+});
 
-// // Флаг для отслеживания, находится ли мышь в области aboutUsList или slideWrappers
-// let isMouseOver = false;
+slideWrapper.addEventListener('mouseleave', () => {
+  isHovered = false; // Сбрасываем флаг
+  setTimeout(() => {
+    if (!isHovered) {
+      aboutUsList.classList.remove('about-us-list-active'); // Убираем класс
+    }
+  }, 50); // Небольшая задержка для исключения конфликтов
+});
 
-// // Обработчик наведения на .commercial-slide-wrapper
-// slideWrappers.addEventListener('mouseenter', () => {
-//   isMouseOver = true; // Устанавливаем флаг
-//   aboutUsList.classList.add('about-us-list-active'); // Добавляем класс
-// });
+// Обработчик для наведения на .about-us-list
+aboutUsList.addEventListener('mouseenter', () => {
+  isHovered = true; // Устанавливаем флаг
+});
 
-// slideWrappers.addEventListener('mouseleave', () => {
-//   setTimeout(() => {
-//     if (!isMouseOver) {
-//       aboutUsList.classList.remove('about-us-list-active'); // Убираем класс, если мышь не в области
-//     }
-//   }, 0); // Небольшая задержка для обработки событий
-// });
-
-// // Обработчик наведения на .about-us-list
-// aboutUsList.addEventListener('mouseenter', () => {
-//   isMouseOver = true; // Устанавливаем флаг
-// });
-
-// aboutUsList.addEventListener('mouseleave', () => {
-//   isMouseOver = false; // Сбрасываем флаг
-//   setTimeout(() => {
-//     if (!isMouseOver) {
-//       aboutUsList.classList.remove('about-us-list-active'); // Убираем класс, если мышь ушла из всех областей
-//     }
-//   }, 0);
-// });
+aboutUsList.addEventListener('mouseleave', () => {
+  isHovered = false; // Сбрасываем флаг
+  setTimeout(() => {
+    if (!isHovered) {
+      aboutUsList.classList.remove('about-us-list-active'); // Убираем класс
+    }
+  }, 50);
+});
 
 // Добавляем обработчик на документ
 document.addEventListener('click', handleDocumentClick);
-
-
 
 
 
