@@ -330,9 +330,6 @@ if (commercialSlides.length > 0) {
   updateArrowsColor(); // Обновляем стрелки сразу при загрузке страницы
 }
 
-
-
-
 // Получаем элементы
 const aboutUsList = document.querySelector('.about-us-list');
 const arrowWrappers = document.querySelectorAll('.commercial-slide-arrow-wrapper');
@@ -354,6 +351,7 @@ function handleDocumentClick(event) {
 // Добавляем обработчики на .commercial-slide-arrow-wrapper
 arrowWrappers.forEach(wrapper => {
   wrapper.addEventListener('click', (event) => {
+    event.stopPropagation(); // Останавливаем всплытие события
     aboutUsList.classList.toggle('about-us-list-active');
   });
 });
@@ -390,6 +388,19 @@ aboutUsList.addEventListener('mouseleave', () => {
 // Добавляем обработчик на документ
 document.addEventListener('click', handleDocumentClick);
 
+// Проверяем, если устройство мобильное или сенсорное
+const isMobile = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+
+if (isMobile) {
+  // Убираем hover эффект для мобильных устройств
+  const commercialSlides = document.querySelectorAll('.commercial-slide');
+  commercialSlides.forEach(slide => {
+    slide.addEventListener('click', function() {
+      // Отключаем эффект hover по клику
+      this.classList.toggle('no-hover');
+    });
+  });
+}
 
 
 

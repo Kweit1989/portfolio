@@ -49,6 +49,12 @@
   background-color: #fff;
   color: #d3e97a;
 }
+/* Отключаем hover эффект для мобильных устройств */
+.commercial-slide.no-hover:hover {
+  background-color: unset;
+  color: unset;
+  border-color: unset;
+}
 .commercial-slide:hover .commercial-slide-arrow path {
   stroke: #d3e97a; /* Задаем новый цвет для стрелок */
 }
@@ -253,13 +259,6 @@ svg.active.commercial-arrow-transform.active{
 }
 .commercial-window > img {
   width: 100%;
-}
-@media (hover: none) and (pointer: coarse) and (min-width: 650px) {
-  .commercial-slide:hover {
-    background-color: unset; /* Возвращаем значение по умолчанию */
-    color: unset; /* Возвращаем значение по умолчанию */
-    border-color: unset; /* Если меняется граница */
-  }
 }
 @media screen and (min-width: 450px){
   .commercial-description {
