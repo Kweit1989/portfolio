@@ -308,6 +308,41 @@ arrowWrappers.forEach(wrapper => {
   });
 });
 
+// Находим элементы
+const slideWrappers = document.querySelector('.commercial-slide-wrapper');
+
+// Флаг для отслеживания, находится ли мышь в области aboutUsList или slideWrappers
+let isMouseOver = false;
+
+// Обработчик наведения на .commercial-slide-wrapper
+slideWrappers.addEventListener('mouseenter', () => {
+  isMouseOver = true; // Устанавливаем флаг
+  aboutUsList.classList.add('about-us-list-active'); // Добавляем класс
+});
+
+slideWrappers.addEventListener('mouseleave', () => {
+  setTimeout(() => {
+    if (!isMouseOver) {
+      aboutUsList.classList.remove('about-us-list-active'); // Убираем класс, если мышь не в области
+    }
+  }, 0); // Небольшая задержка для обработки событий
+});
+
+// Обработчик наведения на .about-us-list
+aboutUsList.addEventListener('mouseenter', () => {
+  isMouseOver = true; // Устанавливаем флаг
+});
+
+aboutUsList.addEventListener('mouseleave', () => {
+  isMouseOver = false; // Сбрасываем флаг
+  setTimeout(() => {
+    if (!isMouseOver) {
+      aboutUsList.classList.remove('about-us-list-active'); // Убираем класс, если мышь ушла из всех областей
+    }
+  }, 0);
+});
+
+
 // Добавляем обработчик на документ
 document.addEventListener('click', handleDocumentClick);
 

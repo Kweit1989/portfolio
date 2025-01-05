@@ -42,36 +42,37 @@
   border-radius: 5px;
   width: auto !important;
   cursor: pointer;
+  transition: 0.2s all ease-in !important; 
+}
+.commercial-slide:hover{
+  border: 2px solid #d3e97a;
+  background-color: #fff;
+  color: #d3e97a;
+}
+.commercial-slide:hover .commercial-slide-arrow path {
+  stroke: #d3e97a; /* Задаем новый цвет для стрелок */
 }
 .commercial-slide-black {
   color: #000;
 }
-
+.commercial-slide-black:hover{
+  background-color: #000000;
+}
 .commercial-slide + .commercial-slide {
   margin-left: 10px;
 }
 
-.commercial-slide-wrapper {
-  /* background-color: transparent; */
-  padding: 0;
-  border: 2px solid transparent;
-}
 .commercial-slide-active {
   background-color: transparent;
   color: #d3e97a;
   border: 2px solid #d3e97a;
 }
 .commercial-slide-wrapper {
- 
-}
-.commercial-slide-wrapper > .commercial-slide{
-  display: flex;
+  display: flex !important;
   justify-content: center;
   column-gap: 5px;
-  color: inherit;
-  border: none;
-  background: transparent;
 }
+
 .commercial-slide-arrow-wrapper {
   position: relative;
   width: 15px;
@@ -107,7 +108,6 @@
   left: 0;
   top: 125%;
   width: 210px;
-  background-color: #d3e97a;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -119,9 +119,6 @@
   font-size: 14px;
   width: 100% !important;
   border-radius: 0;
-}
-.about-us-list > .about-us-item:not(:last-child) { 
-  border-bottom: 1px solid #bebebe;
 }
 .about-us-item > span {
   font-size: 10px;
