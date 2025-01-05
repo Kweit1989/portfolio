@@ -269,6 +269,11 @@ svg.active.commercial-arrow-transform.active{
     font-size: 18px;
   }
 }
+@media screen and (min-width: 660px){ 
+  .commercial-swiper > .swiper-wrapper {
+    justify-content: center;
+  }
+}
 
 @media screen and (min-width: 800px){
   .commercial-description {
@@ -304,9 +309,4 @@ svg.active.commercial-arrow-transform.active{
     width: 50%;
   }
   
-}
-@media screen and (min-width: 1300px){ 
-.commercial-swiper > .swiper-wrapper {
-  justify-content: center;
-}
 }
