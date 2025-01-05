@@ -260,6 +260,12 @@ svg.active.commercial-arrow-transform.active{
 .commercial-window > img {
   width: 100%;
 }
+@media (hover: none) and (pointer: coarse) {
+  .commercial-slide:hover {
+    background-color: inherit; /* Убираем эффект hover */
+    color: inherit; /* Убираем эффект hover */
+  }
+}
 
 @media screen and (min-width: 450px){
   .commercial-description {
