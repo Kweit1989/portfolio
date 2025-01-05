@@ -44,20 +44,20 @@
   cursor: pointer;
   transition: 0.2s all ease-in !important; 
 }
-.commercial-slide:hover{
+/* .commercial-slide:hover{
   border: 2px solid #d3e97a;
   background-color: #fff;
   color: #d3e97a;
-}
+} */
 .commercial-slide:hover .commercial-slide-arrow path {
   stroke: #d3e97a; /* Задаем новый цвет для стрелок */
 }
 .commercial-slide-black {
   color: #000;
 }
-.commercial-slide-black:hover{
+/* .commercial-slide-black:hover{
   background-color: #000000;
-}
+} */
 .commercial-slide + .commercial-slide {
   margin-left: 10px;
 }

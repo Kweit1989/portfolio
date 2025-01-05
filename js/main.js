@@ -249,32 +249,32 @@ new Swiper(".commercial-swiper", {
 });
 
 
-// // Получаем все слайды с классом .commercial-slide - для добовления активного таба
-// const commercialSlides = document.querySelectorAll('.commercial-slide');
-// // Добавляем обработчик клика для каждого слайда
-// commercialSlides.forEach(slide => {
-//   slide.addEventListener('click', function() {
-//     // Удаляем класс .commercial-slide-active у всех слайдов
-//     commercialSlides.forEach(s => {
-//       s.classList.remove('commercial-slide-active');
+// Получаем все слайды с классом .commercial-slide - для добовления активного таба
+const commercialSlides = document.querySelectorAll('.commercial-slide');
+// Добавляем обработчик клика для каждого слайда
+commercialSlides.forEach(slide => {
+  slide.addEventListener('click', function() {
+    // Удаляем класс .commercial-slide-active у всех слайдов
+    commercialSlides.forEach(s => {
+      s.classList.remove('commercial-slide-active');
       
-//       // Возвращаем стрелки на белый цвет для неактивных слайдов
-//       const arrows = s.querySelectorAll('.commercial-slide-arrow path');
-//       arrows.forEach(arrow => {
-//         arrow.setAttribute('stroke', colorArrowDown);
-//       });
-//     });
+      // Возвращаем стрелки на белый цвет для неактивных слайдов
+      const arrows = s.querySelectorAll('.commercial-slide-arrow path');
+      arrows.forEach(arrow => {
+        arrow.setAttribute('stroke', colorArrowDown);
+      });
+    });
 
-//     // Добавляем класс .commercial-slide-active только к текущему слайду
-//     this.classList.add('commercial-slide-active');
+    // Добавляем класс .commercial-slide-active только к текущему слайду
+    this.classList.add('commercial-slide-active');
     
-//     // Меняем стрелки на черный цвет для активного слайда
-//     const arrows = this.querySelectorAll('.commercial-slide-arrow path');
-//     arrows.forEach(arrow => {
-//       arrow.setAttribute('stroke', '#d3e97a'); // меняем цвет на #000 для активного
-//     });
-//   });
-// });
+    // Меняем стрелки на черный цвет для активного слайда
+    const arrows = this.querySelectorAll('.commercial-slide-arrow path');
+    arrows.forEach(arrow => {
+      arrow.setAttribute('stroke', '#d3e97a'); // меняем цвет на #000 для активного
+    });
+  });
+});
 
 
 
