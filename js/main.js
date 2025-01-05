@@ -300,23 +300,13 @@ function handleDocumentClick(event) {
   }
 }
 
-// Добавляем обработчики для кликов и касаний
+// Добавляем обработчики на .commercial-slide-arrow-wrapper
 arrowWrappers.forEach(wrapper => {
-  const toggleClass = () => {
-    aboutUsList.classList.toggle('about-us-list-active');
-  };
-
   wrapper.addEventListener('click', (event) => {
-    event.stopPropagation();
-    toggleClass();
-  });
-
-  wrapper.addEventListener('touchstart', (event) => {
-    event.stopPropagation();
-    toggleClass();
+    event.stopPropagation(); // Останавливаем всплытие события
+    aboutUsList.classList.toggle('about-us-list-active');
   });
 });
-
 
 // Находим элементы
 const slideWrappers = document.querySelector('.commercial-slide-wrapper');
@@ -351,8 +341,6 @@ aboutUsList.addEventListener('mouseleave', () => {
     }
   }, 0);
 });
-
-
 
 // Добавляем обработчик на документ
 document.addEventListener('click', handleDocumentClick);
