@@ -354,7 +354,6 @@ function handleDocumentClick(event) {
 // Добавляем обработчики на .commercial-slide-arrow-wrapper
 arrowWrappers.forEach(wrapper => {
   wrapper.addEventListener('click', (event) => {
-    event.stopPropagation(); // Останавливаем всплытие события
     aboutUsList.classList.toggle('about-us-list-active');
   });
 });
