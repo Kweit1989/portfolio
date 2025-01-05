@@ -254,7 +254,7 @@ svg.active.commercial-arrow-transform.active{
 .commercial-window > img {
   width: 100%;
 }
-@media (hover: none) and (pointer: coarse) {
+@media (hover: none) and (pointer: coarse) and (min-width: 650px) {
   .commercial-slide:hover {
     background-color: unset; /* Возвращаем значение по умолчанию */
     color: unset; /* Возвращаем значение по умолчанию */
