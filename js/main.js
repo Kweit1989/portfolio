@@ -96,12 +96,15 @@ new Swiper(".swiper-container", {
 
 
 let colorArrowDown;  // Переменная для хранения значения
-
+let backgroundCommercialSlide = {
+  backgroundColor: '#fff',
+  color: '#d3e97a',
+  border: '2px solid #d3e97a',
+};
 
 document.addEventListener("DOMContentLoaded", function () {
   const toggle = document.querySelector(".toggle");
   const body = document.body;
-
 
   const singleElements = [
     { element: document.querySelector(".modal-content"), className: "modal-content-black" },
@@ -147,16 +150,36 @@ document.addEventListener("DOMContentLoaded", function () {
       elements.forEach((el) => el.classList.toggle(className));
     });
 
-    // Определяем состояние переключателя и меняем переменную x
+    // Определяем состояние переключателя и меняем переменную
     if (body.classList.contains("body-black")) {
       colorArrowDown = '#000';  // Если переключатель включен (темная тема)
+      backgroundCommercialSlide = {
+        backgroundColor: '#000',
+        color: '#d3e97a',
+        border: '2px solid #d3e97a',
+      };
     } else {
       colorArrowDown = '#fff'; // Если переключатель выключен (светлая тема)
+      backgroundCommercialSlide = {
+        backgroundColor: '#fff',
+        color: '#d3e97a',
+        border: '2px solid #d3e97a',
+      };
+    }
+
+    // После переключения темы обновляем стили для стрелок всех слайдов
+    updateArrowsColor();
+
+    // Обновляем активный слайд, если он существует
+    const activeSlide = document.querySelector('.commercial-slide-active');
+    if (activeSlide) {
+      setActiveSlide(activeSlide); // передаем активный слайд
+    } else {
+      // Если активного слайда нет, делаем первый слайд активным
+      setActiveSlide(commercialSlides[0]);
     }
   });
 });
-
-
 
 
 
@@ -249,39 +272,63 @@ new Swiper(".commercial-swiper", {
 });
 
 
-// Получаем все слайды с классом .commercial-slide - для добовления активного таба
+// Получаем все слайды с классом .commercial-slide
 const commercialSlides = document.querySelectorAll('.commercial-slide');
+
+// Функция для применения стилей активного слайда
+function setActiveSlide(slide) {
+  // Применяем стили из backgroundCommercialSlide к активному слайду
+  slide.style.backgroundColor = backgroundCommercialSlide.backgroundColor;
+  slide.style.color = backgroundCommercialSlide.color;
+  slide.style.border = backgroundCommercialSlide.border;
+
+  // Меняем стрелки на соответствующий цвет для активного слайда
+  const arrows = slide.querySelectorAll('.commercial-slide-arrow path');
+  arrows.forEach(arrow => {
+    arrow.setAttribute('stroke', '#d3e97a'); // меняем цвет на #d3e97a для активного
+  });
+
+  // Помечаем этот слайд как активный
+  commercialSlides.forEach(s => s.classList.remove('commercial-slide-active')); 
+  slide.classList.add('commercial-slide-active');
+}
+
+// Функция для обновления цвета стрелок для всех слайдов
+function updateArrowsColor() {
+  const arrows = document.querySelectorAll('.commercial-slide-arrow path');
+  arrows.forEach(arrow => {
+    arrow.setAttribute('stroke', colorArrowDown); // меняем цвет на colorArrowDown для всех стрелок
+  });
+}
+
 // Добавляем обработчик клика для каждого слайда
 commercialSlides.forEach(slide => {
   slide.addEventListener('click', function() {
-    // Удаляем класс .commercial-slide-active у всех слайдов
+    // Удаляем стили у всех слайдов
     commercialSlides.forEach(s => {
-      s.classList.remove('commercial-slide-active');
-      
-      // Возвращаем стрелки на белый цвет для неактивных слайдов
+      // Возвращаем стрелки на цвет colorArrowDown для неактивных слайдов
       const arrows = s.querySelectorAll('.commercial-slide-arrow path');
       arrows.forEach(arrow => {
         arrow.setAttribute('stroke', colorArrowDown);
       });
+
+      // Убираем стили активного слайда
+      s.style.backgroundColor = '';
+      s.style.color = '';
+      s.style.border = '';
+      s.classList.remove('commercial-slide-active');
     });
 
-    // Добавляем класс .commercial-slide-active только к текущему слайду
-    this.classList.add('commercial-slide-active');
-    
-    // Меняем стрелки на черный цвет для активного слайда
-    const arrows = this.querySelectorAll('.commercial-slide-arrow path');
-    arrows.forEach(arrow => {
-      arrow.setAttribute('stroke', '#d3e97a'); // меняем цвет на #000 для активного
-    });
+    // Применяем стили из backgroundCommercialSlide к текущему слайду
+    setActiveSlide(this);
   });
 });
 
-
-
-
-
-
-
+// Делаем первый слайд активным при загрузке страницы
+if (commercialSlides.length > 0) {
+  setActiveSlide(commercialSlides[0]);
+  updateArrowsColor(); // Обновляем стрелки сразу при загрузке страницы
+}
 
 
 

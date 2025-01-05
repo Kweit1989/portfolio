@@ -62,11 +62,11 @@
   margin-left: 10px;
 }
 
-.commercial-slide-active {
-  background-color: transparent;
+/* .commercial-slide-active {
+  background-color: #fff;
   color: #d3e97a;
   border: 2px solid #d3e97a;
-}
+} */
 .commercial-slide-wrapper {
   display: flex !important;
   justify-content: center;
