@@ -197,11 +197,13 @@ const closeModalButton = document.querySelector(".modal-close");
 // Функция для открытия модального окна
 function openModal() {
   modalOverlay.style.display = "block";
+  document.documentElement.style.overflowY = "hidden"
 }
 
 // Функция для закрытия модального окна
 function closeModal() {
   modalOverlay.style.display = "none";
+  document.documentElement.style.overflowY = "";
 }
 
 // Открытие модального окна при нажатии на кнопку
