@@ -117,6 +117,9 @@ document.addEventListener("DOMContentLoaded", function () {
     { element: document.querySelector(".header__contact-form > span"), className: "header__contact-form-span" },
     { element: document.querySelector(".connect__form-submit"), className: "connect__form-submit-black" },
     { element: document.querySelector(".toggle-circle"), className: "active" },
+    { element: document.querySelector(".my-skills"), className: "black-bg" },
+    { element: document.querySelector(".my-skills-bg"), className: "black-bg" },
+    { element: document.querySelector(".my-skills-row"), className: "my-skills-row-black" },
     { element: toggle, className: "toggle-black" },
   ];
 
