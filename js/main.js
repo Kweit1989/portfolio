@@ -103,8 +103,10 @@ let backgroundCommercialSlide = {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
+  document.body.style.visibility = "visible";
   const toggle = document.querySelector(".toggle");
   const body = document.body;
+  const savedTheme = localStorage.getItem("theme"); // Достаем тему
 
   const singleElements = [
     { element: document.querySelector(".modal-content"), className: "modal-content-black" },
@@ -140,50 +142,61 @@ document.addEventListener("DOMContentLoaded", function () {
     { elements: document.querySelectorAll(".commercial-slide-arrow"), className: "commercial-slide-arrow-black" },
   ];
 
-  toggle.addEventListener("click", function () {
-    body.classList.toggle("body-black");
+  function applyTheme(isDark) {
+    if (isDark) {
+      body.classList.add("body-black");
+      singleElements.forEach(({ element, className }) => {
+        if (element) element.classList.add(className);
+      });
+      multipleElements.forEach(({ elements, className }) => {
+        elements.forEach((el) => el.classList.add(className));
+      });
 
-    // Обработка одиночных элементов
-    singleElements.forEach(({ element, className }) => {
-      if (element) element.classList.toggle(className);
-    });
-
-    // Обработка множественных элементов
-    multipleElements.forEach(({ elements, className }) => {
-      elements.forEach((el) => el.classList.toggle(className));
-    });
-
-    // Определяем состояние переключателя и меняем переменную
-    if (body.classList.contains("body-black")) {
-      colorArrowDown = '#000';  // Если переключатель включен (темная тема)
+      // Устанавливаем стили для темной темы
+      colorArrowDown = "#000";
       backgroundCommercialSlide = {
-        backgroundColor: '#000',
-        color: '#d3e97a',
-        border: '2px solid #d3e97a',
+        backgroundColor: "#000",
+        color: "#d3e97a",
+        border: "2px solid #d3e97a",
       };
+      localStorage.setItem("theme", "dark");
     } else {
-      colorArrowDown = '#fff'; // Если переключатель выключен (светлая тема)
+      body.classList.remove("body-black");
+      singleElements.forEach(({ element, className }) => {
+        if (element) element.classList.remove(className);
+      });
+      multipleElements.forEach(({ elements, className }) => {
+        elements.forEach((el) => el.classList.remove(className));
+      });
+
+      // Устанавливаем стили для светлой темы
+      colorArrowDown = "#fff";
       backgroundCommercialSlide = {
-        backgroundColor: '#fff',
-        color: '#d3e97a',
-        border: '2px solid #d3e97a',
+        backgroundColor: "#fff",
+        color: "#d3e97a",
+        border: "2px solid #d3e97a",
       };
+      localStorage.setItem("theme", "light");
     }
 
-    // После переключения темы обновляем стили для стрелок всех слайдов
     updateArrowsColor();
 
-    // Обновляем активный слайд, если он существует
-    const activeSlide = document.querySelector('.commercial-slide-active');
+    const activeSlide = document.querySelector(".commercial-slide-active");
     if (activeSlide) {
-      setActiveSlide(activeSlide); // передаем активный слайд
-    } else {
-      // Если активного слайда нет, делаем первый слайд активным
+      setActiveSlide(activeSlide);
+    } else if (commercialSlides.length > 0) {
       setActiveSlide(commercialSlides[0]);
     }
+  }
+
+  // Применяем сохраненную тему
+  applyTheme(savedTheme === "dark");
+
+  // Обработчик клика на переключатель
+  toggle.addEventListener("click", function () {
+    applyTheme(!body.classList.contains("body-black"));
   });
 });
-
 
 
 

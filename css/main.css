@@ -14,6 +14,7 @@ html {
 }
 body {
   font-family: "Manrope", sans-serif;
+  visibility: hidden; 
 }
 html,
 body {
