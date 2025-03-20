@@ -103,10 +103,14 @@ let backgroundCommercialSlide = {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  document.body.style.visibility = "visible";
   const toggle = document.querySelector(".toggle");
   const body = document.body;
-  const savedTheme = localStorage.getItem("theme"); // Достаем тему
+  let savedTheme = localStorage.getItem("theme");
+
+  if (savedTheme === null) {
+    savedTheme = "light";
+    localStorage.setItem("theme", "light");
+  }
 
   const singleElements = [
     { element: document.querySelector(".modal-content"), className: "modal-content-black" },
@@ -149,7 +153,9 @@ document.addEventListener("DOMContentLoaded", function () {
         if (element) element.classList.add(className);
       });
       multipleElements.forEach(({ elements, className }) => {
-        elements.forEach((el) => el.classList.add(className));
+        if (elements.length > 0) {
+          elements.forEach((el) => el.classList.add(className));
+        }
       });
 
       // Устанавливаем стили для темной темы
@@ -166,7 +172,9 @@ document.addEventListener("DOMContentLoaded", function () {
         if (element) element.classList.remove(className);
       });
       multipleElements.forEach(({ elements, className }) => {
-        elements.forEach((el) => el.classList.remove(className));
+        if (elements.length > 0) {
+          elements.forEach((el) => el.classList.remove(className));
+        }
       });
 
       // Устанавливаем стили для светлой темы
@@ -196,6 +204,7 @@ document.addEventListener("DOMContentLoaded", function () {
   toggle.addEventListener("click", function () {
     applyTheme(!body.classList.contains("body-black"));
   });
+  body.style.visibility = "visible";
 });
 
 
