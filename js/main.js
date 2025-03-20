@@ -108,8 +108,8 @@ document.addEventListener("DOMContentLoaded", function () {
   let savedTheme = localStorage.getItem("theme");
 
   if (savedTheme === null) {
-    savedTheme = "light";
-    localStorage.setItem("theme", "light");
+    savedTheme = "dark";
+    localStorage.setItem("theme", "dark");
   }
 
   const singleElements = [
@@ -204,7 +204,7 @@ document.addEventListener("DOMContentLoaded", function () {
   toggle.addEventListener("click", function () {
     applyTheme(!body.classList.contains("body-black"));
   });
-  body.style.visibility = "visible";
+  document.body.style.visibility = "visible";
 });
 
 
