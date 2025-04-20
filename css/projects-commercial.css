@@ -1,0 +1,310 @@
+.commercial__title {
+  text-align: center;
+  line-height: 110% !important;
+}
+.commercial__text {
+  max-width: 100%;
+  text-align: center;
+}
+.commercial-link-alpha {
+  position: relative;
+}
+.commercial-link-alpha::after,
+.commercial-link-alpha::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  height: 2px;
+  width: 0%;
+  background-color: #d3e97a;
+  transition: width 0.3s ease-in;
+}
+.commercial-link-alpha::after{
+  right: 0;
+}
+.commercial-link-alpha::before{
+  left: 0;
+}
+.commercial-link-alpha.active::after,
+.commercial-link-alpha.active::before {
+  width: 50%;
+}
+.commercial-swiper {
+  margin-bottom: 20px;
+}
+.commercial-slide {
+  padding: 10px;
+  background-color: #d3e97a;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  width: auto !important;
+  cursor: pointer;
+  transition: 0.2s all ease-in !important; 
+}
+.commercial-slide:hover{
+  border: 2px solid #d3e97a;
+  background-color: #fff;
+  color: #d3e97a;
+}
+/* Отключаем hover эффект для мобильных устройств */
+.commercial-slide.no-hover:hover {
+  background-color: unset;
+  color: unset;
+  border-color: unset;
+}
+.commercial-slide:hover .commercial-slide-arrow path {
+  stroke: #d3e97a; /* Задаем новый цвет для стрелок */
+}
+.commercial-slide-black {
+  color: #000;
+}
+.commercial-slide-black:hover{
+  background-color: #000000;
+}
+.commercial-slide + .commercial-slide {
+  margin-left: 10px;
+}
+.commercial-slide-wrapper {
+  display: flex !important;
+  justify-content: center;
+  column-gap: 5px;
+}
+
+.commercial-slide-arrow-wrapper {
+  position: relative;
+  width: 15px;
+}
+.commercial-slide-arrow {
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) rotate(-90deg);
+  height: 10px;
+  width: 8.75px;
+  opacity: 1;
+  stroke: #fff;
+  transition: opacity 0.5s ease-in-out;
+}
+.commercial-slide-arrow-black {
+  stroke: #000;
+}
+.commercial-slide-arrow-wrapper > .commercial-slide-arrow:nth-child(1) {
+  top: 0px;
+}
+.commercial-slide-arrow-wrapper > .commercial-slide-arrow:nth-child(2) {
+  top: 6px;
+}
+.commercial-slide-arrow-wrapper > .commercial-slide-arrow:nth-child(3) {
+  top: 12px;
+}
+.about-us-list {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  left: 0;
+  top: 125%;
+  width: 210px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.about-us-list-active {
+  display: flex;
+}
+.about-us-list > .about-us-item {
+  margin-left: 0;
+  font-size: 14px;
+  width: 100% !important;
+  border-radius: 0;
+}
+.about-us-item > span {
+  font-size: 10px;
+}
+.commercial-window-container {
+  overflow: hidden;
+}
+.commercial-window-wrapper {
+  position: relative;
+  z-index: 0;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+.commercial-window-wrapper::-webkit-scrollbar {
+  display: none; 
+}
+.wrapper-arrow-description {
+  position: relative;
+  top: 0;
+  left: -85%;
+  width: 100%;
+  transition: left 0.3s ease-in;
+}
+.commercial-arrow {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 2;
+  top: 0;
+  left: 85%;
+  width: 35px;
+  height: 30px;
+  background-color: #d3e97a;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+}
+.commercial-arrow > svg {
+  stroke: #fff;
+}
+.commercial-arrow-black{
+  stroke: #000 !important;
+}
+.wrapper-arrow-description-left {
+  left: 0%;
+}
+.commercial-window {
+  max-height: 550px;
+  overflow-y: scroll;
+  scrollbar-width: none; 
+  border-radius: 15px;
+}
+.commercial-window::-webkit-scrollbar {
+  display: none; 
+}
+.commercial-window-noscroll {
+  overflow-y: hidden;
+}
+.commercial-description {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  font-size: 14px;
+  padding: 20px 10px;
+  height: 551px;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #dfdfdf;
+  border-bottom-left-radius: 13px;
+}
+.commercial-description-black {
+  background-color: #313131;
+}
+.commercial-description-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.commercial-description-header {
+  font-size: 16px;
+  text-align: center;
+  font-weight: 700;
+}
+.commercial-description-text{
+  display: flex;
+  align-items: flex-start;
+  column-gap: 5px;
+}
+.commercial-description-svg {
+  flex-shrink: 0;
+  width: 20px;
+  margin-top: 2px;
+  stroke: #000; 
+  fill: #d3e97a;
+}
+.commercial-description-svg-black {
+  stroke: #d3e97a;
+}
+.commercial-link {
+  align-self: center;
+  display: block;
+  background-color: #d3e97a;
+  color: #fff !important;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease-in;
+}
+.commercial-link-black {
+  color: #000 !important;
+}
+.commercial-link:hover {
+  color: #d3e97a !important;
+  background-color: #fff;
+  border: 2px solid #d3e97a;
+}
+.commercial-arrow > svg {
+  margin: 0 7.5px;
+  height: 15px;
+  transform: rotate(180deg) translateX(0px);
+  transition: transform 0.3s ease-in; /* Плавное изменение */
+}
+svg.active {
+  transform: rotate(180deg) translateX(-10px);
+  transition: transform 0.3s ease-in; /* Плавное изменение */
+} 
+svg.commercial-arrow-transform {
+  transform: rotate(-360deg) translateX(0px);
+}
+svg.active.commercial-arrow-transform.active{
+  transform: translateX(10px);
+}
+.commercial-window > img {
+  width: 100%;
+}
+@media screen and (min-width: 450px){
+  .commercial-description {
+    font-size: 16px;
+  }
+  .commercial-description-header {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 660px){ 
+  .commercial-swiper > .swiper-wrapper {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 800px){
+  .commercial-description {
+    font-size: 18px;
+}
+.commercial-description-svg {
+  width: 25px;
+}
+.commercial-description-header {
+  font-size: 24px;
+}
+.commercial-description { 
+  padding: 30px;
+}
+.commercial-window {
+  max-height: 600px;
+}
+.commercial-description {
+  height: 601px;
+}
+}
+@media screen and (min-width: 1100px){
+  .commercial-arrow {
+    left: 50%;
+  }
+  .wrapper-arrow-description {
+    left: -50%;
+  }
+  .wrapper-arrow-description-left {
+    left: 0;
+  }
+  .commercial-description {
+    width: 50%;
+  }
+  
+}

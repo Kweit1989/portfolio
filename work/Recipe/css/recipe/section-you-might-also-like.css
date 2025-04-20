@@ -1,0 +1,79 @@
+.section-you-might-also-like {
+    padding-bottom: 185px;
+}
+.section-you-might-also-like-header {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    padding-bottom: 40px;
+}
+.section-you-might-also-like-row {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 100px;
+}
+.section-you-might-also-like-card{
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    max-width: 255px;
+}
+.section-you-might-also-like-card:hover{
+    opacity: 1;
+    transform: scale(1.0625);
+    /* Увеличение до 170px (160px * 1.0625 ≈ 170px) */
+}
+.section-you-might-also-like-card > p {
+    padding-top: 10px;
+}
+.section-you-might-also-like-img{
+    width: 100%;
+    /* Устанавливаем ширину на 100%, чтобы она подстраивалась под родителя */
+    height: 190px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+.section-you-might-also-like-img img{
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    object-fit: cover;
+}
+
+@media (max-width: 1140px){
+    .section-you-might-also-like-row {
+        justify-content: space-around;
+        row-gap: 50px;
+    }
+    
+}
+@media (max-width: 1010px){
+    .section-you-might-also-like {
+        padding-bottom: 45px;
+    }
+}
+@media (max-width: 855px){
+    .section-you-might-also-like-row {
+        row-gap: 30px;
+    }
+}
+@media (max-width: 570px){
+    .section-you-might-also-like-card{
+        max-width: 157px;
+    }
+    .section-you-might-also-like-img{
+        height: 0;
+        padding-bottom: 100%; /* Делает высоту равной ширине, сохраняет квадратную форму */
+        position: relative;
+    }
+    .section-you-might-also-like-img img{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}

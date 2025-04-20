@@ -1,0 +1,132 @@
+.business-crm .business-crm__title {
+    padding-bottom: 5px;
+}
+.business-crm__text {
+    padding-bottom: 45px;
+}
+.business-crm__row {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 32px;
+    row-gap: 20px;
+}
+.business-crm__card {
+    width: 684px;
+    display: flex;
+    align-items: center;
+    column-gap: 17px;
+    padding: 29px 48px 29px 26px;
+    background-color: #402274;
+    box-shadow:
+    0px 0px 20px 0px rgba(215, 149, 255, 1),
+    0px 0px 4px 0px rgba(215, 149, 255, 1);
+    border-radius: 30px;
+    border: 2px solid transparent;
+    border: 2px solid transparent; /* Задаем ширину рамки */
+    background-image: 
+    linear-gradient(#402274, #402274), /* Цвет фона кнопки */
+    linear-gradient(
+        147.77deg,
+        rgba(148, 0, 255, 1) 0%,
+        rgba(198, 79, 135, 0.83) 100%
+      );    
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+.business-crm__img {
+    max-width: 273px;
+    max-height: 185px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.business-crm__img > img {
+    max-width: 100%;
+}
+.business-crm__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+    height: 100%;
+}
+.business-crm__content > span {
+    font-size: 16px;
+    line-height: 110%;
+}
+.business-crm__content > span:last-of-type {
+    color: #CF95FF;
+    font-weight: 700;
+}
+.business-crm__title{
+    padding-top: 11px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 110%;
+}
+.business-crm__content__link {
+    text-align: center;
+    margin-top: auto;
+    cursor: pointer;
+    max-width: 177px;
+    padding: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 0 rgba(162, 45, 247, 0.1), 
+                0 0 7px 0 rgba(162, 45, 247, 0.1), 
+                0 0 13px 0 rgba(162, 45, 247, 0.1), 
+                0 0 25px 0 rgba(162, 45, 247, 0.1), 
+                0 0 47px 0 rgba(162, 45, 247, 0.1), 
+                0 0 19px 9px rgba(162, 45, 247, 0.1);
+    border: 1px solid transparent; /* Задаем ширину рамки */
+    background-image: linear-gradient(#452073, #452073), /* Цвет фона кнопки */
+    linear-gradient(
+        240.52deg,
+        rgba(89, 248, 210, 1) 9.062512964010239%,
+        rgba(116, 223, 221, 0.43) 30.9375137090683%,
+        rgba(161, 180, 239, 0.54) 67.39584803581238%,
+        rgba(202, 142, 255, 0.55) 100%
+      ); /* Градиент для границы */
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+
+@media(max-width:1200px){
+    .business-crm__row {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 600px){
+    .business-crm__text {
+        padding-bottom: 20px;
+    }
+    .business-crm__row {
+        flex-wrap: wrap;
+    }
+    .business-crm__card {
+        position: relative;
+        flex-direction: column;
+        row-gap: 12px;
+        padding: 33px 33px 26px 33px;
+    }
+    .business-crm__img {
+        flex-shrink: 0;  /* Не сжимается, если не хватает места */
+    }
+    .business-crm__content {
+        width: 100%;
+        row-gap: 10px;
+    }
+    .business-crm__content > span {
+        font-size: 14px;
+    }
+    .business-crm__title{
+        padding-top: 0px;
+        font-size: 16px;
+    }
+    .business-crm__content__link {
+        width: 155px;
+        margin: 0 auto;
+        margin-top: 3px;
+    }
+}

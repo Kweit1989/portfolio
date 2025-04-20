@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font/Inter/stylesheet.css">
+    <link rel="stylesheet" href="./css/font/PlayfairDisplay/stylesheet.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/description/section-description-main.css">
+    <link rel="stylesheet" href="./css/description/section-description-before.css">
+    <link rel="stylesheet" href="./css/description/section-description-basics.css">
+    <link rel="stylesheet" href="./css/description/section-description-block.css">
+    <link rel="stylesheet" href="./css/description/section-description-in-kitchen.css">
+    <link rel="stylesheet" href="./css/description/section-description-passages.css">
+    <link rel="stylesheet" href="./css/description/section-already-mad-this-comments-write.css">
+    <link rel="stylesheet" href="./css/description/section-you-might-also-like.css">
+    <title>Описание приготовления</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-row">
+                <div class="header-logo">
+                    <img src="./img/header/logo.svg" alt="Логотип">
+                </div>
+                <div class="header-menu header-menu-mobile">
+                    <ul class="dropdown header-menu-kitchen">
+                        <li class="dropbtn"> 
+                            <a href="#">Рецепты</a>
+                            <span class="arrow"></span>
+                            <ul class="dropdown-content">
+                                <li><a href="./categories.html">По типу блюд</a></li>
+                                <li><a href="#">По кухням мира</a></li>
+                                <li><a href="#">По диетам</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="dropdown header-menu-kitchen">
+                        <li class="dropbtn"> 
+                            <a href="#">Мультимедия</a>
+                            <span class="arrow"></span>
+                            <ul class="dropdown-content">
+                                <li><a href="#">Видеорецепты</a></li>
+                                <li><a href="#">Новости кулинарии</a></li>
+                                <li><a href="#">Техники и лайфхаки</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="dropdown header-menu-kitchen">
+                        <li class="dropbtn"> 
+                            <a href="#">Магазин</a>
+                            <span class="arrow"></span>
+                            <ul class="dropdown-content">
+                                <li><a href="#">Ингредиенты</a></li>
+                                <li><a href="#">Книги</a></li>
+                                <li><a href="#">Сувениры</a></li>
+                                <li><a href="#">Инструменты и приборы</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="dropdown header-menu-kitchen">
+                        <li class="dropbtn"> 
+                            <a href="#">Контакты</a>
+                            <span class="arrow"></span>
+                            <ul class="dropdown-content">
+                                <li><a href="#">Реклама</a></li>
+                                <li><a href="#">О нас</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="buy-link">
+                        <a href="#">Buy</a>
+                    </div>
+                </div>
+                <div class="header-login">
+                    <button class="search">
+                        <img src="./img/header/search.svg" alt="Поиск">
+                    </button>
+                    <ul class="dropdown header-menu-kitchen">
+                        <li class="dropbtn"> 
+                            <img src="./img/header/login.svg" alt="Логин">
+                            <ul class="dropdown-content">
+                                <li><a href="./profile_registration.html">Регистрация</a></li>
+                                <li><a href="./authorization.html">Вход</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <button type="button" class="mobile-nav-button">
+                    <span class="mobile-nav-button-icon"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="section-description-main">
+                <div class="section-description-content">
+                    <div class="section-description-header">
+                        <h2>A full guide for a better and smarter cooking</h2>
+                        <div class="section-description-bookmarks">
+                            <a href="#">
+                                <svg>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4896 1.43442C15.3324 1.49949 15.185 1.59594 15.0572 1.72378L9.72386 7.05711C9.20316 7.57781 9.20316 8.42203 9.72386 8.94273C10.2446 9.46343 11.0888 9.46343 11.6095 8.94273L14.6667 5.88554V19.9999C14.6667 20.7363 15.2636 21.3333 16 21.3333C16.7364 21.3333 17.3333 20.7363 17.3333 19.9999V5.88554L20.3905 8.94273C20.9112 9.46343 21.7554 9.46343 22.2761 8.94273C22.7968 8.42203 22.7968 7.57781 22.2761 7.05711L16.944 1.725C16.9407 1.72169 16.9374 1.71839 16.9341 1.71511C16.6935 1.47892 16.3638 1.33325 16 1.33325C15.8192 1.33325 15.6468 1.36923 15.4896 1.43442ZM4 15.9999V26.6666C4 28.8757 5.79086 30.6666 8 30.6666H24C26.2091 30.6666 28 28.8757 28 26.6666V15.9999C28 15.2635 27.403 14.6666 26.6667 14.6666C25.9303 14.6666 25.3333 15.2635 25.3333 15.9999V26.6666C25.3333 27.403 24.7364 27.9999 24 27.9999H8C7.26362 27.9999 6.66667 27.403 6.66667 26.6666V15.9999C6.66667 15.2635 6.06971 14.6666 5.33333 14.6666C4.59695 14.6666 4 15.2635 4 15.9999Z"/>
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.44181 29.0851C6.55932 29.7154 5.3335 29.0846 5.3335 28.0001V6.66675C5.3335 4.45761 7.12436 2.66675 9.3335 2.66675H22.6668C24.876 2.66675 26.6668 4.45761 26.6668 6.66675V28.0001C26.6668 29.0846 25.441 29.7154 24.5585 29.0851L16.0002 22.972L7.44181 29.0851ZM24.0002 25.4092V6.66675C24.0002 5.93037 23.4032 5.33341 22.6668 5.33341H9.3335C8.59712 5.33341 8.00016 5.93037 8.00016 6.66675V25.4092L15.2252 20.2484C15.6888 19.9173 16.3116 19.9173 16.7751 20.2484L24.0002 25.4092Z"/>
+                                </svg> 
+                            </a>                        
+                        </div>
+                    </div>
+                    <div class="section-description-social">
+                        <a class="section-description-social-logo" href="#">
+                            <div class="section-description-social-img">
+                                <img src="./img/description/section_description_main/logo.jpg" alt="Фотография пользователя">
+                            </div>
+                            <div class="section-description-social-name">
+                                <span>Tricia Albert</span>
+                            </div>
+                        </a>
+                        <a class="section-description-social-calendar" href="#">
+                            <svg>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0002 1.99996V1.33329C10.0002 0.965103 10.2986 0.666626 10.6668 0.666626C11.035 0.666626 11.3335 0.965103 11.3335 1.33329V1.99996H12.6668C13.7714 1.99996 14.6668 2.89539 14.6668 3.99996V6.66663V13.3333C14.6668 14.4379 13.7714 15.3333 12.6668 15.3333H3.3335C2.22893 15.3333 1.3335 14.4379 1.3335 13.3333V6.66663V3.99996C1.3335 2.89539 2.22893 1.99996 3.3335 1.99996H4.66683V1.33329C4.66683 0.965103 4.96531 0.666626 5.3335 0.666626C5.70169 0.666626 6.00016 0.965103 6.00016 1.33329V1.99996H10.0002ZM2.66683 7.33329V13.3333C2.66683 13.7015 2.96531 14 3.3335 14H12.6668C13.035 14 13.3335 13.7015 13.3335 13.3333V7.33329H2.66683ZM13.3335 5.99996H2.66683V3.99996C2.66683 3.63177 2.96531 3.33329 3.3335 3.33329H4.66683V3.99996C4.66683 4.36815 4.96531 4.66663 5.3335 4.66663C5.70169 4.66663 6.00016 4.36815 6.00016 3.99996V3.33329H10.0002V3.99996C10.0002 4.36815 10.2986 4.66663 10.6668 4.66663C11.035 4.66663 11.3335 4.36815 11.3335 3.99996V3.33329H12.6668C13.035 3.33329 13.3335 3.63177 13.3335 3.99996V5.99996Z"/>
+                            </svg>
+                            <div class="section-description-social-calendar-day">
+                                <span>Yesterday</span>
+                            </div>
+                        </a>
+                        <a class="section-description-social-message" href="#">
+                            <svg>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.94297 12L2.47157 14.4714C2.05159 14.8914 1.3335 14.594 1.3335 14V3.33337C1.3335 2.2288 2.22893 1.33337 3.3335 1.33337H12.6668C13.7714 1.33337 14.6668 2.2288 14.6668 3.33337V10C14.6668 11.1046 13.7714 12 12.6668 12H4.94297ZM2.66683 12.3906L4.19542 10.862C4.32045 10.7369 4.49002 10.6667 4.66683 10.6667H12.6668C13.035 10.6667 13.3335 10.3682 13.3335 10V3.33337C13.3335 2.96518 13.035 2.66671 12.6668 2.66671H3.3335C2.96531 2.66671 2.66683 2.96518 2.66683 3.33337V12.3906Z"/>
+                            </svg>
+                            <div class="section-description-social-message-count">
+                                <span>25</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="section-description-text">
+                        <p>One thing I learned living in the Canarsie section of Brooklyn, NY was how to cook a good Italian meal. Here is a recipe I created after having this dish in a restaurant. Enjoy!</p>
+                    </div>
+                </div>
+                <div class="section-description-video">
+                    <video controls poster="./img/description/section_description_main/Image.jpg" id="video-description">
+                        <source src="./video/video.mp4" type="video/mp4">
+                        <source src="./video/video.mp4" type="video/ogg">
+                    </video>
+                    <div class="section-description-video-overlay">
+                        <button class="play-button">
+                            <img class="play-button-img" src="./img/description/section_description_main/play.png" alt="Play">
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="section-description-before">
+                <h4 class="section-description-before-header">Before you begin</h4>
+                <p class="section-description-before-content">Food qualities braise chicken cuts bowl through slices butternut snack. Tender meat juicy dinners. One-pot low heat plenty of time adobo fat raw soften fruit. sweet renders bone-in marrow richness kitchen, fricassee basted pork shoulder. Delicious butternut squash hunk.</p>
+            </section>
+            <section class="section-description-basics">
+                <div class="section-description-basics-content">
+                    <h4 class="section-description-basics-header">Here are the basics</h4>
+                    <p>Juicy meatballs brisket slammin' baked shoulder. Juicy smoker soy sauce burgers brisket. polenta mustard hunk greens. Wine technique snack skewers chuck excess. Oil heat slowly.</p>
+                    <p>slices natural delicious, set aside magic tbsp skillet, bay leaves brown centerpiece. fruit soften edges frond slices onion snack pork steem on wines excess technique cup; Cover smoker soy sauce fruit snack. Sweet one-dozen scrape delicious, non sheet raw crunch mustard. Minutes clever slotted tongs scrape, brown steem undisturbed rice.</p>
+                </div>
+                <div class="section-description-basics-img">
+                    <img src="./img/description/section_description_basics/scale.jpg" alt="Катает тесто">
+                </div>
+            </section>
+            <section class="section-description-block">
+                <h2>“One cannot think well, love well, sleep well, if one has not dined well.”</h2>
+                <p>― Virginia Woolf, A Room of One's Own</p>
+            </section>
+            <section class="section-description-in-kitchen">
+                <div class="section-description-in-kitchen-content-top">
+                    <h4>In the kitchen</h4>
+                    <p>Gastronomy atmosphere set aside. Slice butternut cooking home. Delicious romantic undisturbed raw platter will meld. Thick Skewers skillet natural, smoker soy sauce wait roux. slices rosette bone-in simmer precision alongside baby leeks. Crafting renders aromatic enjoyment, then slices taco. Minutes undisturbed cuisine lunch magnificent mustard curry. Juicy share baking sheet pork. Meals ramen rarities selection, raw pastries richness magnificent atmosphere. Sweet soften dinners, cover mustard infused skillet, Skewers on culinary experience.</p>
+                    <p>Juicy meatballs brisket slammin' baked shoulder. Juicy smoker soy sauce burgers brisket. polenta mustard hunk greens. Wine technique snack skewers chuck excess. Oil heat slowly. slices natural delicious, set aside magic tbsp skillet, bay leaves brown centerpiece. fruit soften edges frond slices onion snack pork steem on wines excess technique cup; Cover smoker soy sauce fruit snack. Sweet one-dozen scrape delicious, non sheet raw crunch mustard. Minutes clever slotted tongs scrape, brown steem undisturbed rice.</p>
+                    <p>Food qualities braise chicken cuts bowl through slices butternut snack. Tender meat juicy dinners. One-pot low heat plenty of time adobo fat raw soften fruit. sweet renders bone-in marrow richness kitchen, fricassee basted pork shoulder. Delicious butternut squash hunk. Flavor centerpiece plate, delicious ribs bone-in meat, excess chef end. sweet effortlessly pork, low heat smoker soy sauce flavor meat, rice fruit fruit. Romantic fall-off-the-bone butternut chuck rice burgers.</p>
+                </div>
+                <div class="section-description-in-kitchen-img">
+                    <img src="./img/description/section_description_in_kitchen/in_kitchen.jpg" alt="На кухне">
+                </div>
+                <div class="section-description-in-kitchen-content-botttom">
+                    <p>Gastronomy atmosphere set aside. Slice butternut cooking home. Delicious romantic undisturbed raw platter will meld. Thick Skewers skillet natural, smoker soy sauce wait roux. slices rosette bone-in simmer precision alongside baby leeks. Crafting renders aromatic enjoyment, then slices taco. Minutes undisturbed cuisine lunch magnificent mustard curry. Juicy share baking sheet pork. Meals ramen rarities selection, raw pastries richness magnificent atmosphere. Sweet soften dinners, cover mustard infused skillet, Skewers on culinary experience.</p>
+                    <p>Juicy meatballs brisket slammin' baked shoulder. Juicy smoker soy sauce burgers brisket. polenta mustard hunk greens. Wine technique snack skewers chuck excess. Oil heat slowly. slices natural delicious, set aside magic tbsp skillet, bay leaves brown centerpiece. fruit soften edges frond slices onion snack pork steem on wines excess technique cup; Cover smoker soy sauce fruit snack. Sweet one-dozen scrape delicious, non sheet raw crunch mustard. Minutes clever slotted tongs scrape, brown steem undisturbed rice.</p>
+                    <p>Food qualities braise chicken cuts bowl through slices butternut snack. Tender meat juicy dinners. One-pot low heat plenty of time adobo fat raw soften fruit. sweet renders bone-in marrow richness kitchen, fricassee basted pork shoulder. Delicious butternut squash hunk. Flavor centerpiece plate, delicious ribs bone-in meat, excess chef end. sweet effortlessly pork, low heat smoker soy sauce flavor meat, rice fruit fruit. Romantic fall-off-the-bone butternut chuck rice burgers.</p>
+                </div>
+            </section>
+            <section class="section-description-passages">
+                <div class="section-description-passages-login">
+                    <div class="section-description-passages-ligin-img">
+                        <img src="./img/description/section-description-passages/32px.jpg" alt="">
+                    </div>
+                    <div class="section-description-passages-name">
+                        <p>Julie Gomez</p>
+                        <p>Editor in chief</p>
+                    </div>
+                </div>
+                <div class="section-description-passages-text">
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are from repetition, injected humour, or non-characteristic words etc.</p>
+                </div>
+                <div class="section-description-passages-social">
+                    <a href="#">
+                        <svg>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 7.49992V5.83325C7.5 3.07183 9.73858 0.833252 12.5 0.833252H15C15.4602 0.833252 15.8333 1.20635 15.8333 1.66659V4.99992C15.8333 5.46016 15.4602 5.83325 15 5.83325H12.5V7.49992H15C15.5421 7.49992 15.9399 8.00941 15.8085 8.53536L14.9751 11.8687C14.8824 12.2397 14.5491 12.4999 14.1667 12.4999H12.5V18.3333C12.5 18.7935 12.1269 19.1666 11.6667 19.1666H8.33333C7.8731 19.1666 7.5 18.7935 7.5 18.3333V12.4999H5.83333C5.3731 12.4999 5 12.1268 5 11.6666V8.33325C5 7.87301 5.3731 7.49992 5.83333 7.49992H7.5ZM14.1667 2.49992H12.5C10.6591 2.49992 9.16667 3.9923 9.16667 5.83325V8.33325C9.16667 8.79349 8.79357 9.16658 8.33333 9.16658H6.66667V10.8333H8.33333C8.79357 10.8333 9.16667 11.2063 9.16667 11.6666V17.4999H10.8333V11.6666C10.8333 11.2063 11.2064 10.8333 11.6667 10.8333H13.516L13.9327 9.16658H11.6667C11.2064 9.16658 10.8333 8.79349 10.8333 8.33325V5.83325C10.8333 4.91278 11.5795 4.16659 12.5 4.16659H14.1667V2.49992Z"/>
+                        </svg> 
+                    </a>
+                    <a href="#">
+                        <svg>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.1668 5.83325C19.1668 3.07183 16.9283 0.833252 14.1668 0.833252H5.8335C3.07207 0.833252 0.833496 3.07183 0.833496 5.83325V14.1666C0.833496 16.928 3.07207 19.1666 5.8335 19.1666H14.1668C16.9283 19.1666 19.1668 16.928 19.1668 14.1666V5.83325ZM5.8335 2.49992H14.1668C16.0078 2.49992 17.5002 3.9923 17.5002 5.83325V14.1666C17.5002 16.0075 16.0078 17.4999 14.1668 17.4999H5.8335C3.99255 17.4999 2.50016 16.0075 2.50016 14.1666V5.83325C2.50016 3.9923 3.99255 2.49992 5.8335 2.49992ZM14.1578 9.35259C13.8886 7.53699 12.463 6.11141 10.6474 5.84218C8.86931 5.57851 7.12257 6.48486 6.31441 8.09048C5.50626 9.69611 5.81889 11.639 7.08995 12.9101C8.361 14.1811 10.3039 14.4937 11.9095 13.6856C13.5151 12.8774 14.4215 11.1307 14.1578 9.35259ZM7.80315 8.83982C8.28804 7.87644 9.33608 7.33263 10.4029 7.49083C11.4923 7.65237 12.3477 8.50772 12.5092 9.59708C12.6674 10.6639 12.1236 11.712 11.1602 12.1969C10.1968 12.6818 9.0311 12.4942 8.26847 11.7316C7.50584 10.9689 7.31825 9.80319 7.80315 8.83982ZM15.1728 6.00584C14.8473 6.33128 14.3197 6.33128 13.9942 6.00584C13.6688 5.6804 13.6688 5.15277 13.9942 4.82733C14.3197 4.50189 14.8473 4.50189 15.1728 4.82733C15.4982 5.15277 15.4982 5.6804 15.1728 6.00584Z"/>
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.16951 6.05907C9.23527 4.23458 10.3855 2.61459 12.1048 1.95838C13.7151 1.34375 15.5165 1.69222 16.7775 2.82075C17.4543 2.57199 18.0962 2.23533 18.6865 1.81891C19.3157 1.37509 20.1587 1.94895 19.9765 2.69706C19.6911 3.86918 19.1189 4.94955 18.3143 5.84239C18.3266 5.97737 18.3331 6.11323 18.3335 6.24988C18.3335 16.1327 8.79515 21.2096 0.428838 16.5617C-0.338397 16.1354 -0.0103306 14.9657 0.866661 15.0005C2.27216 15.0564 3.6635 14.777 4.92867 14.1942C3.09189 13.0621 1.91576 11.5632 1.33878 9.79005C0.743056 7.95928 0.83001 6.03536 1.327 4.20819C1.47734 3.65548 1.63014 3.23903 1.7387 2.99477C2.00176 2.40288 2.80993 2.32423 3.18217 2.85429C4.52541 4.76699 6.6214 5.98665 8.91142 6.23206L9.16664 6.2553L9.16951 6.05907ZM17.3633 4.38115L17.0785 4.48131L16.7905 4.57284C16.4766 4.66735 16.1365 4.56909 15.9214 4.32176C15.1228 3.40356 13.836 3.08157 12.6991 3.51549C11.5622 3.94942 10.8171 5.04696 10.8335 6.2749V7.10823C10.8335 7.56005 10.4735 7.92957 10.0218 7.94129C7.30452 8.01174 4.70849 6.94209 2.83691 5.03595C2.50772 6.45686 2.48365 7.92217 2.92365 9.27435C3.48784 11.0082 4.77937 12.4157 7.00531 13.4051C7.60262 13.6705 7.6757 14.489 7.13489 14.8561C6.2023 15.4891 5.18046 15.9642 4.1102 16.2697C10.5095 17.9532 16.6669 13.7051 16.6669 6.25265C16.6663 6.07211 16.6489 5.89202 16.615 5.71469C16.5628 5.44147 16.6503 5.16021 16.8484 4.96489C17.034 4.78182 17.206 4.5867 17.3633 4.38115Z"/>
+                        </svg> 
+                    </a>                
+                </div>
+            </section>
+            <section class="section-already-mad-this-comments">
+                <h2 class="big-haeder">Comments<span>(25)</span></h2>
+                <article>
+                    <section id="comments">
+                        <div class="comment">
+                            <div class="comment-author">
+                                <div class="author">
+                                    <div class="author-img">
+                                        <img src="./img/recipe/jelanee_uwaezuoke.png" alt="Автор">
+                                    </div>
+                                    <div class="author-name-time">
+                                        <div class="author-name">
+                                            <p>Jelanee Uwaezuoke</p>
+                                        </div>
+                                        <div class="author-time">
+                                            <span>45 min ago</span>
+                                        </div>
+                                    </div>
+                                    <span>29-06-2024</span>
+                                </div>
+                                <div class="text">
+                                    <p>Synth polaroid bitters chillwave pickled. Vegan disrupt tousled, Portland keffiyeh aesthetic food truck sriracha cornhole single-origin coffee church-key roof party.</p>
+                                    <div class="author-social">
+                                        <button class="author-social-btn">
+                                            <svg>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.94273 12L2.47132 14.4714C2.05135 14.8914 1.33325 14.594 1.33325 14V3.33337C1.33325 2.2288 2.22868 1.33337 3.33325 1.33337H12.6666C13.7712 1.33337 14.6666 2.2288 14.6666 3.33337V10C14.6666 11.1046 13.7712 12 12.6666 12H4.94273ZM2.66659 12.3906L4.19518 10.862C4.3202 10.7369 4.48977 10.6667 4.66659 10.6667H12.6666C13.0348 10.6667 13.3333 10.3682 13.3333 10V3.33337C13.3333 2.96518 13.0348 2.66671 12.6666 2.66671H3.33325C2.96506 2.66671 2.66659 2.96518 2.66659 3.33337V12.3906Z"/>
+                                            </svg>
+                                            <div>
+                                                Reply<span>(2)</span>
+                                            </div>
+                                        </button>
+                                        <button class="author-social-btn" id="heart-btn">
+                                            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path id="heart-path" fill-rule="evenodd" clip-rule="evenodd" d="M7.99992 2.83723L8.23507 2.60208C9.04778 1.78898 10.1503 1.33215 11.2999 1.33215C12.4495 1.33215 13.552 1.78898 14.3645 2.60186C15.1776 3.41457 15.6345 4.51708 15.6345 5.6667C15.6345 6.81633 15.1776 7.91884 14.3647 8.73144L8.47132 14.6248C8.21097 14.8851 7.78886 14.8851 7.52851 14.6248L1.63518 8.73144C-0.0574293 7.03883 -0.0574294 4.29457 1.63518 2.60197C3.32779 0.909358 6.07205 0.909358 7.76465 2.60197L7.99992 2.83723ZM13.422 7.78852C13.9849 7.22587 14.3011 6.4626 14.3011 5.6667C14.3011 4.87081 13.9849 4.10754 13.4217 3.54466C12.8591 2.98175 12.0958 2.66549 11.2999 2.66549C10.504 2.66549 9.74075 2.98175 9.17799 3.54478L8.47132 4.25144C8.21097 4.51179 7.78886 4.51179 7.52851 4.25144L6.82185 3.54478C5.64994 2.37287 3.7499 2.37287 2.57799 3.54478C1.40608 4.71668 1.40608 6.61672 2.57799 7.78863L7.99992 13.2106L13.422 7.78852Z"/>
+                                            </svg>
+                                            <div>
+                                               <span>48</span>
+                                            </div>                                            
+                                        </button>
+                                        <button class="author-social-btn">
+                                            <svg>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66667 7.99996C4.66667 7.26358 4.06971 6.66663 3.33333 6.66663C2.59695 6.66663 2 7.26358 2 7.99996C2 8.73634 2.59695 9.33329 3.33333 9.33329C4.06971 9.33329 4.66667 8.73634 4.66667 7.99996ZM8 6.66663C8.73638 6.66663 9.33333 7.26358 9.33333 7.99996C9.33333 8.73634 8.73638 9.33329 8 9.33329C7.26362 9.33329 6.66667 8.73634 6.66667 7.99996C6.66667 7.26358 7.26362 6.66663 8 6.66663ZM12.6667 6.66663C13.403 6.66663 14 7.26358 14 7.99996C14 8.73634 13.403 9.33329 12.6667 9.33329C11.9303 9.33329 11.3333 8.73634 11.3333 7.99996C11.3333 7.26358 11.9303 6.66663 12.6667 6.66663Z"/>
+                                            </svg>
+                                            <div>
+                                                <span>More</span>
+                                            </div>                                           
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="replies">
+                                <div class="comment-author">
+                                    <div class="author">
+                                        <div class="author-img">
+                                            <img src="./img/recipe/qiu_xun.png" alt="Автор">
+                                        </div>
+                                        <div class="author-name-time">
+                                            <div class="author-name">
+                                                <p>Qiu Xun</p>
+                                            </div>
+                                            <div class="author-time">
+                                                <span>45 min ago</span>
+                                            </div>
+                                        </div>
+                                        <span>29-06-2024</span>
+                                    </div>
+                                    <div class="text">
+                                        <p>Synth polaroid chillwave pickled 🔥</p>
+                                        <div class="author-social">
+                                            <button class="author-social-btn">
+                                                <svg>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.94273 12L2.47132 14.4714C2.05135 14.8914 1.33325 14.594 1.33325 14V3.33337C1.33325 2.2288 2.22868 1.33337 3.33325 1.33337H12.6666C13.7712 1.33337 14.6666 2.2288 14.6666 3.33337V10C14.6666 11.1046 13.7712 12 12.6666 12H4.94273ZM2.66659 12.3906L4.19518 10.862C4.3202 10.7369 4.48977 10.6667 4.66659 10.6667H12.6666C13.0348 10.6667 13.3333 10.3682 13.3333 10V3.33337C13.3333 2.96518 13.0348 2.66671 12.6666 2.66671H3.33325C2.96506 2.66671 2.66659 2.96518 2.66659 3.33337V12.3906Z"/>
+                                                </svg>
+                                                <div>
+                                                    Reply<span>(2)</span>
+                                                </div>
+                                            </button>
+                                            <button class="author-social-btn">
+                                                <svg>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99992 2.83723L8.23507 2.60208C9.04778 1.78898 10.1503 1.33215 11.2999 1.33215C12.4495 1.33215 13.552 1.78898 14.3645 2.60186C15.1776 3.41457 15.6345 4.51708 15.6345 5.6667C15.6345 6.81633 15.1776 7.91884 14.3647 8.73144L8.47132 14.6248C8.21097 14.8851 7.78886 14.8851 7.52851 14.6248L1.63518 8.73144C-0.0574293 7.03883 -0.0574294 4.29457 1.63518 2.60197C3.32779 0.909358 6.07205 0.909358 7.76465 2.60197L7.99992 2.83723ZM13.422 7.78852C13.9849 7.22587 14.3011 6.4626 14.3011 5.6667C14.3011 4.87081 13.9849 4.10754 13.4217 3.54466C12.8591 2.98175 12.0958 2.66549 11.2999 2.66549C10.504 2.66549 9.74075 2.98175 9.17799 3.54478L8.47132 4.25144C8.21097 4.51179 7.78886 4.51179 7.52851 4.25144L6.82185 3.54478C5.64994 2.37287 3.7499 2.37287 2.57799 3.54478C1.40608 4.71668 1.40608 6.61672 2.57799 7.78863L7.99992 13.2106L13.422 7.78852Z"/>
+                                                </svg>
+                                                <div>
+                                                   <span>48</span>
+                                                </div>                                            
+                                            </button>
+                                            <button class="author-social-btn">
+                                                <svg>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66667 7.99996C4.66667 7.26358 4.06971 6.66663 3.33333 6.66663C2.59695 6.66663 2 7.26358 2 7.99996C2 8.73634 2.59695 9.33329 3.33333 9.33329C4.06971 9.33329 4.66667 8.73634 4.66667 7.99996ZM8 6.66663C8.73638 6.66663 9.33333 7.26358 9.33333 7.99996C9.33333 8.73634 8.73638 9.33329 8 9.33329C7.26362 9.33329 6.66667 8.73634 6.66667 7.99996C6.66667 7.26358 7.26362 6.66663 8 6.66663ZM12.6667 6.66663C13.403 6.66663 14 7.26358 14 7.99996C14 8.73634 13.403 9.33329 12.6667 9.33329C11.9303 9.33329 11.3333 8.73634 11.3333 7.99996C11.3333 7.26358 11.9303 6.66663 12.6667 6.66663Z"/>
+                                                </svg>
+                                                <div>
+                                                    <span>More</span>
+                                                </div>                                           
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="replies">
+                                <div class="comment-author">
+                                    <div class="author">
+                                        <div class="author-img">
+                                            <img src="./img/recipe/noell_blue.png" alt="Автор">
+                                        </div>
+                                        <div class="author-name-time">
+                                            <div class="author-name">
+                                                <p>Noell Blue</p>
+                                            </div>
+                                            <div class="author-time">
+                                                <span>45 min ago</span>
+                                            </div>
+                                        </div>
+                                        <span>29-06-2024</span>
+                                    </div>
+                                    <div class="text">
+                                        <p>Synth polaroid bitters chillwave pickled. Vegan disrupt tousled, Portland keffiyeh aesthetic food truck sriracha cornhole single-origin coffee church-key roof party.</p>
+                                        <div class="author-social">
+                                            <button class="author-social-btn">
+                                                <svg>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.94273 12L2.47132 14.4714C2.05135 14.8914 1.33325 14.594 1.33325 14V3.33337C1.33325 2.2288 2.22868 1.33337 3.33325 1.33337H12.6666C13.7712 1.33337 14.6666 2.2288 14.6666 3.33337V10C14.6666 11.1046 13.7712 12 12.6666 12H4.94273ZM2.66659 12.3906L4.19518 10.862C4.3202 10.7369 4.48977 10.6667 4.66659 10.6667H12.6666C13.0348 10.6667 13.3333 10.3682 13.3333 10V3.33337C13.3333 2.96518 13.0348 2.66671 12.6666 2.66671H3.33325C2.96506 2.66671 2.66659 2.96518 2.66659 3.33337V12.3906Z"/>
+                                                </svg>
+                                                <div>
+                                                    Reply<span>(2)</span>
+                                                </div>
+                                            </button>
+                                            <button class="author-social-btn">
+                                                <svg>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99992 2.83723L8.23507 2.60208C9.04778 1.78898 10.1503 1.33215 11.2999 1.33215C12.4495 1.33215 13.552 1.78898 14.3645 2.60186C15.1776 3.41457 15.6345 4.51708 15.6345 5.6667C15.6345 6.81633 15.1776 7.91884 14.3647 8.73144L8.47132 14.6248C8.21097 14.8851 7.78886 14.8851 7.52851 14.6248L1.63518 8.73144C-0.0574293 7.03883 -0.0574294 4.29457 1.63518 2.60197C3.32779 0.909358 6.07205 0.909358 7.76465 2.60197L7.99992 2.83723ZM13.422 7.78852C13.9849 7.22587 14.3011 6.4626 14.3011 5.6667C14.3011 4.87081 13.9849 4.10754 13.4217 3.54466C12.8591 2.98175 12.0958 2.66549 11.2999 2.66549C10.504 2.66549 9.74075 2.98175 9.17799 3.54478L8.47132 4.25144C8.21097 4.51179 7.78886 4.51179 7.52851 4.25144L6.82185 3.54478C5.64994 2.37287 3.7499 2.37287 2.57799 3.54478C1.40608 4.71668 1.40608 6.61672 2.57799 7.78863L7.99992 13.2106L13.422 7.78852Z"/>
+                                                </svg>
+                                                <div>
+                                                   <span>48</span>
+                                                </div>                                            
+                                            </button>
+                                            <button class="author-social-btn">
+                                                <svg>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66667 7.99996C4.66667 7.26358 4.06971 6.66663 3.33333 6.66663C2.59695 6.66663 2 7.26358 2 7.99996C2 8.73634 2.59695 9.33329 3.33333 9.33329C4.06971 9.33329 4.66667 8.73634 4.66667 7.99996ZM8 6.66663C8.73638 6.66663 9.33333 7.26358 9.33333 7.99996C9.33333 8.73634 8.73638 9.33329 8 9.33329C7.26362 9.33329 6.66667 8.73634 6.66667 7.99996C6.66667 7.26358 7.26362 6.66663 8 6.66663ZM12.6667 6.66663C13.403 6.66663 14 7.26358 14 7.99996C14 8.73634 13.403 9.33329 12.6667 9.33329C11.9303 9.33329 11.3333 8.73634 11.3333 7.99996C11.3333 7.26358 11.9303 6.66663 12.6667 6.66663Z"/>
+                                                </svg>
+                                                <div>
+                                                    <span>More</span>
+                                                </div>                                           
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <div class="comment-author">
+                                <div class="author">
+                                    <div class="author-img">
+                                        <img src="./img/recipe/diane_lansdowne.png" alt="Автор">
+                                    </div>
+                                    <div class="author-name-time">
+                                        <div class="author-name">
+                                            <p>Diane Lansdowne</p>
+                                        </div>
+                                        <div class="author-time">
+                                            <span>45 min ago</span>
+                                        </div>
+                                    </div>
+                                    <span>29-06-2024</span>
+                                </div>
+                                <div class="text">
+                                    <p>Synth polaroid bitters chillwave pickled. Vegan disrupt tousled, Portland keffiyeh aesthetic food truck sriracha cornhole single-origin coffee church-key roof party.</p>
+                                    <div class="author-social">
+                                        <button class="author-social-btn">
+                                            <svg>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.94273 12L2.47132 14.4714C2.05135 14.8914 1.33325 14.594 1.33325 14V3.33337C1.33325 2.2288 2.22868 1.33337 3.33325 1.33337H12.6666C13.7712 1.33337 14.6666 2.2288 14.6666 3.33337V10C14.6666 11.1046 13.7712 12 12.6666 12H4.94273ZM2.66659 12.3906L4.19518 10.862C4.3202 10.7369 4.48977 10.6667 4.66659 10.6667H12.6666C13.0348 10.6667 13.3333 10.3682 13.3333 10V3.33337C13.3333 2.96518 13.0348 2.66671 12.6666 2.66671H3.33325C2.96506 2.66671 2.66659 2.96518 2.66659 3.33337V12.3906Z"/>
+                                            </svg>
+                                            <div>
+                                                Reply<span>(2)</span>
+                                            </div>
+                                        </button>
+                                        <button class="author-social-btn">
+                                            <svg>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99992 2.83723L8.23507 2.60208C9.04778 1.78898 10.1503 1.33215 11.2999 1.33215C12.4495 1.33215 13.552 1.78898 14.3645 2.60186C15.1776 3.41457 15.6345 4.51708 15.6345 5.6667C15.6345 6.81633 15.1776 7.91884 14.3647 8.73144L8.47132 14.6248C8.21097 14.8851 7.78886 14.8851 7.52851 14.6248L1.63518 8.73144C-0.0574293 7.03883 -0.0574294 4.29457 1.63518 2.60197C3.32779 0.909358 6.07205 0.909358 7.76465 2.60197L7.99992 2.83723ZM13.422 7.78852C13.9849 7.22587 14.3011 6.4626 14.3011 5.6667C14.3011 4.87081 13.9849 4.10754 13.4217 3.54466C12.8591 2.98175 12.0958 2.66549 11.2999 2.66549C10.504 2.66549 9.74075 2.98175 9.17799 3.54478L8.47132 4.25144C8.21097 4.51179 7.78886 4.51179 7.52851 4.25144L6.82185 3.54478C5.64994 2.37287 3.7499 2.37287 2.57799 3.54478C1.40608 4.71668 1.40608 6.61672 2.57799 7.78863L7.99992 13.2106L13.422 7.78852Z"/>
+                                            </svg>
+                                            <div>
+                                               <span>48</span>
+                                            </div>                                            
+                                        </button>
+                                        <button class="author-social-btn">
+                                            <svg>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66667 7.99996C4.66667 7.26358 4.06971 6.66663 3.33333 6.66663C2.59695 6.66663 2 7.26358 2 7.99996C2 8.73634 2.59695 9.33329 3.33333 9.33329C4.06971 9.33329 4.66667 8.73634 4.66667 7.99996ZM8 6.66663C8.73638 6.66663 9.33333 7.26358 9.33333 7.99996C9.33333 8.73634 8.73638 9.33329 8 9.33329C7.26362 9.33329 6.66667 8.73634 6.66667 7.99996C6.66667 7.26358 7.26362 6.66663 8 6.66663ZM12.6667 6.66663C13.403 6.66663 14 7.26358 14 7.99996C14 8.73634 13.403 9.33329 12.6667 9.33329C11.9303 9.33329 11.3333 8.73634 11.3333 7.99996C11.3333 7.26358 11.9303 6.66663 12.6667 6.66663Z"/>
+                                            </svg>
+                                            <div>
+                                                <span>More</span>
+                                            </div>                                           
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="comment">
+                            <div class="comment-author">
+                                <div class="author">
+                                    <div class="author-img">
+                                        <img src="./img/recipe/malin_quist.png" alt="Автор">
+                                    </div>
+                                    <div class="author-name-time">
+                                        <div class="author-name">
+                                            <p>Malin Quist</p>
+                                        </div>
+                                        <div class="author-time">
+                                            <span>45 min ago</span>
+                                        </div>
+                                    </div>
+                                    <span>29-06-2024</span>
+                                </div>
+                                <div class="text">
+                                    <p>Synth polaroid bitters chillwave pickled. Vegan disrupt tousled, Portland keffiyeh aesthetic food truck sriracha cornhole single-origin coffee church-key roof party.</p>
+                                    <div class="author-social">
+                                        <button class="author-social-btn">
+                                            <svg>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.94273 12L2.47132 14.4714C2.05135 14.8914 1.33325 14.594 1.33325 14V3.33337C1.33325 2.2288 2.22868 1.33337 3.33325 1.33337H12.6666C13.7712 1.33337 14.6666 2.2288 14.6666 3.33337V10C14.6666 11.1046 13.7712 12 12.6666 12H4.94273ZM2.66659 12.3906L4.19518 10.862C4.3202 10.7369 4.48977 10.6667 4.66659 10.6667H12.6666C13.0348 10.6667 13.3333 10.3682 13.3333 10V3.33337C13.3333 2.96518 13.0348 2.66671 12.6666 2.66671H3.33325C2.96506 2.66671 2.66659 2.96518 2.66659 3.33337V12.3906Z"/>
+                                            </svg>
+                                            <div>
+                                                Reply<span>(2)</span>
+                                            </div>
+                                        </button>
+                                        <button class="author-social-btn">
+                                            <svg>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99992 2.83723L8.23507 2.60208C9.04778 1.78898 10.1503 1.33215 11.2999 1.33215C12.4495 1.33215 13.552 1.78898 14.3645 2.60186C15.1776 3.41457 15.6345 4.51708 15.6345 5.6667C15.6345 6.81633 15.1776 7.91884 14.3647 8.73144L8.47132 14.6248C8.21097 14.8851 7.78886 14.8851 7.52851 14.6248L1.63518 8.73144C-0.0574293 7.03883 -0.0574294 4.29457 1.63518 2.60197C3.32779 0.909358 6.07205 0.909358 7.76465 2.60197L7.99992 2.83723ZM13.422 7.78852C13.9849 7.22587 14.3011 6.4626 14.3011 5.6667C14.3011 4.87081 13.9849 4.10754 13.4217 3.54466C12.8591 2.98175 12.0958 2.66549 11.2999 2.66549C10.504 2.66549 9.74075 2.98175 9.17799 3.54478L8.47132 4.25144C8.21097 4.51179 7.78886 4.51179 7.52851 4.25144L6.82185 3.54478C5.64994 2.37287 3.7499 2.37287 2.57799 3.54478C1.40608 4.71668 1.40608 6.61672 2.57799 7.78863L7.99992 13.2106L13.422 7.78852Z"/>
+                                            </svg>
+                                            <div>
+                                               <span>48</span>
+                                            </div>                                            
+                                        </button>
+                                        <button class="author-social-btn">
+                                            <svg>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66667 7.99996C4.66667 7.26358 4.06971 6.66663 3.33333 6.66663C2.59695 6.66663 2 7.26358 2 7.99996C2 8.73634 2.59695 9.33329 3.33333 9.33329C4.06971 9.33329 4.66667 8.73634 4.66667 7.99996ZM8 6.66663C8.73638 6.66663 9.33333 7.26358 9.33333 7.99996C9.33333 8.73634 8.73638 9.33329 8 9.33329C7.26362 9.33329 6.66667 8.73634 6.66667 7.99996C6.66667 7.26358 7.26362 6.66663 8 6.66663ZM12.6667 6.66663C13.403 6.66663 14 7.26358 14 7.99996C14 8.73634 13.403 9.33329 12.6667 9.33329C11.9303 9.33329 11.3333 8.73634 11.3333 7.99996C11.3333 7.26358 11.9303 6.66663 12.6667 6.66663Z"/>
+                                            </svg>
+                                            <div>
+                                                <span>More</span>
+                                            </div>                                           
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="comment">
+                            <div class="comment-author">
+                                <div class="author">
+                                    <div class="author-img">
+                                        <img src="./img/recipe/nayara_elafuente.png" alt="Автор">
+                                    </div>
+                                    <div class="author-name-time">
+                                        <div class="author-name">
+                                            <p>Nayara Delafuente</p>
+                                        </div>
+                                        <div class="author-time">
+                                            <span>45 min ago</span>
+                                        </div>
+                                    </div>
+                                    <span>29-06-2024</span>
+                                </div>
+                                <div class="text">
+                                    <p>Synth polaroid bitters chillwave pickled. Vegan disrupt tousled, Portland keffiyeh aesthetic food truck sriracha cornhole single-origin coffee church-key roof party.</p>
+                                    <div class="author-social">
+                                        <button class="author-social-btn">
+                                            <svg>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.94273 12L2.47132 14.4714C2.05135 14.8914 1.33325 14.594 1.33325 14V3.33337C1.33325 2.2288 2.22868 1.33337 3.33325 1.33337H12.6666C13.7712 1.33337 14.6666 2.2288 14.6666 3.33337V10C14.6666 11.1046 13.7712 12 12.6666 12H4.94273ZM2.66659 12.3906L4.19518 10.862C4.3202 10.7369 4.48977 10.6667 4.66659 10.6667H12.6666C13.0348 10.6667 13.3333 10.3682 13.3333 10V3.33337C13.3333 2.96518 13.0348 2.66671 12.6666 2.66671H3.33325C2.96506 2.66671 2.66659 2.96518 2.66659 3.33337V12.3906Z"/>
+                                            </svg>
+                                            <div>
+                                                Reply<span>(2)</span>
+                                            </div>
+                                        </button>
+                                        <button class="author-social-btn">
+                                            <svg>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99992 2.83723L8.23507 2.60208C9.04778 1.78898 10.1503 1.33215 11.2999 1.33215C12.4495 1.33215 13.552 1.78898 14.3645 2.60186C15.1776 3.41457 15.6345 4.51708 15.6345 5.6667C15.6345 6.81633 15.1776 7.91884 14.3647 8.73144L8.47132 14.6248C8.21097 14.8851 7.78886 14.8851 7.52851 14.6248L1.63518 8.73144C-0.0574293 7.03883 -0.0574294 4.29457 1.63518 2.60197C3.32779 0.909358 6.07205 0.909358 7.76465 2.60197L7.99992 2.83723ZM13.422 7.78852C13.9849 7.22587 14.3011 6.4626 14.3011 5.6667C14.3011 4.87081 13.9849 4.10754 13.4217 3.54466C12.8591 2.98175 12.0958 2.66549 11.2999 2.66549C10.504 2.66549 9.74075 2.98175 9.17799 3.54478L8.47132 4.25144C8.21097 4.51179 7.78886 4.51179 7.52851 4.25144L6.82185 3.54478C5.64994 2.37287 3.7499 2.37287 2.57799 3.54478C1.40608 4.71668 1.40608 6.61672 2.57799 7.78863L7.99992 13.2106L13.422 7.78852Z"/>
+                                            </svg>
+                                            <div>
+                                               <span>48</span>
+                                            </div>                                            
+                                        </button>
+                                        <button class="author-social-btn">
+                                            <svg>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66667 7.99996C4.66667 7.26358 4.06971 6.66663 3.33333 6.66663C2.59695 6.66663 2 7.26358 2 7.99996C2 8.73634 2.59695 9.33329 3.33333 9.33329C4.06971 9.33329 4.66667 8.73634 4.66667 7.99996ZM8 6.66663C8.73638 6.66663 9.33333 7.26358 9.33333 7.99996C9.33333 8.73634 8.73638 9.33329 8 9.33329C7.26362 9.33329 6.66667 8.73634 6.66667 7.99996C6.66667 7.26358 7.26362 6.66663 8 6.66663ZM12.6667 6.66663C13.403 6.66663 14 7.26358 14 7.99996C14 8.73634 13.403 9.33329 12.6667 9.33329C11.9303 9.33329 11.3333 8.73634 11.3333 7.99996C11.3333 7.26358 11.9303 6.66663 12.6667 6.66663Z"/>
+                                            </svg>
+                                            <div>
+                                                <span>More</span>
+                                            </div>                                           
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <div class="comment-author">
+                                <div class="author">
+                                    <div class="author-img">
+                                        <img src="./img/recipe/henk_fortuin.png" alt="Автор">
+                                    </div>
+                                    <div class="author-name-time">
+                                        <div class="author-name">
+                                            <p>Henk Fortuin</p>
+                                        </div>
+                                        <div class="author-time">
+                                            <span>45 min ago</span>
+                                        </div>
+                                    </div>
+                                    <span>29-06-2024</span>
+                                </div>
+                                <div class="text">
+                                    <p>Synth polaroid bitters chillwave pickled. Vegan disrupt tousled, Portland keffiyeh aesthetic food truck sriracha cornhole single-origin coffee church-key roof party.</p>
+                                    <div class="author-social">
+                                        <button class="author-social-btn">
+                                            <svg>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.94273 12L2.47132 14.4714C2.05135 14.8914 1.33325 14.594 1.33325 14V3.33337C1.33325 2.2288 2.22868 1.33337 3.33325 1.33337H12.6666C13.7712 1.33337 14.6666 2.2288 14.6666 3.33337V10C14.6666 11.1046 13.7712 12 12.6666 12H4.94273ZM2.66659 12.3906L4.19518 10.862C4.3202 10.7369 4.48977 10.6667 4.66659 10.6667H12.6666C13.0348 10.6667 13.3333 10.3682 13.3333 10V3.33337C13.3333 2.96518 13.0348 2.66671 12.6666 2.66671H3.33325C2.96506 2.66671 2.66659 2.96518 2.66659 3.33337V12.3906Z"/>
+                                            </svg>
+                                            <div>
+                                                Reply<span>(2)</span>
+                                            </div>
+                                        </button>
+                                        <button class="author-social-btn">
+                                            <svg>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99992 2.83723L8.23507 2.60208C9.04778 1.78898 10.1503 1.33215 11.2999 1.33215C12.4495 1.33215 13.552 1.78898 14.3645 2.60186C15.1776 3.41457 15.6345 4.51708 15.6345 5.6667C15.6345 6.81633 15.1776 7.91884 14.3647 8.73144L8.47132 14.6248C8.21097 14.8851 7.78886 14.8851 7.52851 14.6248L1.63518 8.73144C-0.0574293 7.03883 -0.0574294 4.29457 1.63518 2.60197C3.32779 0.909358 6.07205 0.909358 7.76465 2.60197L7.99992 2.83723ZM13.422 7.78852C13.9849 7.22587 14.3011 6.4626 14.3011 5.6667C14.3011 4.87081 13.9849 4.10754 13.4217 3.54466C12.8591 2.98175 12.0958 2.66549 11.2999 2.66549C10.504 2.66549 9.74075 2.98175 9.17799 3.54478L8.47132 4.25144C8.21097 4.51179 7.78886 4.51179 7.52851 4.25144L6.82185 3.54478C5.64994 2.37287 3.7499 2.37287 2.57799 3.54478C1.40608 4.71668 1.40608 6.61672 2.57799 7.78863L7.99992 13.2106L13.422 7.78852Z"/>
+                                            </svg>
+                                            <div>
+                                               <span>48</span>
+                                            </div>                                            
+                                        </button>
+                                        <button class="author-social-btn">
+                                            <svg>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66667 7.99996C4.66667 7.26358 4.06971 6.66663 3.33333 6.66663C2.59695 6.66663 2 7.26358 2 7.99996C2 8.73634 2.59695 9.33329 3.33333 9.33329C4.06971 9.33329 4.66667 8.73634 4.66667 7.99996ZM8 6.66663C8.73638 6.66663 9.33333 7.26358 9.33333 7.99996C9.33333 8.73634 8.73638 9.33329 8 9.33329C7.26362 9.33329 6.66667 8.73634 6.66667 7.99996C6.66667 7.26358 7.26362 6.66663 8 6.66663ZM12.6667 6.66663C13.403 6.66663 14 7.26358 14 7.99996C14 8.73634 13.403 9.33329 12.6667 9.33329C11.9303 9.33329 11.3333 8.73634 11.3333 7.99996C11.3333 7.26358 11.9303 6.66663 12.6667 6.66663Z"/>
+                                            </svg>
+                                            <div>
+                                                <span>More</span>
+                                            </div>                                           
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment hidden">
+                            <div class="comment-author">
+                                <div class="author">
+                                    <div class="author-img">
+                                        <img src="./img/recipe/malin_quist.png" alt="Автор">
+                                    </div>
+                                    <div class="author-name-time">
+                                        <div class="author-name">
+                                            <p>Malin Quist</p>
+                                        </div>
+                                        <div class="author-time">
+                                            <span>45 min ago</span>
+                                        </div>
+                                    </div>
+                                    <span>29-06-2024</span>
+                                </div>
+                                <div class="text">
+                                    <p>Synth polaroid bitters chillwave pickled. Vegan disrupt tousled, Portland keffiyeh aesthetic food truck sriracha cornhole single-origin coffee church-key roof party.</p>
+                                    <div class="author-social">
+                                        <button class="author-social-btn">
+                                            <svg>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.94273 12L2.47132 14.4714C2.05135 14.8914 1.33325 14.594 1.33325 14V3.33337C1.33325 2.2288 2.22868 1.33337 3.33325 1.33337H12.6666C13.7712 1.33337 14.6666 2.2288 14.6666 3.33337V10C14.6666 11.1046 13.7712 12 12.6666 12H4.94273ZM2.66659 12.3906L4.19518 10.862C4.3202 10.7369 4.48977 10.6667 4.66659 10.6667H12.6666C13.0348 10.6667 13.3333 10.3682 13.3333 10V3.33337C13.3333 2.96518 13.0348 2.66671 12.6666 2.66671H3.33325C2.96506 2.66671 2.66659 2.96518 2.66659 3.33337V12.3906Z"/>
+                                            </svg>
+                                            <div>
+                                                Reply<span>(2)</span>
+                                            </div>
+                                        </button>
+                                        <button class="author-social-btn">
+                                            <svg>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99992 2.83723L8.23507 2.60208C9.04778 1.78898 10.1503 1.33215 11.2999 1.33215C12.4495 1.33215 13.552 1.78898 14.3645 2.60186C15.1776 3.41457 15.6345 4.51708 15.6345 5.6667C15.6345 6.81633 15.1776 7.91884 14.3647 8.73144L8.47132 14.6248C8.21097 14.8851 7.78886 14.8851 7.52851 14.6248L1.63518 8.73144C-0.0574293 7.03883 -0.0574294 4.29457 1.63518 2.60197C3.32779 0.909358 6.07205 0.909358 7.76465 2.60197L7.99992 2.83723ZM13.422 7.78852C13.9849 7.22587 14.3011 6.4626 14.3011 5.6667C14.3011 4.87081 13.9849 4.10754 13.4217 3.54466C12.8591 2.98175 12.0958 2.66549 11.2999 2.66549C10.504 2.66549 9.74075 2.98175 9.17799 3.54478L8.47132 4.25144C8.21097 4.51179 7.78886 4.51179 7.52851 4.25144L6.82185 3.54478C5.64994 2.37287 3.7499 2.37287 2.57799 3.54478C1.40608 4.71668 1.40608 6.61672 2.57799 7.78863L7.99992 13.2106L13.422 7.78852Z"/>
+                                            </svg>
+                                            <div>
+                                               <span>48</span>
+                                            </div>                                            
+                                        </button>
+                                        <button class="author-social-btn">
+                                            <svg>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66667 7.99996C4.66667 7.26358 4.06971 6.66663 3.33333 6.66663C2.59695 6.66663 2 7.26358 2 7.99996C2 8.73634 2.59695 9.33329 3.33333 9.33329C4.06971 9.33329 4.66667 8.73634 4.66667 7.99996ZM8 6.66663C8.73638 6.66663 9.33333 7.26358 9.33333 7.99996C9.33333 8.73634 8.73638 9.33329 8 9.33329C7.26362 9.33329 6.66667 8.73634 6.66667 7.99996C6.66667 7.26358 7.26362 6.66663 8 6.66663ZM12.6667 6.66663C13.403 6.66663 14 7.26358 14 7.99996C14 8.73634 13.403 9.33329 12.6667 9.33329C11.9303 9.33329 11.3333 8.73634 11.3333 7.99996C11.3333 7.26358 11.9303 6.66663 12.6667 6.66663Z"/>
+                                            </svg>
+                                            <div>
+                                                <span>More</span>
+                                            </div>                                           
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="comment hidden">
+                            <div class="comment-author">
+                                <div class="author">
+                                    <div class="author-img">
+                                        <img src="./img/recipe/nayara_elafuente.png" alt="Автор">
+                                    </div>
+                                    <div class="author-name-time">
+                                        <div class="author-name">
+                                            <p>Nayara Delafuente</p>
+                                        </div>
+                                        <div class="author-time">
+                                            <span>45 min ago</span>
+                                        </div>
+                                    </div>
+                                    <span>29-06-2024</span>
+                                </div>
+                                <div class="text">
+                                    <p>Synth polaroid bitters chillwave pickled. Vegan disrupt tousled, Portland keffiyeh aesthetic food truck sriracha cornhole single-origin coffee church-key roof party.</p>
+                                    <div class="author-social">
+                                        <button class="author-social-btn">
+                                            <svg>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.94273 12L2.47132 14.4714C2.05135 14.8914 1.33325 14.594 1.33325 14V3.33337C1.33325 2.2288 2.22868 1.33337 3.33325 1.33337H12.6666C13.7712 1.33337 14.6666 2.2288 14.6666 3.33337V10C14.6666 11.1046 13.7712 12 12.6666 12H4.94273ZM2.66659 12.3906L4.19518 10.862C4.3202 10.7369 4.48977 10.6667 4.66659 10.6667H12.6666C13.0348 10.6667 13.3333 10.3682 13.3333 10V3.33337C13.3333 2.96518 13.0348 2.66671 12.6666 2.66671H3.33325C2.96506 2.66671 2.66659 2.96518 2.66659 3.33337V12.3906Z"/>
+                                            </svg>
+                                            <div>
+                                                Reply<span>(2)</span>
+                                            </div>
+                                        </button>
+                                        <button class="author-social-btn">
+                                            <svg>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99992 2.83723L8.23507 2.60208C9.04778 1.78898 10.1503 1.33215 11.2999 1.33215C12.4495 1.33215 13.552 1.78898 14.3645 2.60186C15.1776 3.41457 15.6345 4.51708 15.6345 5.6667C15.6345 6.81633 15.1776 7.91884 14.3647 8.73144L8.47132 14.6248C8.21097 14.8851 7.78886 14.8851 7.52851 14.6248L1.63518 8.73144C-0.0574293 7.03883 -0.0574294 4.29457 1.63518 2.60197C3.32779 0.909358 6.07205 0.909358 7.76465 2.60197L7.99992 2.83723ZM13.422 7.78852C13.9849 7.22587 14.3011 6.4626 14.3011 5.6667C14.3011 4.87081 13.9849 4.10754 13.4217 3.54466C12.8591 2.98175 12.0958 2.66549 11.2999 2.66549C10.504 2.66549 9.74075 2.98175 9.17799 3.54478L8.47132 4.25144C8.21097 4.51179 7.78886 4.51179 7.52851 4.25144L6.82185 3.54478C5.64994 2.37287 3.7499 2.37287 2.57799 3.54478C1.40608 4.71668 1.40608 6.61672 2.57799 7.78863L7.99992 13.2106L13.422 7.78852Z"/>
+                                            </svg>
+                                            <div>
+                                               <span>48</span>
+                                            </div>                                            
+                                        </button>
+                                        <button class="author-social-btn">
+                                            <svg>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66667 7.99996C4.66667 7.26358 4.06971 6.66663 3.33333 6.66663C2.59695 6.66663 2 7.26358 2 7.99996C2 8.73634 2.59695 9.33329 3.33333 9.33329C4.06971 9.33329 4.66667 8.73634 4.66667 7.99996ZM8 6.66663C8.73638 6.66663 9.33333 7.26358 9.33333 7.99996C9.33333 8.73634 8.73638 9.33329 8 9.33329C7.26362 9.33329 6.66667 8.73634 6.66667 7.99996C6.66667 7.26358 7.26362 6.66663 8 6.66663ZM12.6667 6.66663C13.403 6.66663 14 7.26358 14 7.99996C14 8.73634 13.403 9.33329 12.6667 9.33329C11.9303 9.33329 11.3333 8.73634 11.3333 7.99996C11.3333 7.26358 11.9303 6.66663 12.6667 6.66663Z"/>
+                                            </svg>
+                                            <div>
+                                                <span>More</span>
+                                            </div>                                           
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment hidden">
+                            <div class="comment-author">
+                                <div class="author">
+                                    <div class="author-img">
+                                        <img src="./img/recipe/henk_fortuin.png" alt="Автор">
+                                    </div>
+                                    <div class="author-name-time">
+                                        <div class="author-name">
+                                            <p>Henk Fortuin</p>
+                                        </div>
+                                        <div class="author-time">
+                                            <span>45 min ago</span>
+                                        </div>
+                                    </div>
+                                    <span>29-06-2024</span>
+                                </div>
+                                <div class="text">
+                                    <p>Synth polaroid bitters chillwave pickled. Vegan disrupt tousled, Portland keffiyeh aesthetic food truck sriracha cornhole single-origin coffee church-key roof party.</p>
+                                    <div class="author-social">
+                                        <button class="author-social-btn">
+                                            <svg>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.94273 12L2.47132 14.4714C2.05135 14.8914 1.33325 14.594 1.33325 14V3.33337C1.33325 2.2288 2.22868 1.33337 3.33325 1.33337H12.6666C13.7712 1.33337 14.6666 2.2288 14.6666 3.33337V10C14.6666 11.1046 13.7712 12 12.6666 12H4.94273ZM2.66659 12.3906L4.19518 10.862C4.3202 10.7369 4.48977 10.6667 4.66659 10.6667H12.6666C13.0348 10.6667 13.3333 10.3682 13.3333 10V3.33337C13.3333 2.96518 13.0348 2.66671 12.6666 2.66671H3.33325C2.96506 2.66671 2.66659 2.96518 2.66659 3.33337V12.3906Z"/>
+                                            </svg>
+                                            <div>
+                                                Reply<span>(2)</span>
+                                            </div>
+                                        </button>
+                                        <button class="author-social-btn">
+                                            <svg>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99992 2.83723L8.23507 2.60208C9.04778 1.78898 10.1503 1.33215 11.2999 1.33215C12.4495 1.33215 13.552 1.78898 14.3645 2.60186C15.1776 3.41457 15.6345 4.51708 15.6345 5.6667C15.6345 6.81633 15.1776 7.91884 14.3647 8.73144L8.47132 14.6248C8.21097 14.8851 7.78886 14.8851 7.52851 14.6248L1.63518 8.73144C-0.0574293 7.03883 -0.0574294 4.29457 1.63518 2.60197C3.32779 0.909358 6.07205 0.909358 7.76465 2.60197L7.99992 2.83723ZM13.422 7.78852C13.9849 7.22587 14.3011 6.4626 14.3011 5.6667C14.3011 4.87081 13.9849 4.10754 13.4217 3.54466C12.8591 2.98175 12.0958 2.66549 11.2999 2.66549C10.504 2.66549 9.74075 2.98175 9.17799 3.54478L8.47132 4.25144C8.21097 4.51179 7.78886 4.51179 7.52851 4.25144L6.82185 3.54478C5.64994 2.37287 3.7499 2.37287 2.57799 3.54478C1.40608 4.71668 1.40608 6.61672 2.57799 7.78863L7.99992 13.2106L13.422 7.78852Z"/>
+                                            </svg>
+                                            <div>
+                                               <span>48</span>
+                                            </div>                                            
+                                        </button>
+                                        <button class="author-social-btn">
+                                            <svg>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66667 7.99996C4.66667 7.26358 4.06971 6.66663 3.33333 6.66663C2.59695 6.66663 2 7.26358 2 7.99996C2 8.73634 2.59695 9.33329 3.33333 9.33329C4.06971 9.33329 4.66667 8.73634 4.66667 7.99996ZM8 6.66663C8.73638 6.66663 9.33333 7.26358 9.33333 7.99996C9.33333 8.73634 8.73638 9.33329 8 9.33329C7.26362 9.33329 6.66667 8.73634 6.66667 7.99996C6.66667 7.26358 7.26362 6.66663 8 6.66663ZM12.6667 6.66663C13.403 6.66663 14 7.26358 14 7.99996C14 8.73634 13.403 9.33329 12.6667 9.33329C11.9303 9.33329 11.3333 8.73634 11.3333 7.99996C11.3333 7.26358 11.9303 6.66663 12.6667 6.66663Z"/>
+                                            </svg>
+                                            <div>
+                                                <span>More</span>
+                                            </div>                                           
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment hidden">
+                            <div class="comment-author">
+                                <div class="author">
+                                    <div class="author-img">
+                                        <img src="./img/recipe/malin_quist.png" alt="Автор">
+                                    </div>
+                                    <div class="author-name-time">
+                                        <div class="author-name">
+                                            <p>Malin Quist</p>
+                                        </div>
+                                        <div class="author-time">
+                                            <span>45 min ago</span>
+                                        </div>
+                                    </div>
+                                    <span>29-06-2024</span>
+                                </div>
+                                <div class="text">
+                                    <p>Synth polaroid bitters chillwave pickled. Vegan disrupt tousled, Portland keffiyeh aesthetic food truck sriracha cornhole single-origin coffee church-key roof party.</p>
+                                    <div class="author-social">
+                                        <button class="author-social-btn">
+                                            <svg>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.94273 12L2.47132 14.4714C2.05135 14.8914 1.33325 14.594 1.33325 14V3.33337C1.33325 2.2288 2.22868 1.33337 3.33325 1.33337H12.6666C13.7712 1.33337 14.6666 2.2288 14.6666 3.33337V10C14.6666 11.1046 13.7712 12 12.6666 12H4.94273ZM2.66659 12.3906L4.19518 10.862C4.3202 10.7369 4.48977 10.6667 4.66659 10.6667H12.6666C13.0348 10.6667 13.3333 10.3682 13.3333 10V3.33337C13.3333 2.96518 13.0348 2.66671 12.6666 2.66671H3.33325C2.96506 2.66671 2.66659 2.96518 2.66659 3.33337V12.3906Z"/>
+                                            </svg>
+                                            <div>
+                                                Reply<span>(2)</span>
+                                            </div>
+                                        </button>
+                                        <button class="author-social-btn">
+                                            <svg>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99992 2.83723L8.23507 2.60208C9.04778 1.78898 10.1503 1.33215 11.2999 1.33215C12.4495 1.33215 13.552 1.78898 14.3645 2.60186C15.1776 3.41457 15.6345 4.51708 15.6345 5.6667C15.6345 6.81633 15.1776 7.91884 14.3647 8.73144L8.47132 14.6248C8.21097 14.8851 7.78886 14.8851 7.52851 14.6248L1.63518 8.73144C-0.0574293 7.03883 -0.0574294 4.29457 1.63518 2.60197C3.32779 0.909358 6.07205 0.909358 7.76465 2.60197L7.99992 2.83723ZM13.422 7.78852C13.9849 7.22587 14.3011 6.4626 14.3011 5.6667C14.3011 4.87081 13.9849 4.10754 13.4217 3.54466C12.8591 2.98175 12.0958 2.66549 11.2999 2.66549C10.504 2.66549 9.74075 2.98175 9.17799 3.54478L8.47132 4.25144C8.21097 4.51179 7.78886 4.51179 7.52851 4.25144L6.82185 3.54478C5.64994 2.37287 3.7499 2.37287 2.57799 3.54478C1.40608 4.71668 1.40608 6.61672 2.57799 7.78863L7.99992 13.2106L13.422 7.78852Z"/>
+                                            </svg>
+                                            <div>
+                                               <span>48</span>
+                                            </div>                                            
+                                        </button>
+                                        <button class="author-social-btn">
+                                            <svg>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66667 7.99996C4.66667 7.26358 4.06971 6.66663 3.33333 6.66663C2.59695 6.66663 2 7.26358 2 7.99996C2 8.73634 2.59695 9.33329 3.33333 9.33329C4.06971 9.33329 4.66667 8.73634 4.66667 7.99996ZM8 6.66663C8.73638 6.66663 9.33333 7.26358 9.33333 7.99996C9.33333 8.73634 8.73638 9.33329 8 9.33329C7.26362 9.33329 6.66667 8.73634 6.66667 7.99996C6.66667 7.26358 7.26362 6.66663 8 6.66663ZM12.6667 6.66663C13.403 6.66663 14 7.26358 14 7.99996C14 8.73634 13.403 9.33329 12.6667 9.33329C11.9303 9.33329 11.3333 8.73634 11.3333 7.99996C11.3333 7.26358 11.9303 6.66663 12.6667 6.66663Z"/>
+                                            </svg>
+                                            <div>
+                                                <span>More</span>
+                                            </div>                                           
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="comment hidden">
+                            <div class="comment-author">
+                                <div class="author">
+                                    <div class="author-img">
+                                        <img src="./img/recipe/nayara_elafuente.png" alt="Автор">
+                                    </div>
+                                    <div class="author-name-time">
+                                        <div class="author-name">
+                                            <p>Nayara Delafuente</p>
+                                        </div>
+                                        <div class="author-time">
+                                            <span>45 min ago</span>
+                                        </div>
+                                    </div>
+                                    <span>29-06-2024</span>
+                                </div>
+                                <div class="text">
+                                    <p>Synth polaroid bitters chillwave pickled. Vegan disrupt tousled, Portland keffiyeh aesthetic food truck sriracha cornhole single-origin coffee church-key roof party.</p>
+                                    <div class="author-social">
+                                        <button class="author-social-btn">
+                                            <svg>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.94273 12L2.47132 14.4714C2.05135 14.8914 1.33325 14.594 1.33325 14V3.33337C1.33325 2.2288 2.22868 1.33337 3.33325 1.33337H12.6666C13.7712 1.33337 14.6666 2.2288 14.6666 3.33337V10C14.6666 11.1046 13.7712 12 12.6666 12H4.94273ZM2.66659 12.3906L4.19518 10.862C4.3202 10.7369 4.48977 10.6667 4.66659 10.6667H12.6666C13.0348 10.6667 13.3333 10.3682 13.3333 10V3.33337C13.3333 2.96518 13.0348 2.66671 12.6666 2.66671H3.33325C2.96506 2.66671 2.66659 2.96518 2.66659 3.33337V12.3906Z"/>
+                                            </svg>
+                                            <div>
+                                                Reply<span>(2)</span>
+                                            </div>
+                                        </button>
+                                        <button class="author-social-btn">
+                                            <svg>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99992 2.83723L8.23507 2.60208C9.04778 1.78898 10.1503 1.33215 11.2999 1.33215C12.4495 1.33215 13.552 1.78898 14.3645 2.60186C15.1776 3.41457 15.6345 4.51708 15.6345 5.6667C15.6345 6.81633 15.1776 7.91884 14.3647 8.73144L8.47132 14.6248C8.21097 14.8851 7.78886 14.8851 7.52851 14.6248L1.63518 8.73144C-0.0574293 7.03883 -0.0574294 4.29457 1.63518 2.60197C3.32779 0.909358 6.07205 0.909358 7.76465 2.60197L7.99992 2.83723ZM13.422 7.78852C13.9849 7.22587 14.3011 6.4626 14.3011 5.6667C14.3011 4.87081 13.9849 4.10754 13.4217 3.54466C12.8591 2.98175 12.0958 2.66549 11.2999 2.66549C10.504 2.66549 9.74075 2.98175 9.17799 3.54478L8.47132 4.25144C8.21097 4.51179 7.78886 4.51179 7.52851 4.25144L6.82185 3.54478C5.64994 2.37287 3.7499 2.37287 2.57799 3.54478C1.40608 4.71668 1.40608 6.61672 2.57799 7.78863L7.99992 13.2106L13.422 7.78852Z"/>
+                                            </svg>
+                                            <div>
+                                               <span>48</span>
+                                            </div>                                            
+                                        </button>
+                                        <button class="author-social-btn">
+                                            <svg>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66667 7.99996C4.66667 7.26358 4.06971 6.66663 3.33333 6.66663C2.59695 6.66663 2 7.26358 2 7.99996C2 8.73634 2.59695 9.33329 3.33333 9.33329C4.06971 9.33329 4.66667 8.73634 4.66667 7.99996ZM8 6.66663C8.73638 6.66663 9.33333 7.26358 9.33333 7.99996C9.33333 8.73634 8.73638 9.33329 8 9.33329C7.26362 9.33329 6.66667 8.73634 6.66667 7.99996C6.66667 7.26358 7.26362 6.66663 8 6.66663ZM12.6667 6.66663C13.403 6.66663 14 7.26358 14 7.99996C14 8.73634 13.403 9.33329 12.6667 9.33329C11.9303 9.33329 11.3333 8.73634 11.3333 7.99996C11.3333 7.26358 11.9303 6.66663 12.6667 6.66663Z"/>
+                                            </svg>
+                                            <div>
+                                                <span>More</span>
+                                            </div>                                           
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment hidden">
+                            <div class="comment-author">
+                                <div class="author">
+                                    <div class="author-img">
+                                        <img src="./img/recipe/henk_fortuin.png" alt="Автор">
+                                    </div>
+                                    <div class="author-name-time">
+                                        <div class="author-name">
+                                            <p>Henk Fortuin</p>
+                                        </div>
+                                        <div class="author-time">
+                                            <span>45 min ago</span>
+                                        </div>
+                                    </div>
+                                    <span>29-06-2024</span>
+                                </div>
+                                <div class="text">
+                                    <p>Synth polaroid bitters chillwave pickled. Vegan disrupt tousled, Portland keffiyeh aesthetic food truck sriracha cornhole single-origin coffee church-key roof party.</p>
+                                    <div class="author-social">
+                                        <button class="author-social-btn">
+                                            <svg>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.94273 12L2.47132 14.4714C2.05135 14.8914 1.33325 14.594 1.33325 14V3.33337C1.33325 2.2288 2.22868 1.33337 3.33325 1.33337H12.6666C13.7712 1.33337 14.6666 2.2288 14.6666 3.33337V10C14.6666 11.1046 13.7712 12 12.6666 12H4.94273ZM2.66659 12.3906L4.19518 10.862C4.3202 10.7369 4.48977 10.6667 4.66659 10.6667H12.6666C13.0348 10.6667 13.3333 10.3682 13.3333 10V3.33337C13.3333 2.96518 13.0348 2.66671 12.6666 2.66671H3.33325C2.96506 2.66671 2.66659 2.96518 2.66659 3.33337V12.3906Z"/>
+                                            </svg>
+                                            <div>
+                                                Reply<span>(2)</span>
+                                            </div>
+                                        </button>
+                                        <button class="author-social-btn">
+                                            <svg>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99992 2.83723L8.23507 2.60208C9.04778 1.78898 10.1503 1.33215 11.2999 1.33215C12.4495 1.33215 13.552 1.78898 14.3645 2.60186C15.1776 3.41457 15.6345 4.51708 15.6345 5.6667C15.6345 6.81633 15.1776 7.91884 14.3647 8.73144L8.47132 14.6248C8.21097 14.8851 7.78886 14.8851 7.52851 14.6248L1.63518 8.73144C-0.0574293 7.03883 -0.0574294 4.29457 1.63518 2.60197C3.32779 0.909358 6.07205 0.909358 7.76465 2.60197L7.99992 2.83723ZM13.422 7.78852C13.9849 7.22587 14.3011 6.4626 14.3011 5.6667C14.3011 4.87081 13.9849 4.10754 13.4217 3.54466C12.8591 2.98175 12.0958 2.66549 11.2999 2.66549C10.504 2.66549 9.74075 2.98175 9.17799 3.54478L8.47132 4.25144C8.21097 4.51179 7.78886 4.51179 7.52851 4.25144L6.82185 3.54478C5.64994 2.37287 3.7499 2.37287 2.57799 3.54478C1.40608 4.71668 1.40608 6.61672 2.57799 7.78863L7.99992 13.2106L13.422 7.78852Z"/>
+                                            </svg>
+                                            <div>
+                                               <span>48</span>
+                                            </div>                                            
+                                        </button>
+                                        <button class="author-social-btn">
+                                            <svg>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66667 7.99996C4.66667 7.26358 4.06971 6.66663 3.33333 6.66663C2.59695 6.66663 2 7.26358 2 7.99996C2 8.73634 2.59695 9.33329 3.33333 9.33329C4.06971 9.33329 4.66667 8.73634 4.66667 7.99996ZM8 6.66663C8.73638 6.66663 9.33333 7.26358 9.33333 7.99996C9.33333 8.73634 8.73638 9.33329 8 9.33329C7.26362 9.33329 6.66667 8.73634 6.66667 7.99996C6.66667 7.26358 7.26362 6.66663 8 6.66663ZM12.6667 6.66663C13.403 6.66663 14 7.26358 14 7.99996C14 8.73634 13.403 9.33329 12.6667 9.33329C11.9303 9.33329 11.3333 8.73634 11.3333 7.99996C11.3333 7.26358 11.9303 6.66663 12.6667 6.66663Z"/>
+                                            </svg>
+                                            <div>
+                                                <span>More</span>
+                                            </div>                                           
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="latest-comments-more">
+                            <a href="#" id="show-more-button">Показать еще</a>
+                        </div>
+                    </section>
+                </article>
+                    <!-- Модальное окно для коментария -->
+                <div id="commentModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <form class="comment-form" action="submit_comment.php" method="post">
+                            <label for="author">Имя:</label>
+                            <input type="text" id="author" name="author" required>
+                            <br>
+                            <label for="text">Комментарий:</label>
+                            <textarea id="text" name="text" required></textarea>
+                            <br>
+                            <button type="submit">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section class="section-already-mad-this-write">
+                <div class="section-already-mad-this-write-header">
+                    <h3 class="small-header">Write a comment</h3>
+                    <div class="section-already-mad-this-write-login">
+                        <button class="login-btn">Login</button>
+                        <p class="comment-paragraph">to post a comment</p>
+                    </div>
+                </div>
+                <div class="section-already-mad-this-write-comment">
+                    <p>@Jelanee Uwaezuoke Synth polaroid bitters chillwave pickled. Vegan disrupt tousled, Portland keffiyeh aesthetic food truck sriracha cornhole single-origin coffee church-key roof party. 🔥|</p>
+                    <button class="post-btn">Post comment</button>
+                </div>
+            </section>
+            <section class="section-you-might-also-like">
+                <h3 class="section-you-might-also-like-header">You might also like</h3>
+                <div class="section-you-might-also-like-row">
+                    <a class="section-you-might-also-like-card" href="#">
+                        <div class="section-you-might-also-like-img">
+                            <img src="./img/recipe/cranberry_macaroon_ice_cream_cake .jpg" alt="Рецепт">
+                        </div>
+                        <p>Cranberry Macaroon Ice Cream Cake</p>
+                    </a>
+                    <a class="section-you-might-also-like-card" href="#">
+                        <div class="section-you-might-also-like-img">
+                            <img src="./img/recipe/no_bake_cheesecake.jpg" alt="Рецепт">
+                        </div>
+                        <p>No Bake Cheesecake</p>
+                    </a>
+                    <a class="section-you-might-also-like-card" href="#">
+                        <div class="section-you-might-also-like-img">
+                            <img src="./img/recipe/double_thick_layered _sponge_cake.jpg" alt="Рецепт">
+                        </div>
+                        <p>Double Thick Layered Sponge Cake</p>
+                    </a>
+                    <a class="section-you-might-also-like-card" href="#">
+                        <div class="section-you-might-also-like-img">
+                            <img src="./img/recipe/caramel_glaze_cake.jpg" alt="Рецепт">
+                        </div>
+                        <p>Caramel Glaze Cake</p>
+                    </a>
+                    <a class="section-you-might-also-like-card" href="#">
+                        <div class="section-you-might-also-like-img">
+                            <img src="./img/recipe/strawberry_creamCake Bites.png" alt="Рецепт">
+                        </div>
+                        <p>Strawberry Cream Cake Bites</p>
+                    </a>
+                    <a class="section-you-might-also-like-card" href="#">
+                        <div class="section-you-might-also-like-img">
+                            <img src="./img/recipe/homemade_mixed_berries_wedding_cake.jpg" alt="Рецепт">
+                        </div>
+                        <p>Homemade Mixed Berries Wedding Cake</p>
+                    </a>
+                    <a class="section-you-might-also-like-card" href="#">
+                        <div class="section-you-might-also-like-img">
+                            <img src="./img/recipe/m&ms_chocolate_cake.jpg" alt="Рецепт">
+                        </div>
+                        <p>M&Ms Chocolate Cake</p>
+                    </a>
+                    <a class="section-you-might-also-like-card" href="#">
+                        <div class="section-you-might-also-like-img">
+                            <img src="./img/recipe/almond_cinnamon_sponge_cake.jpg" alt="Рецепт">
+                        </div>
+                        <p>Almond Cinnamon Sponge Cake</p>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-row">
+            <div class="footer-logo-menu">
+                <div class="footer-logo">
+                    <div class="footer-logo-img">
+                        <img class="footer-logo-logo" src="./img/footer/logo.svg" alt="Логотип">
+                    </div>
+                    <div class="footer-logo-text">
+                        <p>"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment</p>
+                    </div>
+                </div>
+                <div class="footer-menu">
+                    <ul class="footer-menu-one">
+                        <li>
+                            <span class="footer-menu-toggle">Рецепты<span class="arrow"></span></span>
+                            <ul class="footer-menu-content">
+						        <li><a href="#">По типу блюд</a></li>
+                                <li><a href="#">По кухням мира</a></li>
+                                <li><a href="#">По диетам</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="footer-menu-two">
+                        <li>
+                            <span class="footer-menu-toggle">Мультимедия<span class="arrow"></span></span>
+                            <ul class="footer-menu-content">
+                                <li><a href="#">Видеорецепты</a></li>
+                                <li><a href="#">Новости кулинарии</a></li>
+                                <li><a href="#">Техники и лайфхаки</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="footer-menu-three">
+                        <li>
+                            <span class="footer-menu-toggle">Магазин<span class="arrow"></span></span>
+                            <ul class="footer-menu-content">
+                                <li><a href="#">Ингредиенты</a></li>
+                                <li><a href="#">Книги</a></li>
+                                <li><a href="#">Сувениры</a></li>
+                                <li><a href="#">Инструменты и приборы</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>                      
+            </div>
+            <div class="footer-coperative-social">
+                <div class="footer-coperative">
+                    <p>© 2020 Tastebite - All rights reserved</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#">
+                        <svg class="svg-icon">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 7.50016V5.8335C7.5 3.07207 9.73858 0.833496 12.5 0.833496H15C15.4602 0.833496 15.8333 1.20659 15.8333 1.66683V5.00016C15.8333 5.4604 15.4602 5.8335 15 5.8335H12.5V7.50016H15C15.5421 7.50016 15.9399 8.00965 15.8085 8.53561L14.9751 11.8689C14.8824 12.2399 14.5491 12.5002 14.1667 12.5002H12.5V18.3335C12.5 18.7937 12.1269 19.1668 11.6667 19.1668H8.33333C7.8731 19.1668 7.5 18.7937 7.5 18.3335V12.5002H5.83333C5.3731 12.5002 5 12.1271 5 11.6668V8.3335C5 7.87326 5.3731 7.50016 5.83333 7.50016H7.5ZM14.1667 2.50016H12.5C10.6591 2.50016 9.16667 3.99255 9.16667 5.8335V8.3335C9.16667 8.79373 8.79357 9.16683 8.33333 9.16683H6.66667V10.8335H8.33333C8.79357 10.8335 9.16667 11.2066 9.16667 11.6668V17.5002H10.8333V11.6668C10.8333 11.2066 11.2064 10.8335 11.6667 10.8335H13.516L13.9327 9.16683H11.6667C11.2064 9.16683 10.8333 8.79373 10.8333 8.3335V5.8335C10.8333 4.91302 11.5795 4.16683 12.5 4.16683H14.1667V2.50016Z"/>
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg class="svg-icon">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.16902 6.05932C9.23478 4.23482 10.385 2.61483 12.1043 1.95862C13.7146 1.34399 15.516 1.69246 16.7771 2.82099C17.4538 2.57223 18.0957 2.23557 18.686 1.81916C19.3152 1.37534 20.1582 1.94919 19.9761 2.69731C19.6906 3.86943 19.1184 4.94979 18.3138 5.84264C18.3262 5.97762 18.3326 6.11348 18.3331 6.25013C18.3331 16.133 8.79466 21.2099 0.42835 16.5619C-0.338885 16.1357 -0.0108189 14.9659 0.866173 15.0008C2.27167 15.0567 3.66301 14.7773 4.92818 14.1945C3.0914 13.0623 1.91527 11.5634 1.3383 9.7903C0.742567 7.95952 0.829522 6.03561 1.32651 4.20844C1.47685 3.65573 1.62965 3.23927 1.73821 2.99501C2.00127 2.40313 2.80944 2.32448 3.18168 2.85453C4.52492 4.76723 6.62091 5.9869 8.91093 6.2323L9.16615 6.25555L9.16902 6.05932ZM17.3628 4.38139L17.078 4.48155L16.79 4.57308C16.4761 4.66759 16.136 4.56933 15.9209 4.32201C15.1224 3.40381 13.8355 3.08181 12.6986 3.51574C11.5617 3.94966 10.8167 5.0472 10.833 6.27514V7.10848C10.833 7.5603 10.473 7.92982 10.0213 7.94153C7.30403 8.01199 4.708 6.94234 2.83643 5.03619C2.50723 6.4571 2.48316 7.92241 2.92316 9.2746C3.48735 11.0084 4.77889 12.416 7.00483 13.4053C7.60213 13.6708 7.67521 14.4892 7.1344 14.8563C6.20182 15.4893 5.17998 15.9644 4.10971 16.2699C10.509 17.9535 16.6664 13.7053 16.6664 6.2529C16.6658 6.07236 16.6484 5.89226 16.6145 5.71493C16.5623 5.44172 16.6498 5.16046 16.8479 4.96514C17.0335 4.78207 17.2055 4.58694 17.3628 4.38139Z"/>
+                         </svg>    
+                    </a>
+                    <a href="#">
+                        <svg class="svg-icon">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.1673 5.8335C19.1673 3.07207 16.9287 0.833496 14.1673 0.833496H5.83398C3.07256 0.833496 0.833984 3.07207 0.833984 5.8335V14.1668C0.833984 16.9283 3.07256 19.1668 5.83398 19.1668H14.1673C16.9287 19.1668 19.1673 16.9283 19.1673 14.1668V5.8335ZM5.83398 2.50016H14.1673C16.0083 2.50016 17.5007 3.99255 17.5007 5.8335V14.1668C17.5007 16.0078 16.0083 17.5002 14.1673 17.5002H5.83398C3.99304 17.5002 2.50065 16.0078 2.50065 14.1668V5.8335C2.50065 3.99255 3.99304 2.50016 5.83398 2.50016ZM14.1583 9.35284C13.8891 7.53724 12.4635 6.11165 10.6479 5.84242C8.8698 5.57875 7.12306 6.4851 6.3149 8.09073C5.50674 9.69635 5.81938 11.6392 7.09043 12.9103C8.36149 14.1813 10.3044 14.494 11.91 13.6858C13.5156 12.8777 14.422 11.1309 14.1583 9.35284ZM7.80363 8.84006C8.28853 7.87668 9.33657 7.33287 10.4034 7.49108C11.4928 7.65261 12.3481 8.50797 12.5097 9.59733C12.6679 10.6642 12.1241 11.7122 11.1607 12.1971C10.1973 12.682 9.03158 12.4944 8.26895 11.7318C7.50632 10.9692 7.31874 9.80343 7.80363 8.84006ZM15.1732 6.00609C14.8478 6.33152 14.3202 6.33152 13.9947 6.00609C13.6693 5.68065 13.6693 5.15301 13.9947 4.82757C14.3202 4.50214 14.8478 4.50214 15.1732 4.82757C15.4987 5.15301 15.4987 5.68065 15.1732 6.00609Z"/>
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg class="svg-icon">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.80243 2.50049L10.2863 2.5008L11.3957 2.51058C11.9672 2.51804 12.5583 2.52954 13.1438 2.546L13.7265 2.56414C15.4823 2.62438 16.7328 2.71943 17.394 2.88144C18.4797 3.18861 19.3182 4.05305 19.6039 5.20203C19.8774 6.71815 20.0101 8.25631 20.0005 9.78863C20.0059 11.3062 19.8732 12.821 19.5922 14.369C19.3182 15.4635 18.4797 16.328 17.3825 16.6383C16.8241 16.7877 15.7962 16.8861 14.3687 16.9528L13.7765 16.9778C13.1563 17.0015 12.5038 17.0189 11.8434 17.0308L10.5256 17.0476H9.47536L8.15759 17.0308C7.49714 17.0189 6.84465 17.0015 6.22445 16.9778L5.63227 16.9528C4.20466 16.8861 3.17634 16.7875 2.61388 16.6371C1.55108 16.3463 0.717483 15.5213 0.39705 14.3812C0.123574 12.8651 -0.00917459 11.327 0.000492182 9.79575C-0.00706305 8.2667 0.125677 6.74019 0.408753 5.18096C0.682723 4.08638 1.52123 3.22194 2.61851 2.91159C3.19792 2.75663 4.28481 2.65619 5.7958 2.58964L6.88706 2.54945C7.56163 2.52892 8.23815 2.51562 8.87593 2.50796L9.80243 2.50049ZM9.80336 4.16716L9.35845 4.16987C8.63098 4.17572 7.83357 4.189 7.03777 4.21236L5.92851 4.25224C4.51593 4.31381 3.48042 4.40631 3.06068 4.51849C2.54941 4.66314 2.15456 5.0702 2.03725 5.53119C1.78398 6.93566 1.66009 8.3604 1.66713 9.79686C1.65811 11.2347 1.782 12.6703 2.01862 14.005C2.16073 14.5041 2.55327 14.8926 3.04912 15.0283C3.48745 15.1455 4.56205 15.2403 6.02578 15.3019L6.9067 15.3336C7.32533 15.3464 7.75515 15.3566 8.18874 15.3644L9.4874 15.3809H10.5136L11.8122 15.3644C12.2458 15.3566 12.6756 15.3464 13.0943 15.3336L13.9752 15.3019L14.7123 15.2662C15.7978 15.2063 16.5883 15.1255 16.9403 15.0314C17.4516 14.8868 17.8464 14.4797 17.9637 14.0188C18.215 12.6249 18.3389 11.211 18.3338 9.7864C18.3429 8.34854 18.219 6.91294 17.9754 5.5523C17.8464 5.03687 17.4516 4.6298 16.9695 4.49284C16.5731 4.39605 15.6748 4.31667 14.4454 4.26061L13.6693 4.22983C12.9103 4.20379 12.1244 4.1869 11.3737 4.1771L10.282 4.16746L9.80336 4.16716ZM7.29215 7.06653C7.29215 6.42744 7.9819 6.02621 8.53744 6.34214L13.3291 9.06714C13.8909 9.38665 13.8909 10.1964 13.3291 10.5159L8.53744 13.2409C7.9819 13.5568 7.29215 13.1556 7.29215 12.5165V7.06653ZM8.95881 11.0839L11.2314 9.7915L8.95881 8.49908V11.0839Z"/>
+                        </svg>    
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/header.js"></script>
+    <script src="./js/description.js"></script>
+    <script src="./js/footer.js"></script>
+</body>
+</html>

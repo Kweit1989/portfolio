@@ -1,0 +1,143 @@
+.connect__row {
+    display: flex;
+    justify-content: space-between;
+}
+.connect__content {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+}
+.connect__phone > a {
+    font-size: 30px;
+    color: #444;
+}
+.connect__phone-black{
+    color: #fff!important;
+}
+.connect__content > p + p {
+    padding-top: 10px;
+}
+.connect__mail  > a,
+.connect__hh  > a {
+    color: #D3E97A;
+}
+.connect__content > .connect__title {
+    line-height: 120%;
+}
+/* .connect__mail {
+}
+.connect__hh {
+} */
+.connect__all {
+    padding-top: 40px;
+}
+.connect_copyright {
+    margin-top: auto;
+}
+.connect__form {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+.connect__form > label {
+    font-weight: 500;
+    padding-bottom: 8px;
+}
+.connect__form > input {
+    font-weight: 600;
+    padding: 0 20px;
+    height: 50px;
+    border: 1px solid #444;
+    border-radius: 5px;
+}
+.input-black {
+    background-color: #1A1A1A;
+    color: #fff;
+}
+
+.connect__form > label:not(:first-child) {
+   padding-top: 24px;
+}
+
+/* .connect__form-name {
+}
+.connect__form-email {
+}
+.connect__form-subject {
+} */
+.connect__form-message {
+    font-weight: 500;
+    padding: 12px 20px;
+    height: 150px;
+    border: 1px solid #444;
+    border-radius: 5px;
+}
+.message-black{
+    background-color: #1A1A1A;
+    color: #fff;
+}
+
+.connect__form-submit {
+    align-self: flex-start;
+    text-transform: uppercase;
+    background-color: #D3E97A;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 20px 40px;
+    margin-top: 40px;
+    cursor: pointer;
+    color: #fff;
+}
+.connect__form-submit.connect__form-submit-black{
+    color: #000;
+}
+.connect_copyright-phone{
+    display: none;
+    text-align: center;
+    padding-top: 20px;
+}
+
+@media (max-width: 900px) {
+    .connect__row{
+        flex-direction: column;
+        row-gap: 40px;
+    }
+    .connect__form{
+        align-self: center;
+    }
+    .connect_copyright {
+        display: none;
+    }
+    .connect__all {
+        padding-top: 10px;
+    }
+    .connect_copyright-phone{
+        display: block;
+    }
+}
+
+@media (max-width: 650px){
+    .connect__form {
+        width: 500px;
+    }
+
+    .connect__form-submit {
+        padding: 10px 40px;
+        margin-top: 20px;
+    }
+    .connect__form > label:not(:first-child) {
+        padding-top: 14px;
+    }
+}
+
+@media (max-width: 530px){
+    .connect__row{
+        row-gap: 20px;
+    }
+    .connect__form {
+        width: 350px;
+    }
+    .connect__form > input{
+        height: 30px;
+    }
+}

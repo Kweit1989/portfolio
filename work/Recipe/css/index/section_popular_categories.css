@@ -1,0 +1,64 @@
+.popular-categories {
+    padding: 16px 0px 80px 0px;
+}
+.popular-categories-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.popular-categories-cart{
+    padding-top: 20px;
+}
+.popular-categories-img{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease; /* Плавный переход для трансформации */
+}
+.popular-categories-img:hover{
+    transform: scale(1.0625); /* Увеличение до 170px (160px * 1.0625 ≈ 170px) */
+}
+.popular-categories-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Изображение масштабируется, чтобы полностью заполнить круг */
+}
+.popular-categories-name{
+    padding-top: 13px;
+    text-align: center;
+}
+.popular-categories-name p{
+    font-family: 'OpenSans', sans-serif;
+    font-weight: 500;
+    font-size: 1.1em;
+	color: #505050;
+}
+
+
+@media (max-width: 1110px) {
+    .popular-categories h5 {
+        text-align: center;
+    }
+}
+@media (max-width: 1070px) {
+    .popular-categories-cart{
+        padding: 10px;
+        flex: 1 0 33%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 570px) {
+    .popular-categories-img{
+        width: 95px;
+        height: 95px;
+    }
+}

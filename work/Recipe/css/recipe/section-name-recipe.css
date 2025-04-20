@@ -1,0 +1,110 @@
+.section-name-recipe{
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+.section-name-recipe-bookmarks{
+    display: flex;
+    justify-content: space-between;
+}
+.section-name-recipe-bookmarks p {
+    font-size: 14px;
+}
+.section-name-recipe-bookmarks svg{
+    margin-left: 32px;
+    width: 32px;
+    height: 32px;
+    fill: #7F7F7F;
+    transition: all 0.3s ease;
+}
+
+.section-name-recipe-bookmarks svg:hover{
+    fill: #000;
+    transform: scale(1.15);
+}
+
+.section-name-recipe-social {
+    padding-top: 12px;
+    padding-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 420px;
+    font-size: 12px;
+}
+
+.section-name-recipe-social svg {
+    width: 16px;
+    height: 16px;
+    fill: #7F7F7F;
+    transition: all 0.3s ease;
+}
+.section-name-recipe-social-logo {
+    display: flex;
+    align-items: center;
+}
+.section-name-recipe-social-img {
+    transition: transform 0.3s ease;
+}
+.section-name-recipe-social-logo:hover .section-name-recipe-social-img{
+    transform: scale(1.15);
+}
+.section-name-recipe-social-name {
+    padding-left: 6px;
+}
+.section-name-recipe-calendar {
+    display: flex;
+    align-items: center;
+}
+.section-name-recipe-calendar:hover svg{
+    transform: scale(1.15);
+    fill: #000;
+}
+.section-name-recipe-calendar-day{
+    margin-left: 6px;
+}
+.section-name-recipe-social-message {
+    display: flex;
+    align-items: center;
+}
+.section-name-recipe-social-message:hover svg{
+    transform: scale(1.15);
+    fill: #000;
+}
+.section-name-recipe-social-message-count{
+    padding-left: 6px;
+}
+.section-name-recipe-short-description{
+    border-top: 1px solid #E8E8E8;
+    padding-top: 24px;
+    font-size: 18px;
+}
+.section-name-recipe-short-description p {
+    max-width: 825px;
+}
+
+.section-name-recipe-social-cart-rating {
+    display: flex;
+    padding-left: 32px;
+  }
+.section-name-recipe-social-cart-rating span + span {
+    margin-left: 4px;
+}
+.star {
+    width: 16px;
+    height: 16px;
+    background: url('../../img/index/super_delicious/star_ffp94yz30cy2.svg') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+  }
+  
+.star.hover, .star.selected  {
+    background: url('../../img/index/super_delicious/star_42odfuqi8x72.svg') no-repeat center center;
+    background-size: contain;
+  }
+
+
+@media (max-width: 450px){
+    .section-name-recipe-social-cart-rating {
+        padding-left: 12px;
+      }
+}

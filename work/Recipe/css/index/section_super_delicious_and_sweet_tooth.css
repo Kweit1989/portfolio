@@ -1,0 +1,107 @@
+.super-delicious-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 64px;
+}
+.super-delicious-cart {
+    padding-top: 40px;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+.super-delicious-cart:hover {
+    opacity: 1.0;
+    transform: scale(1.0625);
+}
+.super-delicious-cart-img{
+    border-radius: 5px;
+}
+.super-delicious-cart-rating {
+    display: flex;
+    direction: row;
+    padding: 16px 0px 8px 0px;
+  }
+.super-delicious-cart-rating span + span {
+    margin-left: 4px;
+}
+.star {
+    width: 16px;
+    height: 16px;
+    background: url('../../img/index/super_delicious/star_ffp94yz30cy2.svg') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+  }
+  
+.star.hover, .star.selected  {
+    background: url('../../img/index/super_delicious/star_42odfuqi8x72.svg') no-repeat center center;
+    background-size: contain;
+  }
+
+.super-delicious-cart-name p{
+	font-family: 'OpenSans', sans-serif;
+    font-weight: 500;
+	font-size: 20px;
+    line-height: 28px;
+    max-width: 350px;
+	color: #505050;
+  }
+
+  @media (max-width: 1110px){
+    .super-delicious-row {
+      padding: 10px 0px 40px 0px;
+  }
+    .super-delicious h5{
+     text-align: center;
+    }
+    .sweet-tooth h5{
+     text-align: center;
+    }
+    .super-delicious-row {
+      justify-content: center;
+  }
+    .super-delicious-cart {
+      padding: 15px;
+    }
+  }
+
+  @media (max-width: 790px) {
+    .super-delicious-row {
+      flex-direction: column;
+  }
+    .super-delicious-cart {
+      display: flex;
+      text-align: center;
+    }
+    .super-delicious-cart-rating-name{
+      padding-left: 40px;
+    }
+    .super-delicious-cart-name{
+      text-align: left;
+    }
+  }
+
+  @media (max-width: 580px) {
+    .super-delicious-row {
+      align-items: center;
+      justify-content: space-between;
+  }
+    .super-delicious-cart {
+      flex-direction: column;
+    }
+    .super-delicious-cart-rating-name{
+      padding-left: 0px;
+    }
+    .super-delicious-cart {
+      display: flex;
+      
+    }
+  }
+
+  @media (max-width: 410px){
+    .super-delicious-cart-img img{
+      max-width: 100%;
+      height: auto;
+      display: block;
+  }
+  }
+ 

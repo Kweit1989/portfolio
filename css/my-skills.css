@@ -1,0 +1,81 @@
+.my-skills {
+    position: relative;
+    background-image: url('../img/projects/projects_bg_bright.jpg');
+    background-attachment: fixed; /* Фон фиксируется при прокрутке */
+}
+.my-skills.black-bg {
+    background-image: url('../img/projects/projects_bg_black.jpg');
+}
+.my-skills-bg {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: rgba(255, 255, 255, 0.6);
+}
+.my-skills-bg.black-bg{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.container-row {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.my-skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 35px;
+}
+.my-skills-container {
+    width: 90px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+}
+.my-skills-row > .my-skills-container > img {
+    width: 65px;
+    height: 65px;
+}
+.my-skills-row > .my-skills-container > img:last-of-type{
+    display: none;
+}
+.my-skills-row.my-skills-row-black > .my-skills-container > img:first-of-type{
+    display: none;
+}
+.my-skills-row.my-skills-row-black > .my-skills-container > img:last-of-type{ 
+    display: block;
+}
+.my-skills-text{
+    font-weight: 700;
+}
+
+
+@media screen and (min-width: 480px) {
+    .my-skills-row > .my-skills-container > img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media screen and (min-width: 730px) {
+    .container-row {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .my-skills-row {
+        flex-basis: 50%;
+        margin: 0 auto;
+    }
+}
+@media screen and (min-width: 950px) { 
+    .my-skills-container {
+        width: 100px;
+    }
+    .my-skills-row > .my-skills-container > img {
+        width: 96px;
+        height: 96px;
+    }
+}

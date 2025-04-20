@@ -1,0 +1,71 @@
+.section-profile {
+    padding-top: 80px;
+}
+.orange-btn {
+    background-color: #FF642F;
+    padding: 13px 48px; /* фиксированный padding */
+    cursor: pointer;
+    color: #505050;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+    box-shadow: none; /* начальное значение тени */
+}
+.orange-btn:hover {
+    box-shadow: 2px 2px 2px 2px #828282; /* изменение только тени */
+    transform: scale(1.05); /* небольшой масштаб при наведении */
+}
+
+.white-btn{
+    margin-left: 24px;
+    padding: 13px 48px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: inherit;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    box-shadow: none; /* начальное значение тени */
+}
+.white-btn:hover{
+    box-shadow: 2px 2px 2px 2px #828282; /* изменение только тени */
+    transform: scale(1.05); /* небольшой масштаб при наведении */
+}
+
+@media (max-width: 800px){
+    .section-profile {
+        padding-top: 50px;
+    }
+    .orange-btn {
+        padding: 8px 36px; /* фиксированный padding */
+    }
+}
+
+@media (max-width: 500px){
+    .orange-btn {
+        padding: 5px 25px; /* фиксированный padding */
+    }
+}
+
+@media (max-width: 400px){
+    .orange-btn {
+        padding: 5px 15px; /* фиксированный padding */
+    }
+}
+
+@media (max-width: 800px){
+    .white-btn{
+        margin-left: 0px;
+        padding: 8px 36px; /* фиксированный padding */
+    }
+}
+
+@media (max-width: 500px){
+    .white-btn{
+        padding: 5px 25px; /* фиксированный padding */
+    }
+}
+
+@media (max-width: 400px){
+    .white-btn{
+        padding: 5px 15px; /* фиксированный padding */
+    }
+}

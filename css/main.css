@@ -1,0 +1,338 @@
+@import url(./fonts/Inter/font_inter.css);
+@import url(./fonts/Manrope/font_manrope.css);
+@import url(./fonts/Oswald/font_oswald.css);
+@import url(./fonts/Roboto/font_roboto.css);
+@import url(./bg-video.css);
+@import url(./nav-header.css);
+@import url(./my-skills.css);
+@import url(./projects.css);
+@import url(./projects-commercial.css);
+@import url(./aboutme.css);
+@import url(./connect.css);
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Manrope", sans-serif;
+  visibility: hidden; 
+}
+html,
+body {
+  overflow-x: hidden;
+  color: #444;
+}
+body.body-black {
+  color: #DCDCDC;
+  background-color: #000;
+}
+main {
+  background-color: #fff;
+}
+main.black {
+  background-color: #000;
+}
+.none {
+  display: none;
+}
+
+/* Модальное окно  "Задать вопрос"*/
+.modal-overlay {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+/* Содержимое модального окна */
+.modal-content {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 40px;
+  width: 564px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  border: 2px solid #444;
+  -webkit-box-shadow: 0px 0px 50px 50px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 50px 50px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 50px 50px rgba(0, 0, 0, 0.2);
+}
+.modal-content-black {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid #fff;
+  color: #fff;
+  -webkit-box-shadow: 0px 0px 50px 50px rgba(255, 255, 255, 0.2);
+  -moz-box-shadow: 0px 0px 50px 50px rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 50px 50px rgba(255, 255, 255, 0.2);
+}
+.modal-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 35px;
+  font-weight: 700;
+}
+.modal-content > input {
+  font-weight: 500;
+  padding: 15px;
+  background-color: #d3e97a;
+  border: 1px solid #444;
+  border-radius: 5px;
+  color: #444;
+}
+.modal-content > .input-black {
+  border: 1px solid #fff;
+}
+.modal-content > textarea {
+  font-weight: 500;
+  padding: 15px;
+  height: 150px;
+  background-color: #d3e97a;
+  border: 1px solid #444;
+  border-radius: 5px;
+  color: #444;
+}
+.modal-content > .textarea-black {
+  border: 1px solid #fff;
+}
+
+.modal-content > *::placeholder {
+  color: #444;
+  font-weight: 500;
+}
+.modal-btn {
+  cursor: pointer;
+  align-self: flex-start;
+  padding: 15px;
+  font-weight: 700;
+  background-color: #d3e97a;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: 1px solid #444;
+  color: #444;
+}
+
+.modal-close {
+  cursor: pointer;
+  height: 26px;
+  width: 26px;
+}
+.modal-close > svg {
+  fill: #444;
+  width: 26px;
+  height: 26px;
+}
+.modal-close > .modal-close-black {
+  fill: #fff;
+}
+/* Toggle and Navigation-Bar */
+.navigation-bar {
+  position: fixed;
+  z-index: 15;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 250px;
+  border: 2px solid #555;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 5px;
+}
+.navigation-bar-black {
+  border: 2px solid #fff;
+  background-color: #000;
+}
+.navigation-bar__row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.navigation-bar__row > a > svg {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  fill: #555;
+  stroke: #555;
+  stroke-width: 0;
+  transition: 0.1s all ease-in;
+}
+.svg-black {
+  fill: #fff !important;
+  stroke: #fff;
+}
+
+.navigation-bar__row > a > svg:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(1px 1px 1px #555);
+}
+.span {
+  display: block;
+  height: 2px;
+  width: 36px;
+  background-color: #555;
+}
+.span-black {
+  background-color: #fff;
+}
+.toggle {
+  cursor: pointer;
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 2px solid #555;
+  transition: 0.3s all ease-in;
+}
+.toggle-black {
+  border: 2px solid #fff;
+}
+.toggle-circle {
+  display: block;
+  height: 4px;
+  width: 4px;
+  margin: 7px 2px 7px 2px;
+  background-color: #555;
+  border-radius: 50%;
+  transition: 0.3s margin ease-in;
+}
+.toggle-circle.active {
+  margin-left: 11px;
+  background-color: #fff;
+}
+.toggle:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(1px 1px 1px #555);
+}
+
+/* Ancor */
+.ancor {
+  position: relative;
+}
+.link {
+  position: absolute;
+  display: block;
+  top: -80px;
+}
+
+.container {
+  max-width: 1280px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.title {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-size: 75px;
+  line-height: 90%;
+  padding-bottom: 30px;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 16px;
+  align-items: center;
+}
+
+.border-padding {
+  border-bottom: 1px solid #444;
+  padding: 80px 0;
+}
+
+@media (max-width: 1150px) {
+  .title {
+    font-size: 65px;
+  }
+  .contact {
+    column-gap: 35px;
+  }
+  .header__contact a:first-child {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+  .link {
+    position: absolute;
+    display: block;
+    top: -40px;
+  }
+  .border-padding {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .title {
+    font-size: 43px;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+@media (max-width: 700px) {
+  /* Содержимое модального окна */
+  .modal-content {
+    row-gap: 15px;
+    padding: 30px;
+    width: 464px;
+  }
+  .modal-title {
+    font-size: 30px;
+  }
+  .modal-content > input {
+    padding: 10px;
+  }
+  .modal-content > textarea {
+    padding: 10px;
+    height: 100px;
+  }
+  .modal-btn {
+    padding: 10px;
+  }
+}
+@media (max-width: 550px) {
+  /* Содержимое модального окна */
+  .modal-content {
+    row-gap: 10px;
+    padding: 20px;
+    width: 364px;
+  }
+  .modal-title {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  .header__contact a:first-child {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  /* Содержимое модального окна */
+  .modal-content {
+    padding: 10px;
+    width: 300px;
+  }
+  .modal-title {
+    font-size: 20px;
+  }
+  .modal-btn {
+    padding: 5px;
+  }
+}

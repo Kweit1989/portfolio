@@ -1,0 +1,33 @@
+.section-profile-subscribe {
+    padding-bottom: 26px;
+    border-bottom: 1px solid #E8E8E8;
+}
+.section-profile-subscribe-header {
+    padding-bottom: 26px;
+    font-weight: 600;
+    font-size: 20px;
+}
+.section-profile-subscribe-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 800px){
+    .section-profile-subscribe-btn p{
+        padding-right: 50px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px){
+    .section-profile-subscribe-btn p{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 500px){
+    .section-profile-subscribe-btn p{
+        padding-right: 20px;
+    }
+}

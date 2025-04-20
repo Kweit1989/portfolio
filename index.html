@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Портфолио Калимуллина Ильдара Рамилевича, Frontend-разработчик" />
+    <meta name="keywords" content="вёрстка сайтов, frontend-разработчик, html, css, javaScript, figma" />
+
+    <meta property="og:title" content="Портфолио" />
+    <meta property="og:description" content="Калимуллин Ильдар - начинающий front-end разработчик" />
+    <meta property="og:image" content="https://kweit1989.github.io/portfolio/img/hh_favicon_link-dark.jpg" />
+    <meta name="twitter:image" content="https://kweit1989.github.io/portfolio/img/telegram_favicon_link-dark.jpg" />
+    <meta property="og:url" content="https://kweit1989.github.io/portfolio/" />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <title>Моё портфолио</title>
+  </head>
+  <body>
+    <!-- Модальное окно "Задать вопрос" -->
+    <div id="modal" class="modal-overlay">
+      <form class="modal-content" id="my-form" action="https://formspree.io/f/mldrweed" method="POST">
+        <h2 class="modal-title">
+          Связаться со мной
+          <div class="modal-close">
+            <svg>
+              <path
+                d="M 21.734375 19.640625 L 19.636719 21.734375 C 19.253906 22.121094 18.628906 22.121094 18.242188 21.734375 L 13 16.496094 L 7.761719 21.734375 C 7.375 22.121094 6.746094 22.121094 6.363281 21.734375 L 4.265625 19.640625 C 3.878906 19.253906 3.878906 18.628906 4.265625 18.242188 L 9.503906 13 L 4.265625 7.761719 C 3.882813 7.371094 3.882813 6.742188 4.265625 6.363281 L 6.363281 4.265625 C 6.746094 3.878906 7.375 3.878906 7.761719 4.265625 L 13 9.507813 L 18.242188 4.265625 C 18.628906 3.878906 19.257813 3.878906 19.636719 4.265625 L 21.734375 6.359375 C 22.121094 6.746094 22.121094 7.375 21.738281 7.761719 L 16.496094 13 L 21.734375 18.242188 C 22.121094 18.628906 22.121094 19.253906 21.734375 19.640625 Z"
+              />
+            </svg>
+          </div>
+        </h2>
+        <input class="modal-name" type="text" placeholder="Ваше имя" name="name" id="" required />
+        <input class="modal-mail" type="email" placeholder="Ваша почта" name="email" id="" required />
+        <textarea class="modal-message" placeholder="Сообщение" name="message" id="" required></textarea>
+        <button class="modal-btn" type="submit">Отправить</button>
+      </form>
+    </div>
+
+    <!-- Bar -->
+    <div class="navigation-bar">
+      <div class="navigation-bar__row">
+        <a href="#header">
+          <svg>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M13 18H20C21.6569 18 23 16.6569 23 15V5C23 3.34315 21.6569 2 20 2H4C2.34315 2 1 3.34315 1 5V15C1 16.6569 2.34315 18 4 18H11V20H8C7.44772 20 7 20.4477 7 21C7 21.5523 7.44772 22 8 22H16C16.5523 22 17 21.5523 17 21C17 20.4477 16.5523 20 16 20H13V18ZM4 4C3.44772 4 3 4.44772 3 5V15C3 15.5523 3.44772 16 4 16H20C20.5523 16 21 15.5523 21 15V5C21 4.44772 20.5523 4 20 4H4Z"
+            />
+          </svg>
+        </a>
+        <a href="#project">
+          <svg>
+            <path
+              d="M8.70711 6.70711C9.09763 6.31658 9.09763 5.68342 8.70711 5.29289C8.31658 4.90237 7.68342 4.90237 7.29289 5.29289L1.29289 11.2929C0.902369 11.6834 0.902369 12.3166 1.29289 12.7071L7.29289 18.7071C7.68342 19.0976 8.31658 19.0976 8.70711 18.7071C9.09763 18.3166 9.09763 17.6834 8.70711 17.2929L3.41421 12L8.70711 6.70711Z"
+            />
+            <path
+              d="M16.7071 5.29289C16.3166 4.90237 15.6834 4.90237 15.2929 5.29289C14.9024 5.68342 14.9024 6.31658 15.2929 6.70711L20.5858 12L15.2929 17.2929C14.9024 17.6834 14.9024 18.3166 15.2929 18.7071C15.6834 19.0976 16.3166 19.0976 16.7071 18.7071L22.7071 12.7071C23.0976 12.3166 23.0976 11.6834 22.7071 11.2929L16.7071 5.29289Z"
+            />
+          </svg>
+        </a>
+        <a href="#aboutme">
+          <svg>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2ZM9 7C9 5.34315 10.3431 4 12 4C13.6569 4 15 5.34315 15 7C15 8.65685 13.6569 10 12 10C10.3431 10 9 8.65685 9 7Z"
+            />
+            <path
+              d="M8 14C6.67392 14 5.40215 14.5268 4.46447 15.4645C3.52678 16.4021 3 17.6739 3 19V21C3 21.5523 3.44772 22 4 22C4.55228 22 5 21.5523 5 21V19C5 18.2043 5.31607 17.4413 5.87868 16.8787C6.44129 16.3161 7.20435 16 8 16H16C16.7956 16 17.5587 16.3161 18.1213 16.8787C18.6839 17.4413 19 18.2044 19 19V21C19 21.5523 19.4477 22 20 22C20.5523 22 21 21.5523 21 21V19C21 17.6739 20.4732 16.4021 19.5355 15.4645C18.5979 14.5268 17.3261 14 16 14H8Z"
+            />
+          </svg>
+        </a>
+        <a href="#connect">
+          <svg>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M20 0.878662C19.1722 0.878662 18.3783 1.20751 17.7929 1.79288L8.29289 11.2929C8.16473 11.421 8.07382 11.5816 8.02986 11.7574L7.02986 15.7574C6.94466 16.0982 7.04451 16.4587 7.29289 16.7071C7.54127 16.9555 7.90176 17.0553 8.24254 16.9701L12.2425 15.9701C12.4184 15.9262 12.5789 15.8352 12.7071 15.7071L22.2071 6.20709C22.7925 5.62173 23.1213 4.82781 23.1213 3.99998C23.1213 3.17216 22.7925 2.37824 22.2071 1.79288C21.6217 1.20751 20.8278 0.878662 20 0.878662ZM19.2071 3.20709C19.4174 2.9968 19.7026 2.87866 20 2.87866C20.2974 2.87866 20.5826 2.9968 20.7929 3.20709C21.0032 3.41738 21.1213 3.70259 21.1213 3.99998C21.1213 4.29737 21.0032 4.58259 20.7929 4.79288L11.4888 14.097L9.37437 14.6256L9.90296 12.5112L19.2071 3.20709Z"
+            />
+            <path
+              d="M4 3C3.20435 3 2.44129 3.31607 1.87868 3.87868C1.31607 4.44129 1 5.20435 1 6V20C1 20.7957 1.31607 21.5587 1.87868 22.1213C2.44129 22.6839 3.20435 23 4 23H18C18.7957 23 19.5587 22.6839 20.1213 22.1213C20.6839 21.5587 21 20.7957 21 20V13C21 12.4477 20.5523 12 20 12C19.4477 12 19 12.4477 19 13V20C19 20.2652 18.8946 20.5196 18.7071 20.7071C18.5196 20.8946 18.2652 21 18 21H4C3.73478 21 3.48043 20.8946 3.29289 20.7071C3.10536 20.5196 3 20.2652 3 20V6C3 5.73478 3.10536 5.48043 3.29289 5.29289C3.48043 5.10536 3.73478 5 4 5H11C11.5523 5 12 4.55228 12 4C12 3.44772 11.5523 3 11 3H4Z"
+            />
+          </svg>
+        </a>
+        <span class="span"></span>
+        <button class="toggle">
+          <span class="toggle-circle"></span>
+        </button>
+        <span class="span"></span>
+        <a class="navigation-bar__form" href="#!">
+          <svg>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M1.00005 5.98266C0.999889 5.99253 0.999873 6.00239 1 6.01225V18C1 19.6523 2.34772 21 4 21H20C21.6523 21 23 19.6523 23 18V6.01236C23.0001 6.00242 23.0001 5.99247 23 5.98251C22.9905 4.33822 21.6465 3 20 3H4C2.3535 3 1.00944 4.3383 1.00005 5.98266ZM3.10658 5.55395C3.27196 5.22692 3.61204 5 4 5H20C20.388 5 20.728 5.22692 20.8934 5.55395L12 11.7793L3.10658 5.55395ZM21 7.92066V18C21 18.5477 20.5477 19 20 19H4C3.45229 19 3 18.5477 3 18V7.92066L11.4265 13.8192C11.7709 14.0603 12.2291 14.0603 12.5735 13.8192L21 7.92066Z"
+            />
+          </svg>
+        </a>
+        <a href="tel:+79603604732">
+          <svg viewBox="0 0 32 32">
+            <path
+              d="M19.744 11.495c-0.23-0.252-0.559-0.41-0.926-0.41-0.691 0-1.25 0.56-1.25 1.25 0 0.323 0.122 0.617 0.323 0.838l-0.001-0.001c0.737 0.832 1.186 1.933 1.186 3.14 0 1.463-0.662 2.771-1.702 3.642l-0.007 0.006c-0.225 0.226-0.364 0.538-0.364 0.882 0 0.691 0.56 1.251 1.251 1.251 0.344 0 0.655-0.139 0.881-0.363l-0 0c1.51-1.327 2.457-3.262 2.457-5.418 0-1.855-0.701-3.547-1.854-4.823l0.006 0.006zM22.799 8.44c-0.23-0.253-0.56-0.411-0.926-0.411-0.69 0-1.25 0.56-1.25 1.25 0 0.321 0.121 0.614 0.32 0.835l-0.001-0.001c1.359 1.544 2.188 3.582 2.188 5.814 0 2.679-1.195 5.079-3.080 6.697l-0.012 0.010c-0.225 0.226-0.364 0.538-0.364 0.882 0 0.691 0.56 1.251 1.251 1.251 0.344 0 0.656-0.139 0.882-0.364l-0 0c2.335-2.092 3.798-5.117 3.798-8.484 0-2.87-1.063-5.492-2.817-7.493l0.011 0.013zM25.639 5.182c-0.229-0.242-0.552-0.393-0.911-0.393-0.691 0-1.251 0.56-1.251 1.251 0 0.329 0.127 0.629 0.336 0.853l-0.001-0.001c2.124 2.273 3.428 5.336 3.428 8.704 0 3.846-1.701 7.294-4.392 9.634l-0.016 0.013c-0.225 0.226-0.364 0.538-0.364 0.882 0 0.691 0.56 1.251 1.251 1.251 0.344 0 0.656-0.139 0.882-0.364l-0 0c10.973-10.976 1.135-21.723 1.035-21.83zM13.39 20.291c-0.23-0.314-0.597-0.516-1.011-0.516-0 0-0 0-0 0h0c-0.687 0.001-1.345 0.127-1.952 0.356l0.038-0.013c-0.461-1.225-0.728-2.641-0.728-4.119s0.267-2.894 0.755-4.202l-0.027 0.083c0.569 0.216 1.227 0.342 1.914 0.343h0c0 0 0 0 0 0 0.414 0 0.782-0.202 1.009-0.512l0.002-0.004 4.282-5.897c0.149-0.203 0.238-0.458 0.238-0.734 0-0.108-0.014-0.212-0.039-0.312l0.002 0.009c-0.154-0.586-0.4-1.1-0.726-1.552l0.009 0.014c-0.199-0.306-0.418-0.572-0.663-0.812l-0.001-0.001-0.006-0.007c-1.043-1.029-2.475-1.664-4.057-1.664-1.585 0-3.020 0.638-4.064 1.671l0-0c-3.469 3.477-5.614 8.275-5.614 13.575s2.145 10.099 5.614 13.576l-0-0c1.032 1.033 2.459 1.672 4.035 1.672 0.006 0 0.013 0 0.019-0h-0.001c0.003 0 0.007 0 0.010 0 1.582 0 3.016-0.636 4.059-1.667l-0.001 0.001c0.232-0.221 0.437-0.467 0.613-0.734l0.010-0.016c0.337-0.456 0.599-0.991 0.755-1.57l0.008-0.034c0.024-0.091 0.037-0.195 0.037-0.303 0-0.276-0.089-0.531-0.241-0.738l0.002 0.003zM15.032 27.445c-0.091 0.134-0.19 0.25-0.301 0.355l-0.001 0.001c-0.59 0.587-1.403 0.949-2.301 0.949-0.895 0-1.706-0.36-2.296-0.944l0 0c-3.017-3.024-4.883-7.198-4.883-11.808s1.866-8.784 4.883-11.808l-0 0c0.583-0.581 1.387-0.94 2.275-0.94 0.004 0 0.008 0 0.012 0h-0.001c0.001 0 0.002 0 0.003 0 0.898 0 1.712 0.36 2.305 0.944l-0-0c0.13 0.127 0.246 0.268 0.346 0.42l0.006 0.009c0.055 0.076 0.111 0.164 0.162 0.255l0.008 0.015-3.465 4.771c-0.467-0.099-0.879-0.285-1.236-0.542l0.010 0.007c-0.2-0.142-0.449-0.226-0.718-0.226-0.491 0-0.916 0.283-1.121 0.696l-0.003 0.007c-0.935 1.866-1.482 4.066-1.482 6.393s0.547 4.527 1.52 6.477l-0.038-0.084c0.208 0.419 0.634 0.703 1.125 0.703 0.267 0 0.515-0.084 0.719-0.227l-0.004 0.003c0.349-0.25 0.761-0.436 1.207-0.531l0.021-0.004 3.463 4.77c-0.074 0.133-0.145 0.244-0.222 0.351l0.007-0.011z"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="ancor">
+      <a class="link" id="header"></a>
+    </div>
+
+    <nav class="nav">
+      <div class="contaner__nav">
+        <div class="nav__logo">
+          <h6 class="logo">Калимуллин Ильдар</h6>
+          <div class="swiper-container-menu">
+            <ul class="nav__list swiper-wrapper">
+              <li class="nav__item">
+                <a href="#project" class="nav__item-link">
+                  <img src="./img/header/arrow-bottom.svg" alt="" />
+                  Мои проекты
+                  <img src="./img/header/arrow-bottom.svg" alt="" />
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#aboutme" class="nav__item-link">
+                  <img src="./img/header/arrow-bottom.svg" alt="" />
+                  Обо мне
+                  <img src="./img/header/arrow-bottom.svg" alt="" />
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#connect" class="nav__item-link">
+                  <img src="./img/header/arrow-bottom.svg" alt="" />
+                  Контакты
+                  <img src="./img/header/arrow-bottom.svg" alt="" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+    <video class="bg-video" autoplay muted loop playsinline>
+      <source class="src-video" src="./video/bg-video-white.mp4" type="video/mp4" />
+    </video>
+    <header class="header border-padding">
+      <div class="projects_bg"></div>
+      <div class="container">
+        <div class="header__row">
+          <div class="header__content">
+            <h1 class="header__title">Привет, я Калимуллин Ильдар</h1>
+            <p class="header__text">
+              Начинающий Front-end разработчик из Ульяновска, увлеченный созданием доступных и удобных для пользователя
+              веб-сайтов.
+            </p>
+            <div class="header__contact contact">
+              <a class="header__contact-form" href="">
+                Свяжитесь со мной
+                <span><img src="./img/header/arrow.svg" alt="" /></span>
+              </a>
+              <a class="header__contact-whatsapp" href="https://wa.me/+79603604732" target="_blank">
+                <img src="./img/header/whatsapp.png" alt="" />
+              </a>
+              <a class="header__contact-telegram" href="https://t.me/illddaarr" target="_blank">
+                <img src="./img/header/telegram.png" alt="" />
+              </a>
+              <a class="header__contact-vk" href="https://vk.com/id334202046" target="_blank">
+                <img src="./img/header/vk.png" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="header__img">
+            <img src="./img/header/kalimullin.jpg" alt="Kalimullin" />
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <main>
+      <section class="my-skills border-padding">
+        <div class="my-skills-bg"></div>
+        <div class="container">
+          <div class="container-row">
+            <h2 class="title">Мои навыки</h2>
+            <div class="my-skills-row">
+              <div class="my-skills-container">
+                <img src="./img/my-skills/js.png" alt="">
+                <img src="./img/my-skills/js-white.png" alt="">
+                <p class="my-skills-text">Java Script</p>
+              </div>             
+              <div class="my-skills-container">
+                <img src="./img/my-skills/cms.png" alt="">
+                <img src="./img/my-skills/cms-white.png" alt="">
+                <p class="my-skills-text">CMS</p>
+              </div>           
+              <div class="my-skills-container">
+                <img src="./img/my-skills/crm.png" alt="">
+                <img src="./img/my-skills/crm-white.png" alt="">
+                <p class="my-skills-text">CRM</p>
+              </div>           
+              <div class="my-skills-container">
+                <img src="./img/my-skills/css.png" alt="">
+                <img src="./img/my-skills/css-white.png" alt="">
+                <p class="my-skills-text">CSS</p>
+              </div>            
+              <div class="my-skills-container">
+                <img src="./img/my-skills/mysql.png" alt="">
+                <img src="./img/my-skills/mysql-white.png" alt="">
+                <p class="my-skills-text">MySQL</p>
+              </div>             
+              <div class="my-skills-container">
+                <img src="./img/my-skills/php.png" alt="">
+                <img src="./img/my-skills/php-white.png" alt="">
+                <p class="my-skills-text">PHP</p>
+              </div>            
+              <div class="my-skills-container">
+                <img src="./img/my-skills/virtualbox.png" alt="">
+                <img src="./img/my-skills/virtualbox-white.png" alt="">
+                <p class="my-skills-text">Virtual Box</p>
+              </div>             
+              <div class="my-skills-container">
+                <img src="./img/my-skills/vs-code.png" alt="">
+                <img src="./img/my-skills/vs-code-white.png" alt="">
+                <p class="my-skills-text">VS Code</p>
+              </div>              
+              <div class="my-skills-container">
+                <img src="./img/my-skills/figma.png" alt="">
+                <img src="./img/my-skills/figma-white.png" alt="">
+                <p class="my-skills-text">Figma</p>
+              </div>
+              <div class="my-skills-container">
+                <img src="./img/my-skills/ssh.png" alt="">
+                <img src="./img/my-skills/ssh-white.png" alt="">
+                <p class="my-skills-text">SSH</p>
+              </div>
+              <div class="my-skills-container">
+                <img src="./img/my-skills/html.png" alt="">
+                <img src="./img/my-skills/html-white.png" alt="">
+                <p class="my-skills-text">HTML</p>
+              </div>
+              <div class="my-skills-container">
+                <img src="./img/my-skills/git.png" alt="">
+                <img src="./img/my-skills/git-white.png" alt="">
+                <p class="my-skills-text">Git</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects border-padding">
+        <div class="ancor">
+          <a class="link" id="project"></a>
+        </div>
+        <div class="container">
+          <h2 class="projects__title title">Мои проекты</h2>
+          <p class="projects__text">
+            Вот мои проекты в области front-end разработки, выполненные с максимально точным соблюдением принципа Pixel
+            Perfect. Каждый проект обладает адаптивным дизайном, что обеспечивает отличное отображение на любых
+            устройствах.
+          </p>
+        </div>
+        <div class="projects-container">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="project-card">
+                  <div class="project-card__img">
+                    <img src="./img/projects/elegant.jpg" alt="" />
+                  </div>
+                  <div class="project-card__content">
+                    <h3 class="project-card__title">Elegant</h3>
+                    <p class="project-card__text">
+                      На странице Elegant интерактивность была добавлена с помощью JavaScript, включая реализацию
+                      выпадающего меню при наведении курсора. Слайдер для просмотра товаров интегрирован с
+                      использованием сторонней библиотеки Swiper. Также с помощью JavaScript был реализован таймер,
+                      отсчитывающий время до окончания действия скидки на товар от текущего момента. Проект был создан с
+                      помощью Gulp
+                    </p>
+                    <a class="project-card__btn" href="./work/Elegant/index.html" target="_blank">
+                      Посмотреть проект
+                      <span><img src="./img/header/arrow.svg" alt="" /></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="project-card">
+                  <div class="project-card__img">
+                    <img src="./img/projects/loft-hous.jpg" alt="" />
+                  </div>
+                  <div class="project-card__content">
+                    <h3 class="project-card__title">Loft-hous</h3>
+                    <p class="project-card__text">
+                      Для улучшения функциональности сайта Loft-hous добавлены элементы на JavaScript, включая
+                      интерактивную Yandex карту с указанием местоположения компании. В форму обратной связи
+                      интегрирована проверка номера телефона на соответствие международному формату. Также реализовано
+                      бургер-меню с выезжающим списком для мобильных устройств, а видео с YouTube встроено с учетом
+                      корректного отображения на странице.
+                    </p>
+                    <a class="project-card__btn" href="./work/Loft-hous/index.html" target="_blank">
+                      Посмотреть проект
+                      <span><img src="./img/header/arrow.svg" alt="" /></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="project-card">
+                  <div class="project-card__img">
+                    <img src="./img/projects/alpha-marketing.jpg" alt="" />
+                  </div>
+                  <div class="project-card__content">
+                    <h3 class="project-card__title">Alpha marketing</h3>
+                    <p class="project-card__text">
+                      В тестовом проекте "Alpha Marketing" от ООО "Альфа Контекст" с помощью HTML, CSS и JavaScript было
+                      реализовано меню с фиксированным позиционированием и выпадающими списками при наведении. Также
+                      были созданы формы в виде модальных окон, которые появляются при клике на определённые элементы
+                      страницы (кнопки). Дополнительно интегрирована Yandex карта с указанием местоположения
+                      организации.
+                    </p>
+                    <a class="project-card__btn" href="./work/Alpha marketing/index.html" target="_blank">
+                      Посмотреть проект
+                      <span><img src="./img/header/arrow.svg" alt="" /></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="project-card">
+                  <div class="project-card__img">
+                    <img src="./img/projects/cotodom.jpg" alt="" />
+                  </div>
+                  <div class="project-card__content">
+                    <h3 class="project-card__title">Cotodom</h3>
+                    <p class="project-card__text">
+                      Для создания проекта Cotodom был использован фреймворк Bootstrap. С помощью HTML, CSS и JavaScript
+                      была разработана боковая навигация. При уменьшении экрана боковая навигация скрывается за
+                      бургер-меню и отображается при клике на соответствующую кнопку.
+                    </p>
+                    <a class="project-card__btn" href="./work/Cotodom/index.html" target="_blank">
+                      Посмотреть проект
+                      <span><img src="./img/header/arrow.svg" alt="" /></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide project-card">
+                  <div class="project-card__img">
+                    <img src="./img/projects/mi.jpg" alt="" />
+                  </div>
+                  <div class="project-card__content">
+                    <h3 class="project-card__title">MI</h3>
+                    <p class="project-card__text">
+                      На странице "Mi" с использованием JavaScript, HTML и CSS реализованы две темы оформления: светлая
+                      и тёмная, которые можно переключать при помощи кнопки toggle. Также в проекте предусмотрена
+                      функциональная карусель для просмотра контента, управляемая с помощью кнопок.
+                    </p>
+                    <a class="project-card__btn" href="./work/Mi/index.html" target="_blank">
+                      Посмотреть проект
+                      <span><img src="./img/header/arrow.svg" alt="" /></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="project-card">
+                  <div class="project-card__img">
+                    <img src="./img/projects/yandex.jpg" alt="" />
+                  </div>
+                  <div class="project-card__content">
+                    <h3 class="project-card__title">Yandex</h3>
+                    <p class="project-card__text">
+                      В тестовом задании от Yandex реализована бегущая строка, а кнопки на стартовом экране служат
+                      якорями, которые перенаправляют к соответствующим разделам страницы. Карусель с карточками
+                      зациклена и автоматически переключается каждые 4 секунды или при нажатии на соответствующие
+                      кнопки.
+                    </p>
+                    <a class="project-card__btn" href="./work/Yandex/index.html" target="_blank">
+                      Посмотреть проект
+                      <span><img src="./img/header/arrow.svg" alt="" /></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="project-card">
+                  <div class="project-card__img">
+                    <img src="./img/projects/recipe.jpg" alt="" />
+                  </div>
+                  <div class="project-card__content">
+                    <h3 class="project-card__title">Recipe</h3>
+                    <p class="project-card__text">
+                      На странице "Recipe" реализован автоматический слайдер с кнопками управления. Также предусмотрено
+                      выпадающее меню, которое раскрывается при наведении курсора. В дополнение к этому, добавлена
+                      кнопка для загрузки и отображения дополнительных карточек рецептов. На устройствах с небольшими
+                      экранами была создана адаптивная навигация в виде бургер-меню.
+                    </p>
+                    <a class="project-card__btn" href="./work/Recipe/index.html" target="_blank">
+                      Посмотреть проект
+                      <span><img src="./img/header/arrow.svg" alt="" /></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Пагинация -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <section class="projects-commercial border-padding">
+        <div class="container">
+          <h2 class="commercial__title title">Мой первый комерчиский опыт</h2>
+          <p class="commercial__text projects__text">
+            Выполнена адаптивная вёрстка с подходом mobile-first для различных типов устройств. Подключены плагины
+            Swiper и MixItUp для создания слайдеров и фильтров. Реализована бургер-меню с выпадающим списком и модальные
+            окна для оформления заявок. Также добавлена интерактивная иконка фильтра с формой для заполнения,
+            позволяющая пользователю выбирать различные параметры для фильтрации товаров или услуг -
+            <a class="commercial-link-alpha" href="https://alpha-osteklenie.ru/" target="_blank">Альфа остекление</a>
+          </p>
+          <div class="commercial-swiper">
+            <div class="swiper-wrapper">
+              <div class="commercial-slide swiper-slide" data-filter=".сottages">Коттеджи и дома</div>
+              <div class="commercial-slide swiper-slide commercial-slide-wrapper" data-filter=".about-us">
+                  <span>О нас</span>
+                  <div class="commercial-slide-arrow-wrapper">
+                    <svg class="commercial-slide-arrow" width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.5 2.44141L1.5 10.9414L10.5 19.4414"  stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <svg class="commercial-slide-arrow" width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.5 2.44141L1.5 10.9414L10.5 19.4414"  stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <svg class="commercial-slide-arrow" width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.5 2.44141L1.5 10.9414L10.5 19.4414"  stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                <ul class="about-us-list">
+                  <li class="commercial-slide about-us-item" data-filter=".our-works">Наши работы <span>(разводящая)</span></li>
+                  <li class="commercial-slide about-us-item" data-filter=".detail-page">Наши работы <span>(детальная)</span></li>
+                  <li class="commercial-slide about-us-item" data-filter=".about-us-news">Новости <span>(разводящая)</span></li>
+                  <li class="commercial-slide about-us-item" data-filter=".news-windows">Новости <span>(детальная)</span></li>
+                </ul>
+              </div>
+              <div class="commercial-slide swiper-slide" data-filter=".calculator">Калькулятор</div>
+              <div class="commercial-slide swiper-slide" data-filter=".repair">Ремонт</div>
+              <div class="commercial-slide swiper-slide" data-filter=".catalog">Каталог</div>
+            </div>
+          </div>
+          <div class="commercial-window-container">
+            <div class="mix сottages commercial-window-wrapper">
+              <div class="wrapper-arrow-description">
+                <div class="commercial-arrow">
+                  <svg width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10.5 2.44141L1.5 10.9414L10.5 19.4414"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="commercial-description">
+                  <h5 class="commercial-description-header">Коттеджи и дома</h5>
+                  <div class="commercial-description-content">
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Структурированная разметка с использованием семантических тегов для представления информации об
+                      услугах остекления коттеджей и домов.
+                    </p>
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Адаптивная вёрстка с применением медиазапросов для корректного отображения на различных
+                      устройствах.
+                    </p>
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Реализация слайдера для демонстрации примеров работ с использованием плагина Swiper.
+                    </p>
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Использование Flexbox для создания гибкой и отзывчивой сетки элементов.
+                    </p>
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Открытие модальных окон для заполнения форм-заявок на остекление, замер и ремонт.
+                    </p>
+                  </div>
+                  <a class="commercial-link" href="https://alpha-osteklenie.ru/kottedji-doma/" target="_blank">
+                    Перейти на страницу
+                  </a>
+                </div>
+              </div>
+              <div class="commercial-window">
+                <img
+                  src="./img/projects/commercial-projects/screencapture-alpha-osteklenie-kottedji-doma-2024-12-20-16_08_12.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="mix about-us commercial-window-wrapper">
+              <div class="wrapper-arrow-description">
+                <div class="commercial-arrow">
+                  <svg width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10.5 2.44141L1.5 10.9414L10.5 19.4414"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="commercial-description">
+                  <h5 class="commercial-description-header">О нас</h5>
+                  <div class="commercial-description-content">
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Разметка раздела с информацией о компании, включая текстовый контент и изображения.
+                    </p>
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Стилизация разделов страницы для создания привлекательного и профессионального внешнего вида.
+                    </p>
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Реализация аккордеона для часто задаваемых вопросов, позволяющего скрывать и раскрывать ответы.
+                    </p>
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Использование адаптивных изображений для оптимизации загрузки на разных устройствах.
+                    </p>
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Использование типографики для улучшения восприятия текста, включая различные шрифты, размеры и
+                      интерлиньяж для заголовков и основного контента.
+                    </p>
+                  </div>
+                  <a class="commercial-link" href="https://alpha-osteklenie.ru/about-us/" target="_blank">
+                    Перейти на страницу
+                  </a>
+                </div>
+              </div>
+              <div class="commercial-window">
+                <img
+                  src="./img/projects/commercial-projects/screencapture-alpha-osteklenie-about-us-2024-12-20-16_12_39.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="mix our-works commercial-window-wrapper">
+              <div class="wrapper-arrow-description">
+                <div class="commercial-arrow">
+                  <svg width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10.5 2.44141L1.5 10.9414L10.5 19.4414"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="commercial-description">
+                  <h5 class="commercial-description-header">О нас - наши работы</h5>
+                  <div class="commercial-description-content">
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Использование гридов и флексбоксов для адаптивного позиционирования элементов.
+                    </p>
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Медиазапросы для настройки отображения на разных устройствах.
+                    </p>
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Подключение слайдеров, через библиотеку Swiper.js для создания каруселей и управления их
+                      поведением.
+                    </p>
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Всплывающие модальные окна, активируемые с помощью событий JavaScript.
+                    </p>
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Скрипты для смены категорий работ (data-атрибутам, MixItUp)
+                    </p>
+                  </div>
+                  <a class="commercial-link" href="https://alpha-osteklenie.ru/about-us/our-works/" target="_blank">
+                    Перейти на страницу
+                  </a>
+                </div>
+              </div>
+              <div class="commercial-window">
+                <img
+                  src="./img/projects/commercial-projects/screencapture-alpha-osteklenie-about-us-our-works-2024-12-21-14_52_12.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="mix about-us-news commercial-window-wrapper">
+              <div class="wrapper-arrow-description">
+                <div class="commercial-arrow">
+                  <svg width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10.5 2.44141L1.5 10.9414L10.5 19.4414"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="commercial-description">
+                  <h5 class="commercial-description-header">О нас - новости</h5>
+                  <div class="commercial-description-content">
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Реализована современная форма для поиска, обеспечивающая удобство использования. Она включает в
+                      себя адаптивный дизайн, позволяющий корректно отображаться на любых устройствах.
+                    </p>
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Реализован слайдер скидок на основе Swiper с пагинацией и навигацией, стилизованной собственными
+                      стилями, вместо стандартных стилей Swiper.
+                    </p>
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Реализован фильтр на основе библиотеки MixItUp с использованием атрибутов data-filter, который
+                      выполняет сортировку статей в зависимости от выбранного таба.
+                    </p>
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Статьи размещены в адаптивном контейнере с использованием сетки Grid, которая автоматически
+                      подстраивается под различные размеры устройств.
+                    </p>
+                  </div>
+                  <a class="commercial-link" href="https://alpha-osteklenie.ru/kottedji-doma/" target="_blank">
+                    Перейти на страницу
+                  </a>
+                </div>
+              </div>
+              <div class="commercial-window">
+                <img
+                  src="./img/projects/commercial-projects/screencapture-alpha-osteklenie-about-us-news-2024-12-20-16_15_34.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="mix news-windows commercial-window-wrapper">
+              <div class="wrapper-arrow-description">
+                <div class="commercial-arrow">
+                  <svg width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10.5 2.44141L1.5 10.9414L10.5 19.4414"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="commercial-description">
+                  <h5 class="commercial-description-header">О нас - новости, окна</h5>
+                  <div class="commercial-description-content">
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Разметка раздела, посвящённого информации о статье на тему окон, включает текстовый контент и
+                      изображения, организованные для удобного восприятия.
+                    </p>
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Реализован слайдер на основе Swiper с поддержкой как горизонтальной, так и вертикальной прокрутки.
+                      Слайдер включает функционал увеличения выбранного слайда в отдельном блоке, адаптируясь к ширине
+                      экрана
+                    </p>
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Реализован фильтр на основе библиотеки MixItUp с использованием атрибутов data-filter, который
+                      выполняет сортировку статей в зависимости от выбранного таба.
+                    </p>
+                  </div>
+                  <a class="commercial-link" href="https://alpha-osteklenie.ru/kottedji-doma/" target="_blank">
+                    Перейти на страницу
+                  </a>
+                </div>
+              </div>
+              <div class="commercial-window">
+                <img
+                  src="./img/projects/commercial-projects/screencapture-alpha-osteklenie2-test-about-us-news-windows-index-php-2024-12-20-16_16_08.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="mix detail-page commercial-window-wrapper">
+              <div class="wrapper-arrow-description">
+                <div class="commercial-arrow">
+                  <svg width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10.5 2.44141L1.5 10.9414L10.5 19.4414"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="commercial-description">
+                  <h5 class="commercial-description-header">Детальная страница - окна</h5>
+                  <div class="commercial-description-content">
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Разметка раздела на детальной странице, посвящённой окнам, включает текстовый контент и
+                      изображения, структурированные для удобного восприятия.
+                    </p>
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Создан слайдер на базе Swiper, который поддерживает как горизонтальное, так и вертикальное
+                      пролистывание. Он оснащён функцией увеличения выбранного слайда, отображаемого в отдельном блоке,
+                      с автоматической адаптацией под различные размеры экрана.
+                    </p>
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      В разделах "Наши работы", "Каталог" и "Аксессуары" реализован слайдер на основе Swiper, с
+                      поддержкой фильтрации через табы, использующие MixItUp для сортировки контента.
+                    </p>
+                  </div>
+                  <a class="commercial-link" href="https://alpha-osteklenie.ru/kottedji-doma/" target="_blank">
+                    Перейти на страницу
+                  </a>
+                </div>
+              </div>
+              <div class="commercial-window">
+                <img
+                  src="./img/projects/commercial-projects/screencapture-alpha-osteklenie-about-us-cases-case-01-php-2024-12-20-16_18_07.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="mix calculator commercial-window-wrapper">
+              <div class="wrapper-arrow-description">
+                <div class="commercial-arrow">
+                  <svg width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10.5 2.44141L1.5 10.9414L10.5 19.4414"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="commercial-description">
+                  <h5 class="commercial-description-header">Калькулятор</h5>
+                  <div class="commercial-description-content">
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Разметка интерактивной формы калькулятора с полями для ввода параметров остекления.
+                    </p>
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Стилизация элементов калькулятора для интуитивно понятного интерфейса.
+                    </p>
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Логика расчёта стоимости на основе введённых пользователем данных.
+                    </p>
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Обеспечение адаптивности калькулятора для корректного отображения на мобильных устройствах.
+                    </p>
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Обновление отображаемой стоимости в реальном времени при изменении параметров.
+                    </p>
+                  </div>
+                  <a class="commercial-link" href="https://alpha-osteklenie.ru/calculator/" target="_blank">
+                    Перейти на страницу
+                  </a>
+                </div>
+              </div>
+              <div class="commercial-window">
+                <img
+                  src="./img/projects/commercial-projects/screencapture-alpha-osteklenie-calculator-2024-12-20-16_18_55.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="mix repair commercial-window-wrapper">
+              <div class="wrapper-arrow-description">
+                <div class="commercial-arrow">
+                  <svg width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10.5 2.44141L1.5 10.9414L10.5 19.4414"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="commercial-description">
+                  <h5 class="commercial-description-header">Ремонт</h5>
+                  <div class="commercial-description-content">
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Создание формы заявки на ремонт с обязательными полями для ввода данных пользователя.
+                    </p>
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Стилизация кнопок и элементов формы для улучшения пользовательского интерфейса.
+                    </p>
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Валидация формы на стороне клиента перед отправкой данных.
+                    </p>
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Применение анимаций при наведении на интерактивные элементы для повышения отзывчивости интерфейса.
+                    </p>
+                  </div>
+                  <a class="commercial-link" href="https://alpha-osteklenie.ru/repair/" target="_blank">
+                    Перейти на страницу
+                  </a>
+                </div>
+              </div>
+              <div class="commercial-window">
+                <img
+                  src="./img/projects/commercial-projects/screencapture-alpha-osteklenie-repair-2024-12-20-16_11_06.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="mix catalog commercial-window-wrapper">
+              <div class="wrapper-arrow-description">
+                <div class="commercial-arrow">
+                  <svg width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10.5 2.44141L1.5 10.9414L10.5 19.4414"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="commercial-description">
+                  <h5 class="commercial-description-header">Каталог</h5>
+                  <div class="commercial-description-content">
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Реализована интерактивная иконка фильтра, которая вызывает форму для фильтрации контента.
+                    </p>
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Форма для фильтрации контента является интерактивной и включает различные параметры для настройки
+                      фильтрации. Также реализована кнопка для сброса всех фильтров.
+                    </p>
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Форма и иконка фильтрации сверстаны адаптивно, обеспечивая корректное отображение и удобство
+                      использования на различных устройствах.
+                    </p>
+                    <p class="commercial-description-text">
+                      <svg
+                        class="commercial-description-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 30"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z"
+                        />
+                      </svg>
+                      Создан скрипт, который отображает анимацию и обновляет количество при добавлении товара в корзину
+                      и ставлении лайков, повышая интерактивность взаимодействия с пользователем.
+                    </p>
+                  </div>
+                  <a class="commercial-link" href="https://alpha-osteklenie.ru/catalog/" target="_blank">
+                    Перейти на страницу
+                  </a>
+                </div>
+              </div>
+              <div class="commercial-window">
+                <img
+                  src="./img/projects/commercial-projects/screencapture-alpha-osteklenie-catalog-index-php-2024-12-20-17_06_43.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="aboutme border-padding">
+        <div class="ancor">
+          <a class="link" id="aboutme"></a>
+        </div>
+        <div class="container">
+          <div class="aboutme__row">
+            <h2 class="aboutme__title title">Обо мне</h2>
+            <div class="aboutme__content">
+              <h3 class="aboutme__content-title">Front-end разработчик</h3>
+              <p class="aboutme__text">
+                Я&nbsp;начинающий front-end разработчик из&nbsp;Ульяновска. Ищу интересные возможности и&nbsp;осваиваю
+                новую для себя профессию. Имею образование ветеренарного врача со&nbsp;специализацией ветеренарного
+                санитарного эксперта. При разработке мне нравится уделять особое внимание доступности. Я&nbsp;увлечен
+                и&nbsp;с&nbsp;любопытством отношусь к&nbsp;решению проблем. В&nbsp;настоящее время изучаю: JavaScript,
+                HTML, CSS, SCSS, Python, Galp, Figma и&nbsp;немного интересуюсь дизайном. Учусь больше, чтобы улучшить
+                свои навыки.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="connect border-padding">
+        <div class="ancor">
+          <a class="link" id="connect"></a>
+        </div>
+        <div class="container">
+          <div class="connect__row">
+            <div class="connect__content">
+              <h2 class="connect__title title">Связаться со&nbsp;мной</h2>
+              <p class="connect__phone">
+                <a href="tel:+79603604732">+7 (960) 360-47-32</a>
+              </p>
+              <p class="connect__mail">
+                Написать на
+                <a href="mailto:kweit@bk.ru">kweit@bk.ru</a>
+              </p>
+              <p class="connect__hh">
+                Моё резюме на
+                <a href="https://ulyanovsk.hh.ru/resume/05c37bcdff0d8b2ed80039ed1f544948754265" target="_blank">
+                  HeadHunter
+                </a>
+              </p>
+              <div class="connect__all contact">
+                <a class="header__contact-whatsapp" href="https://wa.me/+79603604732" target="_blank">
+                  <img src="./img/header/whatsapp.png" alt="" />
+                </a>
+                <a class="header__contact-telegram" href="https://t.me/illddaarr" target="_blank">
+                  <img src="./img/header/telegram.png" alt="" />
+                </a>
+                <a class="header__contact-vk" href="https://vk.com/id334202046" target="_blank">
+                  <img src="./img/header/vk.png" alt="" />
+                </a>
+              </div>
+              <div class="connect_copyright">© 2024 Калимуллин Ильдар</div>
+            </div>
+            <form class="connect__form" id="my-form-two" action="https://formspree.io/f/mldrweed" method="POST">
+              <label for="name">Ваше имя</label>
+              <input class="connect__form-name" type="text" name="name" id="" required />
+              <label for="email">Ваша почта</label>
+              <input class="connect__form-email" type="email" name="email" id="" required />
+              <label for="message">Сообщение</label>
+              <textarea class="connect__form-message" name="message" id="" required></textarea>
+              <button class="connect__form-submit" type="submit">Отправить</button>
+            </form>
+            <div class="connect_copyright-phone">© 2024 Калимуллин Ильдар</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mixitup@3/dist/mixitup.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+
+.footer__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 90px;
+}
+.footer__menu__list {
+    font-size: 36px;
+}
+.footer__menu__list > .footer__menu__item:last-child{
+    padding-top: 40px;
+}
+.footer__menu__title {
+    font-weight: 700;
+    padding-bottom: 36px;
+}
+.footer__menu__item {
+    color: #DDDDDD;
+}
+.footer__menu__item + .footer__menu__item{
+    padding-top: 20px;
+}
+.footer__menu__item > a > img{
+    max-width: 227px;
+}
+.footer__contacts-map {
+    display: flex;
+    column-gap: 22px;
+}
+.footer__contacts__title {
+    font-size: 36px;
+    font-weight: 700;
+    padding-bottom: 36px;
+}
+.footer__contacts > span{
+    display: block;
+    padding-bottom: 10px;
+    font-size: 24px;
+    color: #DDDDDD;
+}
+.footer__contacts__social {
+  padding-top: 50px;
+}
+.footer__contacts__social > img + img {
+    padding-left: 33px;
+}
+.map__map {
+    width: 522px;
+    height: 325px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px 0 #d795ff, 0 0 4px 0 #d795ff;
+}
+
+.copiryte{
+    font-size: 10px;
+    padding-bottom: 500px;
+}
+.copiryte > span + span{
+    padding-left: 110px;
+}
+.logo_phone{
+    display: none;
+}
+.footer__contacts__social__phone{
+    display: none;
+}
+
+
+@media (max-width: 1200px){
+    .footer__row {
+       justify-content: center;
+    }
+    .footer__menu__list{
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        padding-bottom: 100px;
+    }
+    .footer__menu__item + .footer__menu__item{
+        padding-top: 0px;
+    }
+    .footer__menu__list > .footer__menu__item:last-child{
+        padding-top: 0px;
+    }
+    .footer__menu__title {
+        padding-bottom: 0px;
+    }
+    .copiryte{
+        text-align: center;
+    }
+}
+
+@media (max-width:750px){
+    .footer__row {
+        padding-bottom: 50px;
+    }
+    .footer__contacts-map {
+        flex-direction: column;
+        row-gap: 50px;
+    }
+    .footer__menu{
+        display: none;
+    }
+    .footer__contacts__title {
+        font-size: 32px;
+        text-align: center;
+        padding-bottom: 25px;
+    }
+    .footer__contacts__social{
+        display: none;
+    }
+    .map__map {
+        width: 341px;
+        height: 203px;
+    }
+    .copiryte{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 100px;
+    }
+    .logo_phone{
+        display: block;
+        padding-bottom: 35px;
+    }
+    .logo_phone > img {
+        max-width: 227px;
+    }
+    .footer__contacts__social__phone{
+        display: block;
+        padding-bottom: 20px;
+    }
+    .footer__contacts__social__phone > img + img {
+        padding-left: 15px;
+    }
+    .copiryte > span + span{
+        padding-left: 0px;
+        padding-top: 10px;
+    }
+}

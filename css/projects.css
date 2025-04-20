@@ -1,0 +1,273 @@
+.projects__text {
+    max-width: 600px;
+    padding-bottom: 80px;
+    font-size: 18px;
+}
+
+.projects-container {
+    position: relative;
+}
+/* Card Work */
+.swiper-container{
+    position: relative; /* Важный момент */
+   
+    border-radius: 10px;
+    z-index: 0;
+ }
+.swiper-slide > .project-card {
+    display: flex;
+    justify-content: space-between;
+    width: 1280px;
+    padding: 0 15px;
+    margin: 0 auto;
+    align-items: center;
+}
+.project-card__img {
+    position: relative;
+    max-width: 100%;
+    width: 600px;
+    max-height: 355.797px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s box-shadow ease-in;
+}
+
+.project-card__img > img {
+    width: 600px;
+    height: 355.797px;
+    transition: 0.3s transform ease-in;
+    object-fit: cover;
+    overflow: visible; /* Тень будет видимой */
+}
+
+
+.project-card__img::before {
+    position: absolute;
+    z-index: 5;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.7) 100%);
+    opacity: 1;
+    transition: 0.3s opacity ease-in;
+}
+ .project-card.hovered .project-card__img::before {
+    opacity: 0;
+}
+.project-card__img::after {
+    position: absolute;
+    content: "";
+    left: 2.5%;
+    top: 2.5%;
+    bottom: 2.5%;
+    right: 2.5%;
+    width: 95%;
+    height: 95%;
+    border: 6px double #D3E97A;;
+    border-radius: 10px;
+    opacity: 0;
+    transition:  0.3s all ease-in;
+  }
+.project-card.hovered .project-card__img::after {
+    opacity: 1;
+}
+
+.project-card__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    max-width: 600px;
+    padding-right: 20px;
+    height: 355.797px
+}
+.project-card__title {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 140%;
+}
+.project-card__text {
+    font-size: 18px;
+    line-height: 150%;
+}
+a.project-card__btn{
+    display: flex;
+    column-gap: 25px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    padding: 20px;
+    align-self: center;
+    background-color: #D3E97A;
+    border: 2px solid #D3E97A;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 5px;
+    color: #fff;
+    transition: 0.3s all ease-in;
+}
+a.project-card__btn.project-card__btn-black{
+    color: #000;
+}
+a.project-card__btn:hover {
+    background-color: transparent;
+    color: #D3E97A;
+}
+
+a.project-card__btn > span {
+    display: block;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    transition: 0.3s background-color ease-in;
+}
+a.project-card__btn > span.project-card__btn-black{
+    background-color: #000;
+}
+a.project-card__btn:hover > span{
+    background-color: #D3E97A;
+}
+a.project-card__btn > span > img{
+    display: none;
+}
+.projects .projects-container > .swiper-pagination {
+    bottom: -50px;
+    z-index: 1;
+}
+.projects-container > .swiper-pagination > .swiper-pagination-bullet {
+    background-color: #ffffff; /* Цвет пульсирующих точек */
+    border: 2px solid #D3E97A;
+    width: 15px;
+    height: 15px;
+    opacity: 1;
+}
+.projects-container > .swiper-pagination > .swiper-pagination-bullet.swiper-pagination-bullet-black{
+    background-color: #000; /* Цвет пульсирующих точек */
+}
+.projects > .projects-container > .swiper-pagination > .swiper-pagination-bullet-active{
+    background-color: #D3E97A;
+    width: 40px;
+    border-radius: 10px;
+    opacity: 1;
+}
+@media (max-width:1290px){
+    .projects__text {
+        padding-bottom: 40px;
+    }
+    .swiper-slide > .project-card{
+        flex-direction: column;
+        justify-content: flex-start;
+        row-gap: 15px;
+        max-width: 540px;
+        height: 820px;
+        padding: 0;
+        border-radius: 10px;
+        -webkit-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.2);
+        
+    }
+    .swiper-slide > .project-card.project-card-black{
+        -webkit-box-shadow: 0px 0px 50px 0px rgb(255 255 255 / 20%);
+        -moz-box-shadow: 0px 0px 50px 0px rgb(255 255 255 / 20%);
+        box-shadow: 0px 0px 50px 0px rgb(255 255 255 / 20%);
+    }
+    .project-card__img {
+        width: 630px;
+        border-radius: 0;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .project-card__content {
+        text-align: center;
+        height: 400px;
+        padding: 0 15px 0 15px;
+    }
+}
+
+
+@media (max-width:1150px){
+    .swiper-slide > .project-card{
+        max-width: 500px; 
+    }
+    .projects.border-padding{
+        padding-bottom: 80px;
+    }
+    .projects__text {
+        padding-bottom: 40px;
+    }
+    .project-card__img {
+        margin-right: 0px;
+    }
+    .project-card__content {
+        padding-top: 20px;
+        flex-grow: 1;
+    }
+    a.project-card__btn {
+        margin-bottom: 35px;
+    }
+    a.project-card__btn > span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+    }
+    a.project-card__btn > span > img{
+        display: block;
+    }
+}
+@media (max-width:1040px){
+    .swiper-slide > .project-card{
+        max-width: 540px;
+        row-gap: 0px;
+    }
+}
+
+
+@media (max-width: 650px) {  
+    .swiper-slide > .project-card {
+        max-width: 480px;
+        height: 700px;
+    }
+    .project-card__img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .project-card__img > img {
+        width: 100%;
+        max-height: 300px;
+    }
+    .project-card__content{
+        height: auto;
+    }
+    .project-card__text{
+        font-size: 16px;
+    }
+    a.project-card__btn{
+        padding: 15px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .swiper-slide > .project-card {
+        max-width: 340px;
+        height: 650px;
+    }
+    .project-card__content {
+        row-gap: 10px;
+        padding: 10px;
+    }
+    .project-card__text {
+        font-size: 14px;
+    }
+    a.project-card__btn{
+        margin-bottom: 0;
+    }
+}
+
+
