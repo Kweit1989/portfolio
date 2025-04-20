@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
         color: "#d3e97a",
         border: "2px solid #d3e97a",
       };
-      srcVideo.src = "./video/bg-video-black.mp4";
+      srcVideo.src = "./Video/bg-video-black.mp4";
       bgVideo.load(); // Перезагружаем видео
       bgVideo.play(); // Запускаем воспроизведение
       localStorage.setItem("theme", "dark");
@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", function () {
         color: "#d3e97a",
         border: "2px solid #d3e97a",
       };
-      srcVideo.src = "./video/bg-video-white.mp4";
+      srcVideo.src = "./Video/bg-video-white.mp4";
       bgVideo.load(); // Перезагружаем видео
       bgVideo.play(); // Запускаем воспроизведение
       localStorage.setItem("theme", "light");
