@@ -249,8 +249,10 @@ function closeModal() {
 }
 
 // Открытие модального окна при нажатии на кнопку
+const bar = document.querySelector('.navigation-bar')
 contactFormButtons.forEach((button) => {
   button.addEventListener("click", function (event) {
+    bar.style.opacity = '0';
     event.preventDefault();
     openModal();
   });
@@ -258,12 +260,14 @@ contactFormButtons.forEach((button) => {
 
 // Закрытие модального окна при нажатии на крестик
 closeModalButton.addEventListener("click", function () {
+  bar.style.opacity = '1';
   closeModal();
 });
 
 // Закрытие модального окна при клике вне формы
 modalOverlay.addEventListener("click", function (event) {
   if (event.target === modalOverlay) {
+    bar.style.opacity = '1';
     closeModal();
   }
 });
