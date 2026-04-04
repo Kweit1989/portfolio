@@ -228,16 +228,24 @@ const contactFormButtons = document.querySelectorAll(
 );
 const closeModalButton = document.querySelector(".modal-close");
 
+
 // Функция для открытия модального окна
+function getScrollbarWidth() {
+  return window.innerWidth - document.documentElement.clientWidth;
+}
+
 function openModal() {
+  const scrollBarWidth = getScrollbarWidth();
   modalOverlay.style.display = "block";
   document.documentElement.style.overflowY = "hidden"
+  document.body.style.paddingRight = scrollBarWidth + 'px';
 }
 
 // Функция для закрытия модального окна
 function closeModal() {
   modalOverlay.style.display = "none";
   document.documentElement.style.overflowY = "";
+  document.body.style.paddingRight = '';
 }
 
 // Открытие модального окна при нажатии на кнопку
