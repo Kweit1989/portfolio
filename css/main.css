@@ -147,6 +147,8 @@ main.black {
   border: 2px solid #555;
   background-color: rgba(255, 255, 255, 1);
   border-radius: 5px;
+  opacity: 1;
+  transition: opacity 0.1s ease;
 }
 .navigation-bar-black {
   border: 2px solid #fff;
