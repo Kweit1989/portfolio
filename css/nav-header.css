@@ -167,9 +167,7 @@ a.header__contact-form:hover.header__contact-form > span {
     overflow: hidden;
 }
 .header__img > img{
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
+    width: auto;
 }
 
 
@@ -227,6 +225,11 @@ a.header__contact-form:hover.header__contact-form > span {
    }
     .header__content {
         margin-bottom: 0px;
+    }
+    .header__img > img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
     }
 }
 
