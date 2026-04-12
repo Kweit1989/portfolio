@@ -91,7 +91,7 @@
 }
 .header__content {
     max-width: 544px;
-    padding-right: 20px;
+    /* padding-right: 20px; */
     margin-bottom: 80px;
 }
 
@@ -191,7 +191,11 @@ a.header__contact-form:hover.header__contact-form > span {
         display: block;
     }
     .header__content {
+        flex-basis: 50%;
         margin-bottom: 40px;
+    }
+    .header__img {
+        flex-basis: 50%;
     }
 }
 
