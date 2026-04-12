@@ -254,7 +254,7 @@ main.black {
   padding: 80px 0;
 }
 
-header {
+.header.border-padding {
   padding: 80px 0 0 0;
 }
 
