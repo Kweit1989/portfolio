@@ -22,9 +22,6 @@ body {
   overflow-x: hidden;
   color: #444;
 }
-header {
-  padding: 80px 0 0 0;
-}
 body.body-black {
   color: #DCDCDC;
   background-color: #000;
@@ -255,6 +252,10 @@ main.black {
 .border-padding {
   border-bottom: 1px solid #444;
   padding: 80px 0;
+}
+
+header {
+  padding: 80px 0 0 0;
 }
 
 @media (max-width: 1150px) {
